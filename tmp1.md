@@ -6,6 +6,8 @@
 @prefix aat: <http://vocab.getty.edu/aat/> .
  ```
   
+<img src='https://g.gravizo.com/source/svg?<source_url_url_encoded>'/>
+          
 <img src='https://g.gravizo.com/svg?
  digraph G {
    label = "Object type and material";
