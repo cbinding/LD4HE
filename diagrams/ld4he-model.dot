@@ -1,0 +1,13 @@
+digraph {
+   // label = "LD4HE main structure";
+   // labelloc = "t";
+   node [color=gray, fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite];
+   edge [color=black, fontcolor=maroon, fontsize=10, fontname=Arial];   
+   "(OASIS dataset)" -> "(OASIS record)" [label="crm:P148_has_component\n(is component of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P148_has_component"];
+   "(OASIS record)" -> "(investigation)" [label="crm:P67_refers_to\n(is referred_to_by)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to"];
+   "(investigation)" -> "(organization)" [label="crm:P14_carried_out_by\n(performed)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"];
+   "(investigation)" -> "(site)" [label="crm:P7_took_place_at\n(witnessed)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"];
+   "(investigation)" -> "(timespan)" [label="crm:P4_has_time-span\n(is time-span of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"];
+   "(investigation)" -> "(report production)" [label="crm:P9_consists_of\n(forms part of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P9_consists_of"];  
+   "(report production)" -> "(OASIS report)" [label="crm:P108_has_produced\n(was produced by)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P108_has_produced"];
+}

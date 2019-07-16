@@ -1,0 +1,15 @@
+digraph {
+   // label = "Time-Span";
+   // labelloc = "t";
+   node [color=gray, fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite];
+   edge [color=black, fontcolor=maroon, fontsize=10, fontname=Arial];
+   "(investigation)" [style=dashed, fillcolor="honeydew"];
+   "(timespan)" [fillcolor=lavender];
+   "crm:E52_Time-Span" [fillcolor=thistle];
+   "(timespan)" -> "crm:E52_Time-Span" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];   
+   "(investigation)" -> "(timespan)" [label="crm:P4_has_time-span\n(is time-span of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"];
+   "(timespan)" -> "\"2019-03-20\"^^xsd:date" [label="crm:P81a_end_of_the_begin", labelURL="http://www.cidoc-crm.org/cidoc-crm/P81a_end_of_the_begin"];
+   "(timespan)" -> "\"2019-03-21\"^^xsd:date" [label="crm:P81b_begin_of_the_end", labelURL="http://www.cidoc-crm.org/cidoc-crm/P81b_begin_of_the_end"];
+   "\"2019-03-20\"^^xsd:date" [shape=box, fontcolor=black];
+   "\"2019-03-21\"^^xsd:date" [shape=box, fontcolor=black];
+}

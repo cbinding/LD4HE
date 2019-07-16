@@ -1,0 +1,18 @@
+digraph {
+   // label = "Person";
+   // labelloc = "t";
+   node [color=gray, fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite];
+   edge [color=black, fontcolor=maroon, fontsize=10, fontname=Arial];
+   "(organization)" [style=dashed];
+   "(project activities)" [style=dashed];
+   "crm:E21_Person" [fillcolor=thistle, URL="http://www.cidoc-crm.org/cidoc-crm/E21_Person"]; 
+   "(project activities)" -> "(person)" [label="crm:P14_carried_out_by\n(performed)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"];
+   "(organization)" -> "(person)" [label="crm:P107_has_current_or_former_member\n(is current or former member of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P107_has_current_or_former_member"];
+   "(person)" [fillcolor="lavender", label="(person)"];
+   "(person)" -> "crm:E21_Person" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "(person)" -> "(person name)" [label="crm:P1_is_identified_by\n(identifies)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by"];
+   "(person name)" -> "crm:E41_Appellation" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "crm:E41_Appellation" [fillcolor=thistle, URL="http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"];  
+   "(person name)" -> "\"Fred Bloggs\"@en" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];
+   "\"Fred Bloggs\"@en" [shape=box, fontcolor=black];
+}

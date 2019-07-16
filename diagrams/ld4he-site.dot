@@ -1,0 +1,24 @@
+digraph {
+   // label = "Site";
+   // labelloc = "t";
+   node [color=gray, fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite];
+   edge [color=black, fontcolor=maroon, fontsize=10, fontname=Arial];
+   "(investigation)" [style=dashed];  
+   "(site)" [fillcolor="lavender"]; 
+   "crm:E53_Place" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E53_Place"];
+   "crm:E41_Appellation" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"];
+   "crm:E55_Type" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E55_Type"];   
+   "(investigation)" -> "(site)" [label="crm:P7_took_place_at\n(witnessed)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"];
+   "(site)" -> "aat:300000809" [label="crm:P2_has_type\n(is type of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"];
+   "(site)" -> "crm:E53_Place" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "aat:300000809" [URL="http://vocab.getty.edu/aat/300000809"];
+   "aat:300000809" -> "crm:E55_Type" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "aat:300000809" -> "\"sites (locations)\"@en" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];
+   "\"sites (locations)\"@en" [shape=box, fontcolor=black]; 
+   "(site)" -> "(site name)" [label="crm:P1_is_identified_by\n(identifies)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by"];
+   "(site name)" -> "crm:E41_Appellation" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "(site name)" -> "\"Boundary Wall of Former\nCinema Site, Sandgate\"@en" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];
+   "\"Boundary Wall of Former\nCinema Site, Sandgate\"@en" [shape=box, fontcolor=black];
+   "(site)" -> "(postcode/district/\nparish/county/country)" [label="crm:P89_falls_within\n(contains)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P89_falls_within"];   
+   "(postcode/district/\nparish/county/country)" -> "crm:E53_Place" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];   
+}

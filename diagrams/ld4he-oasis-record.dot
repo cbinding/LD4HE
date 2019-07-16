@@ -1,0 +1,24 @@
+digraph {
+   // label = "OASIS Record";
+   // labelloc = "t";
+   node [fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite];
+   edge [color=black, fontcolor=maroon, fontsize=10, fontname=Arial ];
+   "aat:300026685" [target="aat", URL="http://vocab.getty.edu/aat/300026685"]; 
+   "crm:E42_Identifier" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"];
+   "crm:E73_Information_Object" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"];
+   "crm:E55_Type" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E55_Type"];
+   "\"records (documents)\"@en" [shape=box, fontcolor=black]; 
+   "\"wardella2-327338\"" [shape=box, fontcolor=black];   
+   "(OASIS dataset)" [style=dashed];
+   "(OASIS record)" [fillcolor=lavender];
+   "(OASIS record)" -> "crm:E73_Information_Object" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "(identifier)" -> "crm:E42_Identifier" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "aat:300026685" -> "crm:E55_Type" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];  
+   "aat:300026685" -> "\"records (documents)\"@en" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];
+   "(OASIS record)" -> "aat:300026685" [label="crm:P2_has_type\n(is type of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"];
+   "(OASIS dataset)" -> "(OASIS record)" [label="crm:P148_has_component\n(is component of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P148_has_component"];
+   "(OASIS record)" -> "(identifier)" [label="crm:P1_is_identified_by\n(identifies)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by"];
+   "(identifier)" -> "\"wardella2-327338\"" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];
+   "(OASIS record)" -> "(investigation)" [label="crm:P67_refers_to\n(is referred to by)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to"];
+   "(investigation)" [style=dashed];
+ }

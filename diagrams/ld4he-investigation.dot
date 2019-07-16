@@ -1,0 +1,26 @@
+digraph {
+   // label = "Investigation";
+   // labelloc = "t";
+   node [color=gray, fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite];
+   edge [color=black, fontcolor=maroon, fontsize=10, fontname=Arial];
+   "crm:E7_Activity" [fillcolor=thistle, URL="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"];   
+   "crm:E55_Type" [fillcolor=thistle, URL="http://www.cidoc-crm.org/cidoc-crm/E55_Type"];
+   "(OASIS record)" [style=dashed];
+   "(investigation)" [fillcolor=lavender];
+   "(OASIS record)" -> "(investigation)" [label="crm:P67_refers_to\n(is referred to by)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to"];
+   "(investigation)" -> "crm:E7_Activity" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "(investigation)" -> "(event type)" [label="crm:P2_has_type\n(is type of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"];
+   "(investigation)" -> "(reason for investigation)" [label="crm:P17_was_motivated_by\n(motivated)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P17_was_motivated_by"];
+   "(reason for investigation)" -> "crm:E55_Type" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "(reason for investigation)" -> "\"planning requirement\"@en" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];
+   "\"planning requirement\"@en" [shape=box, fontcolor=black];
+   "(event type)" -> "crm:E55_Type" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "(event type)" -> "\"excavation (process)\"@en" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];
+   "\"excavation (process)\"@en" [shape=box, fontcolor=black];
+   "(investigation)" -> "(organization)" [label="crm:P14_carried_out_by\n(performed)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"];
+   "(organization)" [style=dashed];
+   "(investigation)" -> "(time span)" [label="crm:P4_has_time-span\n(is time-span of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"];
+   "(investigation)" -> "(site)" [label="crm:P7_took_place_at\n(witnessed)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]; 
+   "(site)" [style=dashed]; 
+   "(time span)" [style=dashed]; 
+}
