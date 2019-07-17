@@ -1,0 +1,20 @@
+site_name: LD4HE
+repo_url: https://github.com/cbinding/LD4HE/
+site_author: Ceri Binding, University of South Wales
+site_description: LD4HE - Linked Data for the Historic Environment
+nav:
+    - Home: index.md
+    - Data Model: 
+        - Overall: ld4he-model.md
+        - Artefact: ld4he-artefact.md
+        - Dataset: ld4he-dataset.md
+        - Investigation: ld4he-investigation.md
+        - Monument: ld4he-monument.md
+        - Organization: ld4he-organization.md
+        - Person: ld4he-person.md
+        - Record: ld4he-record.md
+        - Report: ld4he-report.md
+        - Site: ld4he-site.md
+        - Timespan: ld4he-timespan.md
+    - Data Fields: ld4he-fields.md
+    

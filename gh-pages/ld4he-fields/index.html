@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Ceri Binding, University of South Wales">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Data Fields - LD4HE</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">LD4HE</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Model <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../ld4he-model/">Overall</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-artefact/">Artefact</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-dataset/">Dataset</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-investigation/">Investigation</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-monument/">Monument</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-organization/">Organization</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-person/">Person</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-record/">Record</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-report/">Report</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-site/">Site</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-timespan/">Timespan</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="active">
+                                <a href="./">Data Fields</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../ld4he-timespan/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="disabled">
+                                <a rel="prev" >
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/cbinding/LD4HE/edit/master/docs/ld4he-fields.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#oasis-mandatory-fields">OASIS mandatory fields</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="oasis-mandatory-fields">OASIS mandatory fields</h1>
+<hr />
+<p>The source data for the LD4HE project comes from a specific subset of fields in the overall OASIS dataset. These are mandatory fields in the OASIS data input. </p>
+<table>
+<thead>
+<tr>
+<th>Field ID</th>
+<th>Field Name</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>oasis_id</td>
+<td>Unique identifier related to the OASIS <a href="../ld4he-record/">record</a>)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>event_type</td>
+<td>The type of <a href="../ld4he-investigation/">investigation</a>. URIs from <a href="http://purl.org/heritagedata/schemes/agl_et">FISH Event Types Thesaurus</a>. There may be multiple event types per record</td>
+</tr>
+<tr>
+<td>3</td>
+<td>reason for investigation</td>
+<td>The reason for an <a href="../ld4he-investigation/">investigation</a>. URIs from <a href="http://purl.org/heritagedata/schemes/ee833bdc-4cf1-4fbf-9282-29e75655855d">OASIS Reason for Investigation</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Country</td>
+<td>Location of a <a href="../ld4he-site/">site</a>. URIs from <a href="http://data.ordnancesurvey.co.uk/datasets/boundary-line">OS Open Names</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Site name</td>
+<td>Free text name for a local <a href="../ld4he-site/">site</a></td>
+</tr>
+<tr>
+<td>9a</td>
+<td>Grid reference (geom_ngr)</td>
+<td>Location of a <a href="../ld4he-site/">site</a>. This will store either a point, line or polygon in a single geometry field (using PostGIS), using the OSGB36 crs. There can be multiple values per record.</td>
+</tr>
+<tr>
+<td>9b</td>
+<td>Grid reference (geom_ll)</td>
+<td>Location of a <a href="../ld4he-site/">site</a>. This will store either a point, line or polygon in a single geometry field (using PostGIS), using the WGS84 crs. There can be multiple rows per record.</td>
+</tr>
+<tr>
+<td>15</td>
+<td>County</td>
+<td>Location of a <a href="../ld4he-site/">site</a>. URIs from <a href="http://data.ordnancesurvey.co.uk/datasets/boundary-line">OS Open Names</a></td>
+</tr>
+<tr>
+<td>16</td>
+<td>District</td>
+<td>Location of a <a href="../ld4he-site/">site</a>. URIs from <a href="http://data.ordnancesurvey.co.uk/datasets/boundary-line">OS Open Names</a></td>
+</tr>
+<tr>
+<td>17</td>
+<td>Parish</td>
+<td>Location of a <a href="../ld4he-site/">site</a>. URIs from <a href="http://data.ordnancesurvey.co.uk/datasets/boundary-line">OS Open Names</a></td>
+</tr>
+<tr>
+<td>18</td>
+<td>HER</td>
+<td>Auto generated</td>
+</tr>
+<tr>
+<td>19</td>
+<td>National body</td>
+<td>Auto generated</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Project title</td>
+<td>Value generated in form</td>
+</tr>
+<tr>
+<td>23a</td>
+<td>Start date</td>
+<td>Start of the overall <a href="../ld4he-timespan/">timespan</a> for an <a href="../ld4he-investigation/">investigation</a>. Value generated in form</td>
+</tr>
+<tr>
+<td>23b</td>
+<td>End date</td>
+<td>End of the overall <a href="../ld4he-timespan/">timespan</a> for an <a href="../ld4he-investigation/">investigation</a>. Value generated in form</td>
+</tr>
+<tr>
+<td>24a</td>
+<td>Methodology</td>
+<td>Techniques used in an <a href="../ld4he-investigation/">investigation</a>, URIs from <a href="http://purl.org/heritagedata/schemes/agl_et">FISH Event Types</a>. There can be multiple values per record.</td>
+</tr>
+<tr>
+<td>24b</td>
+<td>Description</td>
+<td>Free text</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Planning application ID</td>
+<td>Free text, and only if prompt (id3) = commercial</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Project codes</td>
+<td>Type of code - OASIS Associated ID</td>
+</tr>
+<tr>
+<td>35</td>
+<td>Publication type</td>
+<td>URIs from <a href="http://purl.org/heritagedata/schemes/c31949b0-b6cf-4223-a2c0-c9a2048633ff">OASIS Paper and Digital Archive Component</a> vocabulary</td>
+</tr>
+<tr>
+<td>91</td>
+<td>Type of report</td>
+<td><a href="../ld4he-report/">Report</a> type. URIs from <a href="http://purl.org/heritagedata/schemes/c31949b0-b6cf-4223-a2c0-c9a2048633ff">OASIS Paper and Digital Archive Component</a> vocabulary</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Title of report</td>
+<td><a href="../ld4he-report/">Report</a> title. Auto generated through form</td>
+</tr>
+<tr>
+<td>39</td>
+<td>Author / editor</td>
+<td>Author / Editor of <a href="../ld4he-report/">report</a>. Potential at a future date to assign ISSN to authors via the ADS Library, but the methodology for sustaining this is still not firmly established.</td>
+</tr>
+<tr>
+<td>44</td>
+<td>Date</td>
+<td>year the <a href="../ld4he-report/">report</a> was published/issued</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Publisher</td>
+<td><a href="../ld4he-organization/">Organization</a> publishing the <a href="../ld4he-report/">report</a></td>
+</tr>
+<tr>
+<td>46</td>
+<td>Place of issue</td>
+<td>Place of publication for the <a href="../ld4he-report/">report</a>. Could use OS, but of limited use for this data</td>
+</tr>
+<tr>
+<td>58</td>
+<td>Name of organization</td>
+<td>Auto generated</td>
+</tr>
+<tr>
+<td>50</td>
+<td>URL</td>
+<td>URL of the <a href="../ld4he-report/">report</a></td>
+</tr>
+<tr>
+<td>50a</td>
+<td>DOI</td>
+<td>DOI of the <a href="../ld4he-report/">report</a></td>
+</tr>
+<tr>
+<td>62</td>
+<td>Monument type</td>
+<td>URIs from monument type vocabulary corresponding to <a href="../ld4he-site/">site</a> location: <a href="http://purl.org/heritagedata/schemes/eh_tmt2">England</a> / <a href="http://purl.org/heritagedata/schemes/1">Scotland</a> / <a href="http://purl.org/heritagedata/schemes/10">Wales</a></td>
+</tr>
+<tr>
+<td>63</td>
+<td>Monument period</td>
+<td>URIs from period vocabulary corresponding to <a href="../ld4he-site/">site</a>  location: <a href="http://purl.org/heritagedata/schemes/eh_period">England</a> / <a href="http://purl.org/heritagedata/schemes/scapa">Scotland</a> / <a href="http://purl.org/heritagedata/schemes/11">Wales</a></td>
+</tr>
+<tr>
+<td>64</td>
+<td>Artefact type</td>
+<td>URIs from object types vocabulary according to <a href="../ld4he-site/">site</a> location: <a href="http://purl.org/heritagedata/schemes/mda_obj">England &amp; Wales</a> / <a href="http://purl.org/heritagedata/schemes/2">Scotland</a></td>
+</tr>
+<tr>
+<td>65</td>
+<td>Artefact period</td>
+<td>URIs from period vocabulary corresponding to <a href="../ld4he-site/">site</a> location: <a href="http://purl.org/heritagedata/schemes/eh_period">England</a> / <a href="http://purl.org/heritagedata/schemes/scapa">Scotland</a> / <a href="http://purl.org/heritagedata/schemes/11">Wales</a></td>
+</tr>
+<tr>
+<td>70</td>
+<td>Research outcomes</td>
+<td>Use selection from Research Frameworks list (non-LOD at time of writing)</td>
+</tr>
+<tr>
+<td>OASIS+</td>
+<td>Solid geology</td>
+<td>If Geophysical module completed. Will use data from <a href="http://data.bgs.ac.uk/downloads.html">http://data.bgs.ac.uk/downloads.html</a></td>
+</tr>
+<tr>
+<td>OASIS+</td>
+<td>Drift geology</td>
+<td>If Geophysical module completed. Will use data from <a href="http://data.bgs.ac.uk/downloads.html">http://data.bgs.ac.uk/downloads.html</a></td>
+</tr>
+</tbody>
+</table></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
