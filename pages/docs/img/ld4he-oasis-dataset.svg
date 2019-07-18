@@ -12,7 +12,7 @@
 <!-- aat:3000028543 -->
 <g id="node1" class="node"><title>aat:3000028543</title>
 <g id="a_node1"><a xlink:href="http://vocab.getty.edu/aat/3000028543" xlink:title="aat:3000028543" target="aat">
-<ellipse fill="ghostwhite" stroke="black" cx="102.093" cy="-101" rx="50.7503" ry="18"/>
+<ellipse fill="ghostwhite" stroke="gray" cx="102.093" cy="-101" rx="50.7503" ry="18"/>
 <text text-anchor="middle" x="102.093" y="-98.5" font-family="Arial" font-size="10.00" fill="blue">aat:3000028543</text>
 </a>
 </g>
@@ -20,7 +20,7 @@
 <!-- crm:E55_Type -->
 <g id="node3" class="node"><title>crm:E55_Type</title>
 <g id="a_node3"><a xlink:href="http://www.cidoc-crm.org/cidoc-crm/E55_Type" xlink:title="crm:E55_Type" target="crm">
-<ellipse fill="thistle" stroke="black" cx="47.093" cy="-18" rx="47.1863" ry="18"/>
+<ellipse fill="thistle" stroke="gray" cx="47.093" cy="-18" rx="47.1863" ry="18"/>
 <text text-anchor="middle" x="47.093" y="-15.5" font-family="Arial" font-size="10.00" fill="blue">crm:E55_Type</text>
 </a>
 </g>
@@ -36,7 +36,7 @@
 </g>
 <!-- &quot;databases&quot;@en -->
 <g id="node4" class="node"><title>&quot;databases&quot;@en</title>
-<polygon fill="ghostwhite" stroke="black" points="201.593,-36 112.593,-36 112.593,-0 201.593,-0 201.593,-36"/>
+<polygon fill="ghostwhite" stroke="gray" points="201.593,-36 112.593,-36 112.593,-0 201.593,-0 201.593,-36"/>
 <text text-anchor="middle" x="157.093" y="-15.5" font-family="Arial" font-size="10.00">&quot;databases&quot;@en</text>
 </g>
 <!-- aat:3000028543&#45;&gt;&quot;databases&quot;@en -->
@@ -51,14 +51,14 @@
 <!-- crm:E73_Information_Object -->
 <g id="node2" class="node"><title>crm:E73_Information_Object</title>
 <g id="a_node2"><a xlink:href="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object" xlink:title="crm:E73_Information_Object" target="crm">
-<ellipse fill="thistle" stroke="black" cx="253.093" cy="-101" rx="82.3257" ry="18"/>
+<ellipse fill="thistle" stroke="gray" cx="253.093" cy="-101" rx="82.3257" ry="18"/>
 <text text-anchor="middle" x="253.093" y="-98.5" font-family="Arial" font-size="10.00" fill="blue">crm:E73_Information_Object</text>
 </a>
 </g>
 </g>
 <!-- (OASIS dataset) -->
 <g id="node5" class="node"><title>(OASIS dataset)</title>
-<ellipse fill="lavender" stroke="black" cx="253.093" cy="-195" rx="51.6054" ry="18"/>
+<ellipse fill="lavender" stroke="gray" cx="253.093" cy="-195" rx="51.6054" ry="18"/>
 <text text-anchor="middle" x="253.093" y="-192.5" font-family="Arial" font-size="10.00" fill="blue">(OASIS dataset)</text>
 </g>
 <!-- (OASIS dataset)&#45;&gt;aat:3000028543 -->
@@ -82,7 +82,7 @@
 </g>
 <!-- (OASIS record) -->
 <g id="node6" class="node"><title>(OASIS record)</title>
-<ellipse fill="none" stroke="black" stroke-dasharray="5,2" cx="402.093" cy="-101" rx="48.7185" ry="18"/>
+<ellipse fill="none" stroke="gray" stroke-dasharray="5,2" cx="402.093" cy="-101" rx="48.7185" ry="18"/>
 <text text-anchor="middle" x="402.093" y="-98.5" font-family="Arial" font-size="10.00" fill="blue">(OASIS record)</text>
 </g>
 <!-- (OASIS dataset)&#45;&gt;(OASIS record) -->

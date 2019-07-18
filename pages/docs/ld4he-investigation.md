@@ -5,8 +5,9 @@ Investigative activity taking place on a [site](ld4he-site.md) is carried out by
  
 ![investigation](img/ld4he-investigation.svg)
 
+**Fig. 1:** Investigation with associated entities and properties
+
 ```turtle
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix aat: <http://vocab.getty.edu/aat/> .
@@ -33,3 +34,4 @@ aat:300053702 a crm:E55_Type ;
 <http://tempuri/site/1> a crm:E53_Place ;
    crm:P7i_witnessed <http://tempuri/investigation/1> .
 ```
+**Fig. 2:** [Turtle RDF](https://www.w3.org/TR/turtle/) syntax example

@@ -1,11 +1,10 @@
 digraph {
    // label = "OASIS Report";
    // labelloc = "t";
-   node [fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite, color=gray];
+   node [color=gray, fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite, color=gray];
    edge [color=black, fontcolor=maroon, fontsize=10, fontname=Arial ];   
    "crm:E31_Document" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E31_Document"];
-   "crm:E35_Title" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E35_Title"];
-   "crm:E42_Identifier" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"];
+   "crm:E35_Title" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E35_Title"];   
    "crm:E55_Type" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E55_Type"]
    "crm:E12_Production" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E12_Production"];
    {rank = same; "(report production)"; "(investigation)";}
@@ -15,11 +14,7 @@ digraph {
    "(OASIS report)" -> "(investigation)" [label="crm:P67_refers_to", labelURL="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to"];    
    "(OASIS report)" [fillcolor=lavender];
    "(OASIS report)" -> "crm:E31_Document" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
-   "(investigation)" [style=dashed];
-   "(OASIS report)" -> "(DOI)" [label="crm:P1_is_identified_by\n(identifies)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by"];
-   "(DOI)" -> "crm:E42_Identifier" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
-   "(DOI)" -> "\"10/1004\"" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];
-   "\"10/1004\"" [shape=box, fontcolor=black];  
+   "(investigation)" [style=dashed];   
    "(OASIS report)" -> "(report type)" [label="crm:P2_has_type\n(is type of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"];
    "(report type)" -> "crm:E55_Type" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
    "(report type)" -> "\"Geophysical survey report\"@en" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];  

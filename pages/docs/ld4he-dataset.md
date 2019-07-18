@@ -4,8 +4,9 @@ The entire OASIS dataset of metadata. The dataset is composed of [records](ld4he
  
 ![dataset](img/ld4he-oasis-dataset.svg)
 
+**Fig. 1:** Dataset with associated entities and properties
+
 ```turtle
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix aat: <http://vocab.getty.edu/aat/> .
@@ -18,3 +19,4 @@ The entire OASIS dataset of metadata. The dataset is composed of [records](ld4he
 aat:300028543 a crm:E55_Type ;
    rdfs:label "databases"@en .
 ```
+**Fig. 2:** [Turtle RDF](https://www.w3.org/TR/turtle/) syntax example

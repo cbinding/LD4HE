@@ -134,67 +134,41 @@
 
 <h1 id="site">Site</h1>
 <hr />
-<p>A site represents the local location for an <a href="../ld4he-investigation/">investigation</a>. <a href="../ld4he-artefact/">Artefacts</a> and <a href="../ld4he-monument/">Monuments</a> are found on sites.</p>
-<p><img alt="site" src="../img/ld4he-site.svg" />
-<strong>Fig. 1:</strong> Site entity in context</p>
+<p>A site represents a location that is subject to an <a href="../ld4he-investigation/">investigation</a>. Sites can be the (former) location of <a href="../ld4he-artefact/">Artefacts</a> and the (current) location of <a href="../ld4he-monument/">Monuments</a>.</p>
+<p><img alt="site" src="../img/ld4he-site.svg" /></p>
+<p><strong>Fig. 1:</strong> Site with associated entities and properties</p>
+<p>Places containing sites are represented using a flat (as opposed to hierarchical) structure. This aligns with the way that OASIS and OS Open Names records are structured</p>
 <pre><code class="turtle">@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix crm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt; .
-@prefix aat: &lt;http://vocab.getty.edu/aat/&gt; .
+@prefix osont: &lt;http://data.ordnancesurvey.co.uk/ontology/admingeo/&gt; .
+@prefix oslod: &lt;http://data.ordnancesurvey.co.uk/id/&gt; .
 
 &lt;http://tempuri/site/1&gt; a crm:E53_Place ;
    crm:P7i_witnessed &lt;http://tempuri/investigation/1&gt; ;
-   crm:P2_has_type aat:300000809 ;
    crm:P1_is_identified_by &lt;http://tempuri/sitename/1&gt; ;
-   crm:P89_falls_within &lt;http://tempuri/postcode/1&gt; , 
-   &lt;http://tempuri/parish/1&gt; , &lt;http://tempuri/county/1&gt; , 
-   &lt;http://tempuri/region/1&gt; , &lt;http://tempuri/country/1&gt; ,
-   &lt;http://tempuri/nation/1&gt; .
+   crm:P55i_currently_holds &lt;http://tempuri/monument/1&gt; ;
+   crm:P53i_is_former_or_current_location_of &lt;http://tempuri/artefact/1&gt; ;
+   crm:P89_falls_within oslod:7000000000043542 ,  
+      oslod:7000000000043674 ,  
+      oslod:7000000000041422 .   
+&lt;http://tempuri/monument/1&gt; crm:P55_has_current_location &lt;http://tempuri/site/1&gt; .  
+&lt;http://tempuri/artefact/1&gt; crm:P53_has_former_or_current_location &lt;http://tempuri/site/1&gt; . 
 &lt;http://tempuri/sitename/1&gt; a crm:E41_Appellation ;
    crm:P1i_identifies &lt;http://tempuri/site/1&gt; ;
-   rdfs:label &quot;Boundary Wall of Former Cinema Site, Sandgate&quot;@en .
-&lt;http://tempuri/postcode/1&gt; a crm:E53_Place ;
-   crm:P89i_contains &lt;http://tempuri/site/1&gt; ;
-   crm:P2_has_type aat:300419274 ;
-   rdfs:label &quot;TA24&quot;@en .
-&lt;http://tempuri/parish/1&gt; a crm:E53_Place ;
-   crm:P89i_contains &lt;http://tempuri/site/1&gt; ;
-   crm:P2_has_type aat:300387092 ;
-   rdfs:label &quot;Berwick Upon Tweed&quot;@en .
-&lt;http://tempuri/county/1&gt; a crm:E53_Place ;
-   crm:P89i_contains &lt;http://tempuri/site/1&gt; ;
-   crm:P2_has_type aat:300000771 ;
-   rdfs:label &quot;Northumberland&quot;@en .
-&lt;http://tempuri/region/1&gt; a crm:E53_Place ;
-   crm:P89i_contains &lt;http://tempuri/site/1&gt; ;
-   crm:P2_has_type aat:300387079 ;
-   rdfs:label &quot;North East&quot;@en .
-&lt;http://tempuri/country/1&gt; a crm:E53_Place ;
-   crm:P89i_contains &lt;http://tempuri/site/1&gt; ;
-   crm:P2_has_type aat:300387506 ;
-   rdfs:label &quot;England&quot;@en .
-&lt;http://tempuri/nation/1&gt; a crm:E53_Place ;
-   crm:P89i_contains &lt;http://tempuri/site/1&gt; ;
-   crm:P2_has_type aat:300128207 ;
-   rdfs:label &quot;United Kingdom&quot;@en .
-aat:300000809 a crm:E55_Type ;
-   rdfs:label &quot;sites (locations)&quot;@en .
-aat:300419274 a crm:E55_Type ;
-   rdfs:label &quot;postcodes&quot;@en .
-aat:300387092 a crm:E55_Type ;
-   rdfs:label &quot;parishes (civil divisions)&quot;@en .
-aat:300000771 a crm:E55_Type ;
-   rdfs:label &quot;counties&quot;@en .
-aat:300387079 a crm:E55_Type ;
-   rdfs:label &quot;local regions&quot;@en .
-aat:300387506 a crm:E55_Type ;
-   rdfs:label &quot;countries&quot;@en .   
-aat:300328207 a crm:E55_Type ;
-   rdfs:label &quot;nations&quot;@en . 
+   rdfs:label &quot;Boundary Wall of Former Cinema Site, Sandgate&quot;@en .   
+oslod:7000000000043542 a osont:Parish ;
+   rdfs:label &quot;Berwick Upon Tweed&quot;@en ;  
+   crm:P89i_contains &lt;http://tempuri/site/1&gt; .  
+oslod:7000000000043674 a osont:District ;
+   rdfs:label &quot;Northumberland&quot;@en ;
+   crm:P89i_contains &lt;http://tempuri/site/1&gt; .   
+oslod:7000000000041422 a osont:EuropeanRegion ;
+   rdfs:label &quot;North East&quot;@en ;
+   crm:P89i_contains &lt;http://tempuri/site/1&gt; .
 </code></pre>
 
-<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> syntax example</p>
-<p>Note places containing sites are represented using a flat (as opposed to hierarchical) structure. This aligns with the way that OASIS and OS Open Names records are structured</p></div>
+<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> syntax example</p></div>
         </div>
 
         <footer class="col-md-12">

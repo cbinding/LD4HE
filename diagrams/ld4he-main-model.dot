@@ -1,0 +1,28 @@
+digraph {
+   // label = "LD4HE main model";
+   // labelloc = "t";
+   node [color=gray, fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite];
+   edge [color=black, fontcolor=maroon, fontsize=10, fontname=Arial];
+   "crm:E7_Activity" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"];
+   "crm:E12_Production" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E12_Production"];
+   "crm:E31_Document" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E31_Document"];
+   "crm:E52_Time-Span" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"];
+   "crm:E53_Place" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E53_Place"];
+   "crm:E73_Information_Object" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"];
+   "crm:E74_Group" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E74_Group"];   
+   "(OASIS dataset)" -> "crm:E73_Information_Object" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];   
+   "(OASIS record)" -> "crm:E73_Information_Object" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];   
+   "(investigation)" -> "crm:E7_Activity" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];   
+   "(organization)" -> "crm:E74_Group" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];   
+   "(site)" -> "crm:E53_Place" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];   
+   "(timespan)" -> "crm:E52_Time-Span" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];   
+   "(report production)" -> "crm:E12_Production" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];   
+   "(OASIS report)" -> "crm:E31_Document" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];    
+   "(OASIS dataset)" -> "(OASIS record)" [label="crm:P148_has_component\n(is component of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P148_has_component"];
+   "(OASIS record)" -> "(investigation)" [label="crm:P67_refers_to\n(is referred_to_by)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to"];
+   "(investigation)" -> "(organization)" [label="crm:P14_carried_out_by\n(performed)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"];
+   "(investigation)" -> "(site)" [label="crm:P7_took_place_at\n(witnessed)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"];
+   "(investigation)" -> "(timespan)" [label="crm:P4_has_time-span\n(is time-span of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"];
+   "(investigation)" -> "(report production)" [label="crm:P9_consists_of\n(forms part of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P9_consists_of"];  
+   "(report production)" -> "(OASIS report)" [label="crm:P108_has_produced\n(was produced by)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P108_has_produced"];
+}

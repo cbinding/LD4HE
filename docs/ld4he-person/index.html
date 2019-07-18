@@ -134,12 +134,11 @@
 
 <h1 id="person">Person</h1>
 <hr />
-<p>A person is a member of an <a href="../ld4he-organization/">organization</a> involved in undertaking project activities such as <a href="../ld4he-investigation/">investigations</a>. </p>
+<p>A person is a member of an <a href="../ld4he-organization/">organization</a> involved in undertaking project activities such as <a href="../ld4he-investigation/">investigations</a> or <a href="../ld4he-report/">report</a> authorship. </p>
 <p><img alt="person" src="../img/ld4he-person.svg" /></p>
-<pre><code class="turtle">@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
-@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+<p><strong>Fig. 1:</strong> Person with associated entities and properties</p>
+<pre><code class="turtle">@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix crm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt; .
-@prefix aat: &lt;http://vocab.getty.edu/aat/&gt; .
 
 &lt;http://tempuri/organization/1&gt; a crm:E74_Group ;
    crm:P107_has_current_or_former_member &lt;http://tempuri/person/1&gt; .
@@ -148,7 +147,9 @@
    crm:P1_is_identified_by &lt;http://tempuri/personname/1&gt; .
 &lt;http://tempuri/personnname/1&gt; a crm:E41_Appellation ;
    rdfs:label &quot;Fred Bloggs&quot;@en .
-</code></pre></div>
+</code></pre>
+
+<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> syntax example</p></div>
         </div>
 
         <footer class="col-md-12">

@@ -134,18 +134,17 @@
 
 <h1 id="report">Report</h1>
 <hr />
-<p>A report is produced as part of an <a href="../ld4he-investigation/">investigation</a></p>
+<p>A report may be produced as part of an <a href="../ld4he-investigation/">investigation</a>. Report types are concepts from the <a href="http://purl.org/heritagedata/schemes/c31949b0-b6cf-4223-a2c0-c9a2048633ff">OASIS Digital Paper and Archive Component</a> thesaurus.</p>
 <p><img alt="report" src="../img/ld4he-oasis-report.svg" /></p>
-<pre><code class="turtle">@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
-@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+<p><strong>Fig. 1:</strong> Report with associated entities and properties</p>
+<pre><code class="turtle">@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix crm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt; .
-@prefix aat: &lt;http://vocab.getty.edu/aat/&gt; .
+@prefix rtype: &lt;http://purl.org/heritagedata/schemes/c31949b0-b6cf-4223-a2c0-c9a2048633ff/concepts/&gt; .
 
 &lt;http://tempuri/report/1&gt; a crm:E31_Document ;
    crm:P108i_was_produced_by &lt;http://tempuri/reportproduction/1&gt; ;
    crm:P67_refers_to &lt;http://tempuri/investigation/1&gt; ;
-   crm:P1_is_identified_by &lt;http://tempuri/doi/1&gt; ;
-   crm:P2_has_type &lt;http://tempuri/reporttype/1&gt; ;
+   crm:P2_has_type rtype:a8554064-858c-4b75-b570-e37643bbfaaa ;
    crm:P102_has_title &lt;http://tempuri/reporttitle/1&gt; .
 &lt;http://tempuri/reportproduction/1&gt; a crm:12_Production ;
    crm:P9i_forms_part_of &lt;http://tempuri/investigation/1&gt; ;
@@ -153,16 +152,15 @@
 &lt;http://tempuri/investigation/1&gt; a crm:E7_Activity ;
    crm:P9_consists_of &lt;http://tempuri/reportproduction/1&gt; ;
    crm:P67i_is_referred_to_by &lt;http://tempuri/report/1&gt; .
-&lt;http://tempuri/doi/1&gt; a crm:E42_Identifier ;
-   crm:P1i_identifies &lt;http://tempuri/report/1&gt; ;
-   rdfs:label &quot;10/1004&quot; .
-&lt;http://tempuri/reporttype/1&gt; a crm:E55_Type ;
+rtype:a8554064-858c-4b75-b570-e37643bbfaaa a crm:E55_Type ;
    crm:P2i_is_type_of &lt;http://tempuri/report/1&gt; ;
    rdfs:label &quot;Geophysical survey report&quot;@en .
 &lt;http://tempuri/reporttitle/1&gt; a crm:E35_Title ;
    crm:P102i_is_title_of &lt;http://tempuri/report/1&gt; ;
    rdfs:label &quot;Investigation of 1 temp street&quot;@en .
-</code></pre></div>
+</code></pre>
+
+<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> syntax example</p></div>
         </div>
 
         <footer class="col-md-12">

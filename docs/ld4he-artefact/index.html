@@ -134,19 +134,22 @@
 
 <h1 id="artefact">Artefact</h1>
 <hr />
-<p>Artefacts are objects found on a <a href="../ld4he-site/">site</a> during an <a href="../ld4he-investigation/">investigation</a>
-Artefact types are concepts from the <a href="http://purl.org/heritagedata/schemes/mda_obj">FISH Archaeological Objects Thesaurus</a></p>
+<p>Artefacts are objects of some interest found on a <a href="../ld4he-site/">site</a> during an <a href="../ld4he-investigation/">investigation</a>. Artefact types are concepts from the object type thesaurus corresponding to the location of the <a href="../ld4he-site/">site</a>. For England &amp; Wales this will be the <a href="http://purl.org/heritagedata/schemes/mda_obj">FISH Archaeological Objects Thesaurus</a>, for Scotland it will be the <a href="http://purl.org/heritagedata/schemes/2">HES Archaeological Objects Thesaurus</a>.</p>
 <p><img alt="artefact" src="../img/ld4he-artefact.svg" /></p>
-<pre><code class="turtle">@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
-@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+<p><strong>Fig. 1:</strong> Artefact with associated entities and properties</p>
+<pre><code class="turtle">@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix crm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt; .
-@prefix aat: &lt;http://vocab.getty.edu/aat/&gt; .
+@prefix obj: &lt;http://purl.org/heritagedata/schemes/mda_obj/concepts/&gt; .
 
 &lt;http://tempuri/artefact/1&gt; a crm:E22_Man-Made_Object ;
-   crm:P2_has_type &lt;http://purl.org/heritagedata/schemes/mda_obj/concepts/100153&gt; ;
-&lt;http://purl.org/heritagedata/schemes/mda_obj/concepts/100153&gt; crm:P2i_is_type_of &lt;http://tempuri/artefact/1&gt; ;
-   rdfs:label &quot;axehead&quot;@en .
-</code></pre></div>
+   crm:P53_has_former_or_current_location &lt;http://tempuri/site/1&gt; ;
+   crm:P2_has_type obj:100153 . 
+obj:100153 a crm:E55_Type;
+   crm:P2i_is_type_of &lt;http://tempuri/artefact/1&gt; ;
+   rdfs:label &quot;Axehead&quot;@en .
+</code></pre>
+
+<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> syntax example</p></div>
         </div>
 
         <footer class="col-md-12">

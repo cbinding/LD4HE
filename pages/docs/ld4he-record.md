@@ -1,12 +1,13 @@
 # Record
 ***
 
-A single OASIS record, a component of the full OASIS [dataset](ld4he-dataset.md). OASIS records refer to [investigations](ld4he-investigation.md)
+A single OASIS record, a component of the full OASIS [dataset](ld4he-dataset.md). OASIS records refer to [investigations](ld4he-investigation.md). OASIS records are identified by both local identifiers and Digital Object Identifiers (DOIs). Note DOIs identify OASIS records not [reports](ld4he-report.md), as there may be multiple reports associated with a single OASIS record.
  
 ![record](img/ld4he-oasis-record.svg)
 
+**Fig. 1:** Record with associated entities and properties
+
 ```turtle
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix aat: <http://vocab.getty.edu/aat/> .
@@ -16,12 +17,13 @@ A single OASIS record, a component of the full OASIS [dataset](ld4he-dataset.md)
 <http://tempuri/record/1> a crm:E73_Information_Object ;
    crm:P148i_is_component_of <http://tempuri/dataset/1> ;
    crm:P2_has_type aat:300026685 ;
-   crm:P1_is_identified_by <http://tempuri/recordidentifier/1> ;
+   crm:P1_is_identified_by <http://tempuri/identifier/1> ;
    crm:P67_refers_to <http://tempuri/investigation/1> ,  
 aat:300026685 a crm:E55_Type ;
    crm:P2i_is_type_of <http://tempuri/record/1> ;
    rdfs:label "records (documents)"@en .
-<http://tempuri/recordidentifier/1> a crm:E42_Identifier ;
+<http://tempuri/identifier/1> a crm:E42_Identifier ;
    crm:P1i_identifies <http://tempuri/record/1> ;
    rdfs:label "wardella2-327338" .   
 ```
+**Fig. 2:** [Turtle RDF](https://www.w3.org/TR/turtle/) syntax example

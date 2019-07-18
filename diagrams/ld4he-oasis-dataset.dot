@@ -1,7 +1,7 @@
 digraph {
    // label = "OASIS Dataset";
    // labelloc = "t";
-   node [fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite];
+   node [color=gray, fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite];
    edge [color=black, fontcolor=maroon, fontsize=10, fontname=Arial ];
    "aat:3000028543" [target="aat", URL="http://vocab.getty.edu/aat/3000028543"]; 
    "crm:E73_Information_Object" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"];

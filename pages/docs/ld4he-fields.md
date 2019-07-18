@@ -5,9 +5,9 @@ The source data for the LD4HE project comes from a specific subset of fields in 
 
 | Field ID | Field Name               | Notes
 |----------|--------------------------|----------------------------------------|
-| 1        | oasis_id                 | Unique identifier related to the OASIS [record](ld4he-record.md))  |
+| 1        | oasis_id                 | Unique identifier of the OASIS [record](ld4he-record.md))  |
 | 2        | event_type               | The type of [investigation](ld4he-investigation.md). URIs from [FISH Event Types Thesaurus](http://purl.org/heritagedata/schemes/agl_et). There may be multiple event types per record |
-| 3        | reason for investigation | The reason for an [investigation](ld4he-investigation.md). URIs from [OASIS Reason for Investigation](http://purl.org/heritagedata/schemes/ee833bdc-4cf1-4fbf-9282-29e75655855d) |
+| 3        | reason for investigation | The reason for undertaking an [investigation](ld4he-investigation.md). URIs from [OASIS Reason for Investigation](http://purl.org/heritagedata/schemes/ee833bdc-4cf1-4fbf-9282-29e75655855d) |
 | 4        | Country	              | Location of a [site](ld4he-site.md). URIs from [OS Open Names](http://data.ordnancesurvey.co.uk/datasets/boundary-line) |
 | 5        | Site name                | Free text name for a local [site](ld4he-site.md) |
 | 9a       | Grid reference (geom_ngr)| Location of a [site](ld4he-site.md). This will store either a point, line or polygon in a single geometry field (using PostGIS), using the OSGB36 crs. There can be multiple values per record. |
@@ -15,8 +15,8 @@ The source data for the LD4HE project comes from a specific subset of fields in 
 | 15       | County                   | Location of a [site](ld4he-site.md). URIs from [OS Open Names](http://data.ordnancesurvey.co.uk/datasets/boundary-line) |
 | 16       | District                 | Location of a [site](ld4he-site.md). URIs from [OS Open Names](http://data.ordnancesurvey.co.uk/datasets/boundary-line) |
 | 17       | Parish                   | Location of a [site](ld4he-site.md). URIs from [OS Open Names](http://data.ordnancesurvey.co.uk/datasets/boundary-line) |
-| 18       | HER                      | Auto generated |
-| 19       | National body            | Auto generated |
+| 18       | HER                      | Auto generated. HER organization responsible for the area encompassing the location of the site  |
+| 19       | National body            | Auto generated. National body responsible for the area encompassing the location of the site |
 | 22       | Project title            | Value generated in form |
 | 23a      | Start date               | Start of the overall [timespan](ld4he-timespan.md) for an [investigation](ld4he-investigation.md). Value generated in form |
 | 23b      | End date                 | End of the overall [timespan](ld4he-timespan.md) for an [investigation](ld4he-investigation.md). Value generated in form |
@@ -33,7 +33,7 @@ The source data for the LD4HE project comes from a specific subset of fields in 
 | 46       | Place of issue           | Place of publication for the [report](ld4he-report.md). Could use OS, but of limited use for this data |
 | 58       | Name of organization     | Auto generated |
 | 50       | URL                      | URL of the [report](ld4he-report.md) |
-| 50a      | DOI                      | DOI of the [report](ld4he-report.md) |
+| 50a      | DOI                      | DOI of the [report](ld4he-report.md) - an identifier |
 | 62       | Monument type            | URIs from monument type vocabulary corresponding to [site](ld4he-site.md) location: [England](http://purl.org/heritagedata/schemes/eh_tmt2) / [Scotland](http://purl.org/heritagedata/schemes/1) / [Wales](http://purl.org/heritagedata/schemes/10) |
 | 63       | Monument period          | URIs from period vocabulary corresponding to [site](ld4he-site.md)  location: [England](http://purl.org/heritagedata/schemes/eh_period) / [Scotland](http://purl.org/heritagedata/schemes/scapa) / [Wales](http://purl.org/heritagedata/schemes/11) |
 | 64       | Artefact type            | URIs from object types vocabulary according to [site](ld4he-site.md) location: [England & Wales](http://purl.org/heritagedata/schemes/mda_obj) / [Scotland](http://purl.org/heritagedata/schemes/2 ) |

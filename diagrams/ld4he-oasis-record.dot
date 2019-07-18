@@ -1,7 +1,7 @@
 digraph {
    // label = "OASIS Record";
    // labelloc = "t";
-   node [fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite];
+   node [color=gray, fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite];
    edge [color=black, fontcolor=maroon, fontsize=10, fontname=Arial ];
    "aat:300026685" [target="aat", URL="http://vocab.getty.edu/aat/300026685"]; 
    "crm:E42_Identifier" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"];

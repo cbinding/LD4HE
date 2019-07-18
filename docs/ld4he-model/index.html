@@ -134,28 +134,36 @@
 
 <h1 id="data-model">Data Model</h1>
 <hr />
-<p>The <a href="../ld4he-dataset/">dataset</a> is composed of a <a href="../ld4he-record/">records</a> referring to <a href="../ld4he-investigation/">investigations</a>. Investigations are carried out by <a href="../ld4he-organization/">organizations</a> at <a href="../ld4he-site/">sites</a> during <a href="../ld4he-timespan/">time-spans</a>. Investigations encompass many activities, including <a href="../ld4he-report/">report</a> production.</p>
-<p><img alt="model" src="../img/ld4he-model.svg" /></p>
-<pre><code class="turtle">@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
-@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
-@prefix crm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt; .
-@prefix aat: &lt;http://vocab.getty.edu/aat/&gt; .
+<p>The <a href="../ld4he-dataset/">dataset</a> is composed of <a href="../ld4he-record/">records</a> referring to <a href="../ld4he-investigation/">investigations</a>. Investigations are carried out by <a href="../ld4he-organization/">organizations</a> at <a href="../ld4he-site/">sites</a> during <a href="../ld4he-timespan/">time-spans</a>. Investigations encompass many activities, including <a href="../ld4he-report/">report</a> production.</p>
+<p><img alt="model" src="../img/ld4he-main-model.svg" /></p>
+<p><strong>Fig. 1:</strong> Main entities and properties</p>
+<pre><code class="turtle">@prefix crm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt; .
 
-&lt;http://tempuri/dataset/1&gt; crm:P148_has_component &lt;http://tempuri/record/1&gt; .
-&lt;http://tempuri/record/1&gt; crm:P148i_is_component_of &lt;http://tempuri/dataset/1&gt; ;
+&lt;http://tempuri/dataset/1&gt; a crm:E73_Information_Object ;
+   crm:P148_has_component &lt;http://tempuri/record/1&gt; .
+&lt;http://tempuri/record/1&gt; a crm:E73_Information_Object ;
+   crm:P148i_is_component_of &lt;http://tempuri/dataset/1&gt; ;
    crm:P67_refers_to &lt;http://tempuri/investigation/1&gt; .
-&lt;http://tempuri/investigation/1&gt; crm:P14-carried_out_by &lt;http://tempuri/organization/1&gt; ;
+&lt;http://tempuri/investigation/1&gt; a crm:E7_Activity ;
+   crm:P14-carried_out_by &lt;http://tempuri/organization/1&gt; ;
    crm:P7_took_place_at &lt;http://tempuri/site/1&gt; ;
    crm:P9_consists_of &lt;http://tempuri/reportproduction/1&gt; ;
    crm:P108_has_produced &lt;http://tempuri/report/1&gt; ;
    crm:P4_has_time-span &lt;http://tempuri/timespan/1&gt; .
-&lt;http://tempuri/organization/1&gt; crm:P14i_performed &lt;http://tempuri/investigation/1&gt; .
-&lt;http://tempuri/site/1&gt; crm:P7i_witnessed &lt;http://tempuri/investigation/1&gt; .
-&lt;http://tempuri/reportproduction/1&gt; crm:P9i_forms_part_of &lt;http://tempuri/investigation/1&gt; ;
+&lt;http://tempuri/organization/1&gt; a crm:E74_Group ;
+   crm:P14i_performed &lt;http://tempuri/investigation/1&gt; .
+&lt;http://tempuri/site/1&gt; a crm:E53_Place ;
+   crm:P7i_witnessed &lt;http://tempuri/investigation/1&gt; .
+&lt;http://tempuri/reportproduction/1&gt; a crm:E12_Production ;
+   crm:P9i_forms_part_of &lt;http://tempuri/investigation/1&gt; ;
    crm:P108_has_produced &lt;http://tempuri/report/1&gt; .
-&lt;http://tempuri/report/1&gt; crm:P108i_was_produced_by &lt;http://tempuri/reportproduction/1&gt; .
-&lt;http://tempuri/timespan/1&gt; crm:P4i_is_time-span_of &lt;http://tempuri/investigation/1&gt; . 
-</code></pre></div>
+&lt;http://tempuri/report/1&gt; a crm:E31_Document ;
+   crm:P108i_was_produced_by &lt;http://tempuri/reportproduction/1&gt; .
+&lt;http://tempuri/timespan/1&gt; a crm:E52_Time-Span ;
+   crm:P4i_is_time-span_of &lt;http://tempuri/investigation/1&gt; . 
+</code></pre>
+
+<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> syntax example</p></div>
         </div>
 
         <footer class="col-md-12">
