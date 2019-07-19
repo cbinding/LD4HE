@@ -11,6 +11,6 @@ Places containing sites are represented using a flat (as opposed to hierarchical
 ```turtle
 {!ttl/example-site.ttl!}
 ```
-**Fig. 2:** [Turtle RDF](https://www.w3.org/TR/turtle/) syntax example
+**Fig. 2:** [Turtle RDF](https://www.w3.org/TR/turtle/) example | [raw](https://cbinding.github.io/LD4HE/ttl/example-site.ttl) | [styled](https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-site.ttl)
 
 

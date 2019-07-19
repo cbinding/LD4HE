@@ -10,4 +10,4 @@ A report may be produced as part of an [investigation](ld4he-investigation.md). 
 ```turtle
 {!ttl/example-report.ttl!}
 ```
-**Fig. 2:** [Turtle RDF](https://www.w3.org/TR/turtle/) syntax example
+**Fig. 2:** [Turtle RDF](https://www.w3.org/TR/turtle/) example | [raw](https://cbinding.github.io/LD4HE/ttl/example-report.ttl) | [styled](https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-report.ttl)

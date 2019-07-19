@@ -10,4 +10,4 @@ A person is a member of an [organization](ld4he-organization.md) involved in und
 ```turtle
 {!ttl/example-person.ttl!}
 ```
-**Fig. 2:** [Turtle RDF](https://www.w3.org/TR/turtle/) syntax example
+**Fig. 2:** [Turtle RDF](https://www.w3.org/TR/turtle/) example | [raw](https://cbinding.github.io/LD4HE/ttl/example-person.ttl) | [styled](https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-person.ttl)

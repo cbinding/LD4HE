@@ -11,4 +11,4 @@ A single OASIS record, a component of the full OASIS [dataset](ld4he-dataset.md)
 ```turtle
 {!ttl/example-record.ttl!}
 ```
-**Fig. 2:** [Turtle RDF](https://www.w3.org/TR/turtle/) syntax example
+**Fig. 2:** [Turtle RDF](https://www.w3.org/TR/turtle/) example | [raw](https://cbinding.github.io/LD4HE/ttl/example-record.ttl) | [styled](https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-record.ttl)

@@ -9,4 +9,4 @@ The entire OASIS dataset of metadata. The dataset is composed of [records](ld4he
 ```turtle
 {!ttl/example-dataset.ttl!}
 ```
-**Fig. 2:** [Turtle RDF](https://www.w3.org/TR/turtle/) syntax example
+**Fig. 2:** [Turtle RDF](https://www.w3.org/TR/turtle/) example | [raw](https://cbinding.github.io/LD4HE/ttl/example-dataset.ttl) | [styled](https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-dataset.ttl)

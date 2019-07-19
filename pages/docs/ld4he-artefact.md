@@ -10,6 +10,5 @@ Artefacts are objects of some interest found on a [site](ld4he-site.md) during a
 ```turtle
 {!ttl/example-artefact.ttl!}
 ```
-**Fig. 2:** [Turtle RDF](https://www.w3.org/TR/turtle/) syntax example
+**Fig. 2:** [Turtle RDF](https://www.w3.org/TR/turtle/) example | [raw](https://cbinding.github.io/LD4HE/ttl/example-artefact.ttl) | [styled](https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-artefact.ttl)
 
-[Turtle styled](https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=./ttl/example-artefact.ttl&edit=true)
