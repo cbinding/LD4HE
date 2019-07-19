@@ -134,10 +134,9 @@
 
 <h1 id="time-span">Time-Span</h1>
 <hr />
-<p>A time-span defines the temporal extent of an activity such as an <a href="../ld4he-investigation/">investigation</a>.</p>
+<p>A time-span defines the temporal extent of an activity such as an <a href="../ld4he-investigation/">investigation</a>. Time-spans may also be associated with other activities such as report publication.</p>
 <p><img alt="timespan" src="../img/ld4he-timespan.svg" /></p>
 <p><strong>Fig. 1:</strong> Time-span with associated entities and properties</p>
-<p>Time-spans may also be associated with other activities such as report publication.</p>
 <pre><code class="Turtle">@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix crm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt; .
@@ -148,7 +147,8 @@
 &lt;http://tempuri/timespan/1&gt; a crm:E52_Time-Span ;
    crm:P4i_is_time-span_of &lt;http://tempuri/investigation/1&gt; ;
    crm:P81a_end_of_the_begin &quot;2019-03-20&quot;^^xsd:date ;
-   crm:P81b_begin_of_the_end &quot;2019-03-21&quot;^^xsd:date .   
+   crm:P81b_begin_of_the_end &quot;2019-03-21&quot;^^xsd:date .
+
 </code></pre>
 
 <p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> syntax example</p></div>

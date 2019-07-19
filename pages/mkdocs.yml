@@ -16,4 +16,6 @@ nav:
         - Site: ld4he-site.md
         - Timespan: ld4he-timespan.md
     - Data Fields: ld4he-fields.md
-    
+markdown_extensions:
+    - markdown_include.include:
+        base_path: docs   

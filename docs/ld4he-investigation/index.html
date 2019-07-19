@@ -139,23 +139,24 @@
 <p><strong>Fig. 1:</strong> Investigation with associated entities and properties</p>
 <pre><code class="turtle">@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix crm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt; .
-@prefix aat: &lt;http://vocab.getty.edu/aat/&gt; .
+@prefix evt: &lt;http://purl.org/heritagedata/schemes/agl_et/concepts/&gt; .
+@prefix rfi: &lt;http://purl.org/heritagedata/schemes/ee833bdc-4cf1-4fbf-9282-29e75655855d/concepts/&gt; .
 
 &lt;http://tempuri/investigation/1&gt; a crm:E7_Activity ;
    crm:P67i_is_referred_to_by &lt;http://tempuri/record/1&gt; ;
-   crm:P2_has_type aat:300053702 ;
-   crm:P17_was_motivated_by &lt;http://tempuri/reason/1&gt; ;
+   crm:P2_has_type evt:145129 ;
+   crm:P17_was_motivated_by rfi:11e58ff4-9432-4452-a364-6b22e1696944 ;
    crm:P14_carried_out_by &lt;http://tempuri/organization/1&gt; ;
    crm:P4_has_time-span &lt;http://tempuri/timespan/1&gt; ;
    crm:P7_took_place_at &lt;http://tempuri/site/1&gt; .
 &lt;http://tempuri/record/1&gt; a crm:E73_Information_Object ;
    crm:P67_refers_to &lt;http://tempuri/investigation/1&gt; .
-aat:300053702 a crm:E55_Type ;
+evt:145129 a crm:E55_Type ;
    crm:P2i_is_type_of &lt;http://tempuri/investigation/1&gt; ;
-   rdfs:label &quot;excavation (process)&quot;@en .
-&lt;http://tempuri/reason/1&gt; a crm:E55_Type ;
+   rdfs:label &quot;Excavation&quot;@en .
+rfi:11e58ff4-9432-4452-a364-6b22e1696944 a crm:E55_Type ;
    crm:P17i_motivated &lt;http://tempuri/investigation/1&gt; ;
-   rdfs:label &quot;planning requirement&quot;@en .
+   rdfs:label &quot;Planning requirement&quot;@en .
 &lt;http://tempuri/organization/1&gt; a crm:E74_Group ;
    crm:P14i_performed &lt;http://tempuri/investigation/1&gt; .
 &lt;http://tempuri/timespan/1&gt; a crm:E52_Time-Span ;

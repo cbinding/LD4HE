@@ -5,7 +5,7 @@ The source data for the LD4HE project comes from a specific subset of fields in 
 
 | Field ID | Field Name               | Notes
 |----------|--------------------------|----------------------------------------|
-| 1        | oasis_id                 | Unique identifier of the OASIS [record](ld4he-record.md))  |
+| 1        | oasis_id                 | Unique identifier of the OASIS [record](ld4he-record.md) |
 | 2        | event_type               | The type of [investigation](ld4he-investigation.md). URIs from [FISH Event Types Thesaurus](http://purl.org/heritagedata/schemes/agl_et). There may be multiple event types per record |
 | 3        | reason for investigation | The reason for undertaking an [investigation](ld4he-investigation.md). URIs from [OASIS Reason for Investigation](http://purl.org/heritagedata/schemes/ee833bdc-4cf1-4fbf-9282-29e75655855d) |
 | 4        | Country	              | Location of a [site](ld4he-site.md). URIs from [OS Open Names](http://data.ordnancesurvey.co.uk/datasets/boundary-line) |

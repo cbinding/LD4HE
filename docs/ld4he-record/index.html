@@ -137,6 +137,8 @@
 <p>A single OASIS record, a component of the full OASIS <a href="../ld4he-dataset/">dataset</a>. OASIS records refer to <a href="../ld4he-investigation/">investigations</a>. OASIS records are identified by both local identifiers and Digital Object Identifiers (DOIs). Note DOIs identify OASIS records not <a href="../ld4he-report/">reports</a>, as there may be multiple reports associated with a single OASIS record.</p>
 <p><img alt="record" src="../img/ld4he-oasis-record.svg" /></p>
 <p><strong>Fig. 1:</strong> Record with associated entities and properties</p>
+<!-- see https://github.com/mkdocs/mkdocs/issues/777 - how to include content of a file -->
+
 <pre><code class="turtle">@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix crm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt; .
 @prefix aat: &lt;http://vocab.getty.edu/aat/&gt; .
@@ -147,13 +149,13 @@
    crm:P148i_is_component_of &lt;http://tempuri/dataset/1&gt; ;
    crm:P2_has_type aat:300026685 ;
    crm:P1_is_identified_by &lt;http://tempuri/identifier/1&gt; ;
-   crm:P67_refers_to &lt;http://tempuri/investigation/1&gt; ,  
+   crm:P67_refers_to &lt;http://tempuri/investigation/1&gt; .  
 aat:300026685 a crm:E55_Type ;
    crm:P2i_is_type_of &lt;http://tempuri/record/1&gt; ;
    rdfs:label &quot;records (documents)&quot;@en .
 &lt;http://tempuri/identifier/1&gt; a crm:E42_Identifier ;
    crm:P1i_identifies &lt;http://tempuri/record/1&gt; ;
-   rdfs:label &quot;wardella2-327338&quot; .   
+   rdfs:label &quot;wardella2-327338&quot; . 
 </code></pre>
 
 <p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> syntax example</p></div>

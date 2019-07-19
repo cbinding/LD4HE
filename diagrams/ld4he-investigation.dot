@@ -12,11 +12,11 @@ digraph {
    "(investigation)" -> "(event type)" [label="crm:P2_has_type\n(is type of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"];
    "(investigation)" -> "(reason for investigation)" [label="crm:P17_was_motivated_by\n(motivated)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P17_was_motivated_by"];
    "(reason for investigation)" -> "crm:E55_Type" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
-   "(reason for investigation)" -> "\"planning requirement\"@en" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];
-   "\"planning requirement\"@en" [shape=box, fontcolor=black];
+   "(reason for investigation)" -> "\"Planning requirement\"@en" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];
+   "\"Planning requirement\"@en" [shape=box, fontcolor=black];
    "(event type)" -> "crm:E55_Type" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
-   "(event type)" -> "\"excavation (process)\"@en" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];
-   "\"excavation (process)\"@en" [shape=box, fontcolor=black];
+   "(event type)" -> "\"Excavation\"@en" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];
+   "\"Excavation\"@en" [shape=box, fontcolor=black];
    "(investigation)" -> "(organization)" [label="crm:P14_carried_out_by\n(performed)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"];
    "(organization)" [style=dashed];
    "(investigation)" -> "(time span)" [label="crm:P4_has_time-span\n(is time-span of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"];
