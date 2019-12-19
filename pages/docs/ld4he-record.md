@@ -13,8 +13,8 @@ Each record is a component of the full [dataset](ld4he-dataset.md). Records refe
 ```
 **Fig. 2:** [Turtle RDF](https://www.w3.org/TR/turtle/) example 
 | [styled](https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-record.ttl)
-| [RDFa](http://rdf-translator.appspot.com/convert/n3/rdfa/html/https%3A%2F%2Fcbinding.github.io%2FLD4HE%2Fttl%2Fexample-record.ttl)
-| [microdata](http://rdf-translator.appspot.com/convert/n3/microdata/html/https%3A%2F%2Fcbinding.github.io%2FLD4HE%2Fttl%2Fexample-record.ttl)
-| [xml](http://rdf-translator.appspot.com/convert/n3/xml/html/https%3A%2F%2Fcbinding.github.io%2FLD4HE%2Fttl%2Fexample-record.ttl) 
-| [nt](http://rdf-translator.appspot.com/convert/n3/nt/html/https%3A%2F%2Fcbinding.github.io%2FLD4HE%2Fttl%2Fexample-record.ttl)
-| [json-ld](http://rdf-translator.appspot.com/convert/n3/json-ld/html/https%3A%2F%2Fcbinding.github.io%2FLD4HE%2Fttl%2Fexample-record.ttl)
+| [RDFa](http://rdf-translator.appspot.com/convert/n3/rdfa/html/https://cbinding.github.io/LD4HE/ttl/example-record.ttl)
+| [microdata](http://rdf-translator.appspot.com/convert/n3/microdata/html/https://cbinding.github.io/LD4HE/ttl/example-record.ttl)
+| [xml](http://rdf-translator.appspot.com/convert/n3/xml/html/https://cbinding.github.io/LD4HE/ttl/example-record.ttl) 
+| [nt](http://rdf-translator.appspot.com/convert/n3/nt/html/https://cbinding.github.io/LD4HE/ttl/example-record.ttl)
+| [json-ld](http://rdf-translator.appspot.com/convert/n3/json-ld/html/https://cbinding.github.io/LD4HE/ttl/example-record.ttl)
