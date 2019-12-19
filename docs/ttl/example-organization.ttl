@@ -5,7 +5,7 @@
    crm:P14_carried_out_by <http://tempuri/organization/1> .
    
 <http://tempuri/organization/1> a crm:E74_Group ;
-	crm:P107_has_current_or_former_member <http://tempuri/person/1> .
+	crm:P107_has_current_or_former_member <http://tempuri/person/1> ;
 	crm:P1_is_identified_by <http://tempuri/e41/1> .
    
 <http://tempuri/e41/1> a crm:E41_Appellation ;

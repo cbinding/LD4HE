@@ -31,12 +31,42 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://cbinding.github.io/LD4HE/ld4he-identifier/</loc>
+     <lastmod>2019-12-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://cbinding.github.io/LD4HE/ld4he-investigation/</loc>
      <lastmod>2019-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://cbinding.github.io/LD4HE/ld4he-investigation-identifier/</loc>
+     <lastmod>2019-12-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://cbinding.github.io/LD4HE/ld4he-investigation-reason/</loc>
+     <lastmod>2019-12-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://cbinding.github.io/LD4HE/ld4he-methodology/</loc>
+     <lastmod>2019-12-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://cbinding.github.io/LD4HE/ld4he-site/</loc>
+     <lastmod>2019-12-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://cbinding.github.io/LD4HE/ld4he-site-name/</loc>
+     <lastmod>2019-12-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://cbinding.github.io/LD4HE/ld4he-site-location/</loc>
      <lastmod>2019-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -56,12 +86,32 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://cbinding.github.io/LD4HE/ld4he-organization-name/</loc>
+     <lastmod>2019-12-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://cbinding.github.io/LD4HE/ld4he-person/</loc>
      <lastmod>2019-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://cbinding.github.io/LD4HE/ld4he-report/</loc>
+     <lastmod>2019-12-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://cbinding.github.io/LD4HE/ld4he-report-identifier/</loc>
+     <lastmod>2019-12-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://cbinding.github.io/LD4HE/ld4he-report-production/</loc>
+     <lastmod>2019-12-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://cbinding.github.io/LD4HE/ld4he-report-publication/</loc>
      <lastmod>2019-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
