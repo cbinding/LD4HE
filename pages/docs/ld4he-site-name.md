@@ -11,6 +11,10 @@ Examples of site names are "fenchurch", "Studfield Hill", "Boundary Wall of Form
 ```turtle
 {!ttl/example-site-name.ttl!}
 ```
-**Fig. 2:** [Turtle RDF](https://www.w3.org/TR/turtle/) example | [raw](ttl/example-site-name.ttl) | [styled](https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-site-name.ttl)
-
-
+**Fig. 2:** [Turtle RDF](https://www.w3.org/TR/turtle/) example 
+| [styled](https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-site-name.ttl)
+| [RDFa](http://rdf-translator.appspot.com/convert/n3/rdfa/html/https://cbinding.github.io/LD4HE/ttl/example-site-name.ttl)
+| [microdata](http://rdf-translator.appspot.com/convert/n3/microdata/html/https://cbinding.github.io/LD4HE/ttl/example-site-name.ttl)
+| [xml](http://rdf-translator.appspot.com/convert/n3/xml/html/https://cbinding.github.io/LD4HE/ttl/example-site-name.ttl) 
+| [nt](http://rdf-translator.appspot.com/convert/n3/nt/html/https://cbinding.github.io/LD4HE/ttl/example-site-name.ttl)
+| [json-ld](http://rdf-translator.appspot.com/convert/n3/json-ld/html/https://cbinding.github.io/LD4HE/ttl/example-site-name.ttl)

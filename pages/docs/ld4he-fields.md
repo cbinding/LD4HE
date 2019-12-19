@@ -95,7 +95,7 @@ $.[*].oasisProjDetails.adminAreasMap[*].Parish
 
 *** 
 ## Field 18 - HER
-Name of the Historic Environment Record organization responsible for an area encompassing the [location of a site](ld4he-site-location.md). Example values for the field are *"Bedford Borough HER"*, *"Redcar and Cleveland UAD"*, *"New Forest National Park Authority"* etc.
+A [record](ld4he-record.md) refers to the name of the Historic Environment Record [organization](ld4he-organization.md) responsible for an area encompassing the [location of a site](ld4he-site-location.md). Example values for the field are *"Bedford Borough HER"*, *"Redcar and Cleveland UAD"*, *"New Forest National Park Authority"* etc.
 ```
 $.[*].oasisReviewersHasOasisList[*].[?(@.level=='2')].name
 ```
@@ -103,7 +103,7 @@ $.[*].oasisReviewersHasOasisList[*].[?(@.level=='2')].name
 
 *** 
 ## Field 19 - national body
-National body responsible for the area encompassing the [location of a site](ld4he-site-location.md). Example values for the field are *"Historic Environment Scotland"*, *"Royal Commission on the Ancient and Historical Monuments of Wales"* etc.
+A [record](ld4he-record.md) refers to the national body as an [organization](ld4he-organization.md) responsible for the area encompassing the [location of a site](ld4he-site-location.md). Example values for the field are *"Historic Environment Scotland"*, *"Royal Commission on the Ancient and Historical Monuments of Wales"* etc.
 ```
 $.[*].oasisReviewersHasOasisList[*].[?(@.level=='4')].name
 ```
