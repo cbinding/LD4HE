@@ -3,7 +3,7 @@
 
 
 <http://tempuri/site/1> a crm:E53_Place ;
-   crm:P1_is_identified_by <http://tempuri/sitename/1> ;   
+   crm:P1_is_identified_by <http://tempuri/sitename/1> .   
    
 <http://tempuri/sitename/1> a crm:E41_Appellation ;
    crm:P1i_identifies <http://tempuri/site/1> ;
