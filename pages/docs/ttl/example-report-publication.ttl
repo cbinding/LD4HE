@@ -1,0 +1,21 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+      
+<http://tempuri/report/1/publication> a crm:E7_Activity ;
+   crm:P9i_forms_part_of <http://tempuri/investigation/1> ;
+   crm:P14_carried_out_by <http://tempuri/organization/1> ;
+   crm:P16_used_specific_object <http://tempuri/report/1> ;
+   crm:P7_took_place_at <http://tempuri/place/1> ;
+   crm:P4_has_time-span <http://tempuri/timespan/1> .
+   
+<http://tempuri/report/1> a crm:E31_Document;
+	crm:P16i_was_used_by <http://tempuri/report/1/publication> .
+   
+<http://tempuri/investigation/1> a crm:E7_Activity ;
+   crm:P9_consists_of <http://tempuri/report/1/publication> .
+   
+<http://tempuri/place/1> a crm:E53_Place ;
+   crm:P7i_witnessed <http://tempuri/report/1/publication> .
+    
+<http://tempuri/timespan/1> a crm:E52_Time-Span ;
+   crm:P4i_is_time-span_of <http://tempuri/report/1/publication> .

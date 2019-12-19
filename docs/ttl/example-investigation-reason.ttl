@@ -1,0 +1,10 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rfi: <http://purl.org/heritagedata/schemes/ee833bdc-4cf1-4fbf-9282-29e75655855d/concepts/> .
+
+<http://tempuri/investigation/1> a crm:E7_Activity ;
+   crm:P17_was_motivated_by rfi:11e58ff4-9432-4452-a364-6b22e1696944 .   
+   
+rfi:11e58ff4-9432-4452-a364-6b22e1696944 a crm:E55_Type ;
+   crm:P17i_motivated <http://tempuri/investigation/1> ;
+   rdfs:label "Planning requirement"@en .

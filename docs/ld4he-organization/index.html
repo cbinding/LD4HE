@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Ceri Binding, University of South Wales">
-        
+        <link rel="canonical" href="https://cbinding.github.io/LD4HE/ld4he-organization/">
         <link rel="shortcut icon" href="../img/favicon.ico">
         <title>Organization - LD4HE</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
@@ -49,16 +49,25 @@
                             <li >
                                 <a href="..">Home</a>
                             </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Mapping <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../ld4he-example-data/">Example data</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-fields/">Data fields</a>
+</li>
+                                </ul>
+                            </li>
                             <li class="dropdown active">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Model <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="../ld4he-model/">Overall</a>
-</li>
-                                    
-<li >
-    <a href="../ld4he-artefact/">Artefact</a>
+    <a href="../ld4he-model/">Overview</a>
 </li>
                                     
 <li >
@@ -66,7 +75,19 @@
 </li>
                                     
 <li >
+    <a href="../ld4he-record/">Record</a>
+</li>
+                                    
+<li >
     <a href="../ld4he-investigation/">Investigation</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-site/">Site</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-artefact/">Artefact</a>
 </li>
                                     
 <li >
@@ -82,24 +103,17 @@
 </li>
                                     
 <li >
-    <a href="../ld4he-record/">Record</a>
-</li>
-                                    
-<li >
     <a href="../ld4he-report/">Report</a>
-</li>
-                                    
-<li >
-    <a href="../ld4he-site/">Site</a>
 </li>
                                     
 <li >
     <a href="../ld4he-timespan/">Timespan</a>
 </li>
+                                    
+<li >
+    <a href="../ld4he-place/">Place</a>
+</li>
                                 </ul>
-                            </li>
-                            <li >
-                                <a href="../ld4he-fields/">Data Fields</a>
                             </li>
                         </ul>
 
@@ -134,22 +148,28 @@
 
 <h1 id="organization">Organization</h1>
 <hr />
-<p>An organization is any group involved in activities described in the data - such as <a href="../ld4he-investigation/">investigations</a>. </p>
+<p>An organization is any group involved in activities described in the data - such as <a href="../ld4he-investigation/">investigations</a>, or <a href="../ld4he-report-publication/">report publication</a>. An organization is identified by a <a href="../ld4he-organization-name/">name</a>, although this name is not guaranteed to be unique so should not be relied on as a unique identifier.</p>
 <p><img alt="organization" src="../img/ld4he-organization.svg" /></p>
-<p><strong>Fig. 1:</strong> Organization with associated entities and properties</p>
+<p><strong>Fig. 1:</strong> Organization with associated entities and properties | <a href="../img/ld4he-organization.svg">svg</a> | <a href="../img/ld4he-organization.png">png</a> | <a href="../img/ld4he-organization.pdf">pdf</a></p>
 <p>Examples of organizations are contractors, HERs (or other national bodies), local authorities, data aggregators, report authors, report publishers etc.</p>
 <pre><code class="turtle">@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix crm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt; .
 
 &lt;http://tempuri/e7/1&gt; a crm:E7_Activity ;
-   crm:P14_carried_out_by &lt;http://tempuri/e74/1&gt; .
-&lt;http://tempuri/e74/1&gt; a crm:E74_Group ;
-   crm:P1_is_identified_by &lt;http://tempuri/e41/1&gt; .
+   crm:P14_carried_out_by &lt;http://tempuri/organization/1&gt; .
+
+&lt;http://tempuri/organization/1&gt; a crm:E74_Group ;
+    crm:P107_has_current_or_former_member &lt;http://tempuri/person/1&gt; .
+    crm:P1_is_identified_by &lt;http://tempuri/e41/1&gt; .
+
 &lt;http://tempuri/e41/1&gt; a crm:E41_Appellation ;
-   rdfs:label &quot;Fantasy Archaeology&quot;@en .
+   rdfs:label &quot;Wessex Archaeology&quot;@en .
+
+&lt;http://tempuri/person/1&gt; a crm:E21_Person ;
+   crm:P107i_is_current_or_former_member_of &lt;http://tempuri/organization/1&gt; .
 </code></pre>
 
-<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> example | <a href="https://cbinding.github.io/LD4HE/ttl/example-organization.ttl">raw</a> | <a href="https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-organization.ttl">styled</a></p></div>
+<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> example | <a href="../ttl/example-organization.ttl">raw</a> | <a href="https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-organization.ttl">styled</a></p></div>
         </div>
 
         <footer class="col-md-12">

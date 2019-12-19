@@ -4,9 +4,9 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="LD4HE - Linked Data for the Historic Environment">
+        <meta name="description" content="Linked Data for the Historic Environment (LD4HE)">
         <meta name="author" content="Ceri Binding, University of South Wales">
-        
+        <link rel="canonical" href="https://cbinding.github.io/LD4HE/">
         <link rel="shortcut icon" href="img/favicon.ico">
         <title>LD4HE</title>
         <link href="css/bootstrap-custom.min.css" rel="stylesheet">
@@ -50,15 +50,24 @@
                                 <a href=".">Home</a>
                             </li>
                             <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Mapping <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="ld4he-example-data/">Example data</a>
+</li>
+                                    
+<li >
+    <a href="ld4he-fields/">Data fields</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Model <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="ld4he-model/">Overall</a>
-</li>
-                                    
-<li >
-    <a href="ld4he-artefact/">Artefact</a>
+    <a href="ld4he-model/">Overview</a>
 </li>
                                     
 <li >
@@ -66,7 +75,19 @@
 </li>
                                     
 <li >
+    <a href="ld4he-record/">Record</a>
+</li>
+                                    
+<li >
     <a href="ld4he-investigation/">Investigation</a>
+</li>
+                                    
+<li >
+    <a href="ld4he-site/">Site</a>
+</li>
+                                    
+<li >
+    <a href="ld4he-artefact/">Artefact</a>
 </li>
                                     
 <li >
@@ -82,24 +103,17 @@
 </li>
                                     
 <li >
-    <a href="ld4he-record/">Record</a>
-</li>
-                                    
-<li >
     <a href="ld4he-report/">Report</a>
-</li>
-                                    
-<li >
-    <a href="ld4he-site/">Site</a>
 </li>
                                     
 <li >
     <a href="ld4he-timespan/">Timespan</a>
 </li>
+                                    
+<li >
+    <a href="ld4he-place/">Place</a>
+</li>
                                 </ul>
-                            </li>
-                            <li >
-                                <a href="ld4he-fields/">Data Fields</a>
                             </li>
                         </ul>
 
@@ -115,7 +129,7 @@
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="ld4he-model/">
+                                <a rel="prev" href="ld4he-example-data/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -130,16 +144,15 @@
         <li class="main active"><a href="#linked-data-for-the-historic-environment-ld4he">Linked Data for the Historic Environment (LD4HE)</a></li>
             <li><a href="#project-aims">Project aims</a></li>
             <li><a href="#project-scope">Project scope</a></li>
-            <li><a href="#data-model">Data model</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h1 id="linked-data-for-the-historic-environment-ld4he">Linked Data for the Historic Environment (LD4HE)</h1>
 <h2 id="project-aims">Project aims</h2>
-<p>The LD4HE project has the following aims and objectives:</p>
+<p>The purpose of the LD4HE project is to increase the potential for exchange and reuse of historic environment data. The project has the following primary aims and objectives:</p>
 <ul>
-<li>To create a mapping from mandatory OASIS fields to the CIDOC-CRM.</li>
+<li>To create a mapping from mandatory OASIS fields to CIDOC-CRM.</li>
 <li>To create a simple means of converting an OASIS data export to a Linked Data compatible format.</li>
 <li>To determine criteria for establishing which records should be included in Linked Data export.</li>
 <li>To recommend potential for creation and usage of Linked Data.</li>
@@ -150,25 +163,8 @@
 <ul>
 <li>How many <a href="ld4he-report/">reports</a> have been produced with evidence of Roman archaeology from post-determinative excavation in Southwest England?</li>
 <li>How many research <a href="ld4he-investigation/">investigations</a> occurred in England in a given year?</li>
-<li>How many geophysical surveys have been undertaken on a specific type of geology?</li>
+<li>How many <a href="ld4he-methodology/">geophysical surveys</a> have been undertaken on a specific type of geology?</li>
 <li>How many <a href="ld4he-report/">reports</a> are there which fit a specific theme within a research framework?</li>
-</ul>
-<h2 id="data-model">Data model</h2>
-<p>The <a href="ld4he-model/">data model</a> to be used is based on a subset of the <a href="http://www.cidoc-crm.org/">CIDOC Conceptual Reference Model (CRM)</a>. The following pages give further details of distinct aspects of the LD4HE data model:</p>
-<ul>
-<li><a href="ld4he-model/">Overall data model</a><ul>
-<li><a href="ld4he-dataset/">Dataset</a></li>
-<li><a href="ld4he-record/">Record</a>  </li>
-<li><a href="ld4he-investigation/">Investigation</a></li>
-<li><a href="ld4he-organization/">Organization</a></li>
-<li><a href="ld4he-site/">Site</a></li>
-<li><a href="ld4he-report/">Report</a></li>
-<li><a href="ld4he-timespan/">Time Span</a>  </li>
-<li><a href="ld4he-artefact/">Artefact</a></li>
-<li><a href="ld4he-monument/">Monument</a></li>
-<li><a href="ld4he-person/">Person</a>  </li>
-</ul>
-</li>
 </ul></div>
         </div>
 
@@ -252,5 +248,5 @@
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2019-07-19 12:53:22
+Build Date UTC : 2019-12-19 11:41:10
 -->

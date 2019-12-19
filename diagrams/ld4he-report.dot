@@ -1,0 +1,25 @@
+digraph {
+   // label = "OASIS Report";
+   // labelloc = "t";
+   node [color=gray, fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite, color=gray];
+   edge [color=black, fontcolor=maroon, fontsize=10, fontname=Arial ];   
+   "crm:E31_Document" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E31_Document"];
+   "crm:E35_Title" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E35_Title"];   
+   "crm:E55_Type" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E55_Type"]
+   "(investigation)" [style=dashed]; 
+   "(report production)" [style=dashed]; 
+   "(report)" [fillcolor=lavender];
+   "(identifier)" [style=dashed]; 
+   "(report production)" -> "(report)" [label="crm:P108_has_produced\n(was produced by)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P108_has_produced"];
+   "(report)" -> "(investigation)" [label="crm:P70_documents\n(is documented in)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P70_documents"];    
+   "(report)" -> "(identifier)" [label="crm:P1_is_identified_by\n(identifies)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by"];    
+   "(report)" -> "crm:E31_Document" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "(report)" -> "(report type)" [label="crm:P2_has_type\n(is type of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"];
+   "(report type)" -> "crm:E55_Type" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "(report type)" -> "\"Geophysical survey report\"@en" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];  
+   "\"Geophysical survey report\"@en" [shape=box, fontcolor=black];  
+   "(report)" -> "(report title)" [label="crm:P102_has_title\n(is title of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P102_has_title"];
+   "(report title)" -> "crm:E35_Title" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "(report title)" -> "\"Investigation of 1 temp street\"@en" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];  
+   "\"Investigation of 1 temp street\"@en" [shape=box, fontcolor=black];  
+ }

@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Ceri Binding, University of South Wales">
-        
+        <link rel="canonical" href="https://cbinding.github.io/LD4HE/ld4he-person/">
         <link rel="shortcut icon" href="../img/favicon.ico">
         <title>Person - LD4HE</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
@@ -49,16 +49,25 @@
                             <li >
                                 <a href="..">Home</a>
                             </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Mapping <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../ld4he-example-data/">Example data</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-fields/">Data fields</a>
+</li>
+                                </ul>
+                            </li>
                             <li class="dropdown active">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Model <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="../ld4he-model/">Overall</a>
-</li>
-                                    
-<li >
-    <a href="../ld4he-artefact/">Artefact</a>
+    <a href="../ld4he-model/">Overview</a>
 </li>
                                     
 <li >
@@ -66,7 +75,19 @@
 </li>
                                     
 <li >
+    <a href="../ld4he-record/">Record</a>
+</li>
+                                    
+<li >
     <a href="../ld4he-investigation/">Investigation</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-site/">Site</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-artefact/">Artefact</a>
 </li>
                                     
 <li >
@@ -82,24 +103,17 @@
 </li>
                                     
 <li >
-    <a href="../ld4he-record/">Record</a>
-</li>
-                                    
-<li >
     <a href="../ld4he-report/">Report</a>
-</li>
-                                    
-<li >
-    <a href="../ld4he-site/">Site</a>
 </li>
                                     
 <li >
     <a href="../ld4he-timespan/">Timespan</a>
 </li>
+                                    
+<li >
+    <a href="../ld4he-place/">Place</a>
+</li>
                                 </ul>
-                            </li>
-                            <li >
-                                <a href="../ld4he-fields/">Data Fields</a>
                             </li>
                         </ul>
 
@@ -115,7 +129,7 @@
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../ld4he-record/">
+                                <a rel="prev" href="../ld4he-report/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -134,22 +148,24 @@
 
 <h1 id="person">Person</h1>
 <hr />
-<p>A person is a member of an <a href="../ld4he-organization/">organization</a> involved in undertaking project activities such as <a href="../ld4he-investigation/">investigations</a> or <a href="../ld4he-report/">report</a> authorship. </p>
+<p>A person is a member of an <a href="../ld4he-organization/">organization</a> involved in undertaking project activities such as <a href="../ld4he-investigation/">investigations</a> or <a href="../ld4he-report-production/">report production</a> (authorship). </p>
 <p><img alt="person" src="../img/ld4he-person.svg" /></p>
-<p><strong>Fig. 1:</strong> Person with associated entities and properties</p>
+<p><strong>Fig. 1:</strong> Person with associated entities and properties | <a href="../img/ld4he-person.svg">svg</a> | <a href="../img/ld4he-person.png">png</a> | <a href="../img/ld4he-person.pdf">pdf</a></p>
 <pre><code class="turtle">@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix crm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt; .
 
 &lt;http://tempuri/organization/1&gt; a crm:E74_Group ;
    crm:P107_has_current_or_former_member &lt;http://tempuri/person/1&gt; .
+
 &lt;http://tempuri/person/1&gt; a crm:E21_Person ;
    crm:P107i_is_current_or_former_member_of &lt;http://tempuri/organization/1&gt; ;
    crm:P1_is_identified_by &lt;http://tempuri/personname/1&gt; .
+
 &lt;http://tempuri/personnname/1&gt; a crm:E41_Appellation ;
    rdfs:label &quot;Fred Bloggs&quot;@en .
 </code></pre>
 
-<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> example | <a href="https://cbinding.github.io/LD4HE/ttl/example-person.ttl">raw</a> | <a href="https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-person.ttl">styled</a></p></div>
+<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> example | <a href="../ttl/example-person.ttl">raw</a> | <a href="https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-person.ttl">styled</a></p></div>
         </div>
 
         <footer class="col-md-12">

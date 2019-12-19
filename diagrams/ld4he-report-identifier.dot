@@ -1,0 +1,18 @@
+digraph {
+   // label = Report Identifier";
+   // labelloc = "t";
+   node [color=gray, fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite];
+   edge [color=black, fontcolor=maroon, fontsize=10, fontname=Arial ];
+   "crm:E42_Identifier" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"];
+   "crm:E55_Type" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E55_Type"];
+   "(report)" [style=dashed];  
+   "(identifier)" [fillcolor=lavender]; 
+   "\"DOI\"@en" [shape=box, fontcolor=black];
+   "\"10.5284/1018054\"" [shape=box, fontcolor=black];
+   "(report)" -> "(identifier)" [label="crm:P1_is_identified_by\n(identifies)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by"];
+   "(identifier)" -> "crm:E42_Identifier" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "(identifier)" -> "\"10.5284/1018054\"" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];   
+   "(identifier)" -> "(identifier type)" [label="crm:P2_has_type", labelURL="crm:P2_has_type\n(is type of)"];
+   "(identifier type)" -> "crm:E55_Type" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "(identifier type)" -> "\"DOI\"@en" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"]; 
+ }

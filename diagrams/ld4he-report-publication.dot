@@ -1,0 +1,20 @@
+digraph {
+   // label = "Report Publication";
+   // labelloc = "t";
+   node [color=gray, fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite, color=gray];
+   edge [color=black, fontcolor=maroon, fontsize=10, fontname=Arial ];   
+   
+   "crm:E7_Activity" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"];
+   "(report)" [style=dashed]; 
+   "(investigation)" [style=dashed];
+   "(publisher)" [style=dashed];
+   "(time span)" [style=dashed];
+   "(place)" [style=dashed];
+   "(report publication)" [fillcolor=lavender];     
+   "(report publication)" -> "crm:E7_Activity" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"]; 
+   "(report publication)" -> "(place)" [label="crm:P7_took_place_at\n(witnessed)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"];   
+   "(investigation)" -> "(report publication)" [label="crm:P9_consists_of\n(forms part of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P9_consists_of"];    
+   "(report publication)" -> "(publisher)" [label="crm:P14_carried_out_by\n(performed)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"];    
+   "(report publication)" -> "(report)" [label="crm:P16_used_specific_object\n(was used for)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object"];     
+   "(report publication)" -> "(time span)" [label="crm:P4_has_time-span\n(is time-span of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"];          
+ }

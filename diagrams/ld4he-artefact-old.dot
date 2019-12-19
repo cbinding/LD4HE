@@ -1,0 +1,17 @@
+digraph {
+   // label = "Artefact";
+   // labelloc = "t";
+   node [color=gray, fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite];
+   edge [color=black, fontcolor=maroon, fontsize=10, fontname=Arial ];
+   "obj:100153" [URL="http://purl.org/heritagedata/schemes/mda_obj/concepts/100153"];   
+   "crm:E22_Man-Made_Object" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object"];
+   "crm:E55_Type" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E55_Type"];   
+   "(artefact)" [fillcolor=lavender];
+   "(site)" [style=dashed];
+   "(artefact)" -> "(site)" [label="crm:P53_has_former_or_current_location\n(is former or current location of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location"];
+   "(artefact)" -> "crm:E22_Man-Made_Object" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];   
+   "(artefact)" -> "obj:100153" [label="crm:P2_has_type\n(is type of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"];
+   "obj:100153" -> "crm:E55_Type" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "\"Axehead\"@en" [shape=box, fontcolor=black];
+   "obj:100153" ->  "\"Axehead\"@en" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];
+ }

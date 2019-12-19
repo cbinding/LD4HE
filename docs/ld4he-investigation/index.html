@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Ceri Binding, University of South Wales">
-        
+        <link rel="canonical" href="https://cbinding.github.io/LD4HE/ld4he-investigation/">
         <link rel="shortcut icon" href="../img/favicon.ico">
         <title>Investigation - LD4HE</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
@@ -49,24 +49,45 @@
                             <li >
                                 <a href="..">Home</a>
                             </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Mapping <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../ld4he-example-data/">Example data</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-fields/">Data fields</a>
+</li>
+                                </ul>
+                            </li>
                             <li class="dropdown active">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Model <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="../ld4he-model/">Overall</a>
-</li>
-                                    
-<li >
-    <a href="../ld4he-artefact/">Artefact</a>
+    <a href="../ld4he-model/">Overview</a>
 </li>
                                     
 <li >
     <a href="../ld4he-dataset/">Dataset</a>
 </li>
                                     
+<li >
+    <a href="../ld4he-record/">Record</a>
+</li>
+                                    
 <li class="active">
     <a href="./">Investigation</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-site/">Site</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-artefact/">Artefact</a>
 </li>
                                     
 <li >
@@ -82,24 +103,17 @@
 </li>
                                     
 <li >
-    <a href="../ld4he-record/">Record</a>
-</li>
-                                    
-<li >
     <a href="../ld4he-report/">Report</a>
-</li>
-                                    
-<li >
-    <a href="../ld4he-site/">Site</a>
 </li>
                                     
 <li >
     <a href="../ld4he-timespan/">Timespan</a>
 </li>
+                                    
+<li >
+    <a href="../ld4he-place/">Place</a>
+</li>
                                 </ul>
-                            </li>
-                            <li >
-                                <a href="../ld4he-fields/">Data Fields</a>
                             </li>
                         </ul>
 
@@ -110,12 +124,12 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="../ld4he-dataset/">
+                                <a rel="next" href="../ld4he-record/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../ld4he-monument/">
+                                <a rel="prev" href="../ld4he-site/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -134,9 +148,9 @@
 
 <h1 id="investigation">Investigation</h1>
 <hr />
-<p>Investigative activity taking place on a <a href="../ld4he-site/">site</a> is carried out by an <a href="../ld4he-organization/">organization</a> during a specific <a href="../ld4he-timespan/">time-span</a>.</p>
+<p>A <a href="../ld4he-record/">record</a> refers to investigation activities taking place on a <a href="../ld4he-site/">site</a>. The investigation will have a title - often describing the type of event and the site (e.g. "[Event type] at [Site name]" - "Field Survey at Studfield Hill" etc.). There will be a stated <a href="../ld4he-investigation-reason/">reason</a> for the investigation, which is carried out by an <a href="../ld4he-organization/">organization</a> during a specific <a href="../ld4he-timespan/">time-span</a>. The investigative activity uses a <a href="../ld4he-methodology/">methodology</a></p>
 <p><img alt="investigation" src="../img/ld4he-investigation.svg" /></p>
-<p><strong>Fig. 1:</strong> Investigation with associated entities and properties</p>
+<p><strong>Fig. 1:</strong> Investigation with associated entities and properties | <a href="../img/ld4he-investigation.svg">svg</a> | <a href="../img/ld4he-investigation.png">png</a> | <a href="../img/ld4he-investigation.pdf">pdf</a></p>
 <pre><code class="turtle">@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix crm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt; .
 @prefix evt: &lt;http://purl.org/heritagedata/schemes/agl_et/concepts/&gt; .
@@ -144,28 +158,46 @@
 
 &lt;http://tempuri/investigation/1&gt; a crm:E7_Activity ;
    crm:P67i_is_referred_to_by &lt;http://tempuri/record/1&gt; ;
-   crm:P2_has_type evt:145129 ;
+   crm:P70i_is_documented_in &lt;http://tempuri/report/1&gt; ;
    crm:P17_was_motivated_by rfi:11e58ff4-9432-4452-a364-6b22e1696944 ;
+   crm:P32_used_general_technique evt:145112 ;
    crm:P14_carried_out_by &lt;http://tempuri/organization/1&gt; ;
    crm:P4_has_time-span &lt;http://tempuri/timespan/1&gt; ;
-   crm:P7_took_place_at &lt;http://tempuri/site/1&gt; .
+   crm:P7_took_place_at &lt;http://tempuri/site/1&gt; ;
+   crm:P1_is_identified_by &lt;http://tempuri/investigation/1/identifier&gt;, &lt;http://tempuri/investigation/1/title&gt; ;
+   crm:P3_has_note &quot;An archaeological evaluation was undertaken by Diggs Archaeology in August...&quot;@en .
+
+&lt;http://tempuri/investigation/1/identifier&gt; a crm:E42_Identifier ;
+    crm:P1i_identifies &lt;http://tempuri/investigation/1&gt; .   
+
+&lt;http://tempuri/investigation/1/title&gt; a crm:E35_Title;
+    crm:1i_identifies &lt;http://tempuri/investigation/1&gt; ;
+    rdfs:label &quot;Field Survey at Studfield Hill&quot;@en .    
+
 &lt;http://tempuri/record/1&gt; a crm:E73_Information_Object ;
    crm:P67_refers_to &lt;http://tempuri/investigation/1&gt; .
-evt:145129 a crm:E55_Type ;
-   crm:P2i_is_type_of &lt;http://tempuri/investigation/1&gt; ;
-   rdfs:label &quot;Excavation&quot;@en .
+
+&lt;http://tempuri/report/1&gt; a crm:E31_Document ;
+   crm:P70_documents &lt;http://tempuri/investigation/1&gt; .
+
 rfi:11e58ff4-9432-4452-a364-6b22e1696944 a crm:E55_Type ;
    crm:P17i_motivated &lt;http://tempuri/investigation/1&gt; ;
    rdfs:label &quot;Planning requirement&quot;@en .
+
+evt:145112 a crm:E55_Type ;
+   crm:P32i_was_technique_of &lt;http://tempuri/investigation/1&gt; .
+
 &lt;http://tempuri/organization/1&gt; a crm:E74_Group ;
    crm:P14i_performed &lt;http://tempuri/investigation/1&gt; .
+
 &lt;http://tempuri/timespan/1&gt; a crm:E52_Time-Span ;
    crm:P4i_is_time-span_of &lt;http://tempuri/investigation/1&gt; .
+
 &lt;http://tempuri/site/1&gt; a crm:E53_Place ;
    crm:P7i_witnessed &lt;http://tempuri/investigation/1&gt; .
 </code></pre>
 
-<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> example | <a href="https://cbinding.github.io/LD4HE/ttl/example-investigation.ttl">raw</a> | <a href="https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-investigation.ttl">styled</a></p></div>
+<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> example | <a href="../ttl/example-investigation.ttl">raw</a> | <a href="https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-investigation.ttl">styled</a></p></div>
         </div>
 
         <footer class="col-md-12">

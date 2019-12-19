@@ -2,8 +2,14 @@
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 
 <http://tempuri/e7/1> a crm:E7_Activity ;
-   crm:P14_carried_out_by <http://tempuri/e74/1> .
-<http://tempuri/e74/1> a crm:E74_Group ;
-   crm:P1_is_identified_by <http://tempuri/e41/1> .
+   crm:P14_carried_out_by <http://tempuri/organization/1> .
+   
+<http://tempuri/organization/1> a crm:E74_Group ;
+	crm:P107_has_current_or_former_member <http://tempuri/person/1> .
+	crm:P1_is_identified_by <http://tempuri/e41/1> .
+   
 <http://tempuri/e41/1> a crm:E41_Appellation ;
-   rdfs:label "Fantasy Archaeology"@en .
+   rdfs:label "Wessex Archaeology"@en .
+  
+<http://tempuri/person/1> a crm:E21_Person ;
+   crm:P107i_is_current_or_former_member_of <http://tempuri/organization/1> .

@@ -1,0 +1,10 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix evt: <http://purl.org/heritagedata/schemes/agl_et/concepts/> .
+
+<http://tempuri/investigation/1> a crm:E7_Activity ;
+	crm:P32_used_general_technique evt:145112 .
+	
+evt:145112 a crm:E55_Type ;
+   crm:32i_was_technique_of <http://tempuri/investigation/1> ;
+   rdfs:label "Borehole Survey"@en .	

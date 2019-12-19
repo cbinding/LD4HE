@@ -1,0 +1,20 @@
+digraph {
+   // label = "Site Location";
+   // labelloc = "t";
+   node [color=gray, fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite];
+   edge [color=black, fontcolor=maroon, fontsize=10, fontname=Arial];
+   "crm:E41_Appellation" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"];
+   "crm:E53_Place" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E53_Place"];
+   "(site)" [style=dashed];
+   "(location)" [fillcolor="lavender"];
+   "(location name)" [fillcolor="lavender"];
+   "\"POINT(556600 256500)\"" [shape=box, fontcolor=black, color=gray];    
+   "\"Cambridgeshire\"@en" [shape=box, fontcolor=black, color=gray];    
+   "(location)" -> "crm:E53_Place" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "(location name)" -> "crm:E41_Appellation" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "(location)" -> "(location name)" [label="crm:87_is_identified_by\n(identifies)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P87_is_identified_by"];
+   "(location name)" -> "\"Cambridgeshire\"@en" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];   
+   "(site)" -> "(location)" [label="crm:P89_falls_within\n(contains)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P89_falls_within"];
+   "(site)" -> "\"POINT(556600 256500)\"" [label="crm:P168_place_is_defined_by\n(defines place)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P168_place_is_defined_by"];   
+   "(location)" -> "osont:Parish\nosont:District\nosont:EuropeanRegion" [label="crm:P2_has_type\n(is type of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"];   
+}

@@ -1,0 +1,18 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ids: <http://purl.org/heritagedata/schemes/2fedf061-855a-482c-9bc9-e7629bfc37ad/concepts/> .
+
+<http://tempuri/record/1> a crm:E73_Information_Object ;
+   crm:P1_is_identified_by <http://tempuri/identifier/1> .	
+   
+<http://tempuri/identifier/1> a crm:E42_Identifier ;
+   crm:P1i_identifies <http://tempuri/record/1> ;
+   rdfs:label "TR4584358" ;
+   crm:P2_has_type ids:12433c5f-ccce-4610-91b0-2e4a100df7d6 .
+   
+ids:12433c5f-ccce-4610-91b0-2e4a100df7d6 a crm:E55_Type ;
+   crm:P2i_is_type_of <http://tempuri/identifier/1> ;
+   rdfs:label "Planning Application No"@en .
+   
+
+  

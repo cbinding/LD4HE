@@ -1,0 +1,19 @@
+digraph {
+   // label = "Report Production";
+   // labelloc = "t";
+   node [color=gray, fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite, color=gray];
+   edge [color=black, fontcolor=maroon, fontsize=10, fontname=Arial ];   
+   
+   "crm:E12_Production" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E12_Production"];
+   "(report)" [style=dashed]; 
+   "(investigation)" [style=dashed];
+   "(author)" [style=dashed];
+   "(time span)" [style=dashed];
+   "(report production)" [fillcolor=lavender];   
+   "(report production)" -> "crm:E12_Production" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "(investigation)" -> "(report production)" [label="crm:P9_consists_of\n(forms part of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P9_consists_of"]; 
+   "(report production)" -> "(author)" [label="crm:P14_carried_out_by\n(performed)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]; 
+   "(report production)" -> "(report)" [label="crm:P108_has_produced\n(was produced by)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P108_has_produced"];  
+   "(report production)" -> "(time span)" [label="crm:P4_has_time-span\n(is time-span of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]; 
+   "(report)" -> "(investigation)" [label="crm:P67_refers_to", labelURL="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to"];      
+ }

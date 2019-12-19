@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Ceri Binding, University of South Wales">
-        
+        <link rel="canonical" href="https://cbinding.github.io/LD4HE/ld4he-artefact/">
         <link rel="shortcut icon" href="../img/favicon.ico">
         <title>Artefact - LD4HE</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
@@ -49,16 +49,25 @@
                             <li >
                                 <a href="..">Home</a>
                             </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Mapping <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../ld4he-example-data/">Example data</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-fields/">Data fields</a>
+</li>
+                                </ul>
+                            </li>
                             <li class="dropdown active">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Model <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="../ld4he-model/">Overall</a>
-</li>
-                                    
-<li class="active">
-    <a href="./">Artefact</a>
+    <a href="../ld4he-model/">Overview</a>
 </li>
                                     
 <li >
@@ -66,7 +75,19 @@
 </li>
                                     
 <li >
+    <a href="../ld4he-record/">Record</a>
+</li>
+                                    
+<li >
     <a href="../ld4he-investigation/">Investigation</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-site/">Site</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Artefact</a>
 </li>
                                     
 <li >
@@ -82,24 +103,17 @@
 </li>
                                     
 <li >
-    <a href="../ld4he-record/">Record</a>
-</li>
-                                    
-<li >
     <a href="../ld4he-report/">Report</a>
-</li>
-                                    
-<li >
-    <a href="../ld4he-site/">Site</a>
 </li>
                                     
 <li >
     <a href="../ld4he-timespan/">Timespan</a>
 </li>
+                                    
+<li >
+    <a href="../ld4he-place/">Place</a>
+</li>
                                 </ul>
-                            </li>
-                            <li >
-                                <a href="../ld4he-fields/">Data Fields</a>
                             </li>
                         </ul>
 
@@ -110,12 +124,12 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="../ld4he-model/">
+                                <a rel="next" href="../ld4he-site/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../ld4he-dataset/">
+                                <a rel="prev" href="../ld4he-monument/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -134,22 +148,30 @@
 
 <h1 id="artefact">Artefact</h1>
 <hr />
-<p>Artefacts are objects of some interest found on a <a href="../ld4he-site/">site</a> during an <a href="../ld4he-investigation/">investigation</a>. Artefact types are concepts from the object type thesaurus corresponding to the location of the <a href="../ld4he-site/">site</a>. For England &amp; Wales this will be the <a href="http://purl.org/heritagedata/schemes/mda_obj">FISH Archaeological Objects Thesaurus</a>, for Scotland it will be the <a href="http://purl.org/heritagedata/schemes/2">HES Archaeological Objects Thesaurus</a>.</p>
+<p>Artefacts are objects identified as being of some interest to the archaeological activities. In a similar approach to <a href="../ld4he-monument/">monuments</a>, Specific instances of artefacts are not included in OASIS metadata <a href="../ld4he-record/">records</a> - instead the records refer to general artefact types (and artefact periods). Artefact types are concepts originating from the object types thesaurus corresponding to the location of the <a href="../ld4he-site/">site</a>. For England &amp; Wales this will be the <a href="http://purl.org/heritagedata/schemes/mda_obj">FISH Archaeological Objects Thesaurus</a>, for Scotland it will be the <a href="http://purl.org/heritagedata/schemes/2">HES Archaeological Objects Thesaurus</a>. Where records refer to artefact periods these will be concepts originating from the <a href="http://purl.org/heritagedata/schemes/eh_period">Historic England Periods List</a>. There is no direct connection between the artefact type and the period concept in the dataset record, but the concepts are nevertheless useful for searching on records referring to controlled vocabulary terms e.g. "Early Medieval" or "Axehead".</p>
 <p><img alt="artefact" src="../img/ld4he-artefact.svg" /></p>
-<p><strong>Fig. 1:</strong> Artefact with associated entities and properties</p>
+<p><strong>Fig. 1:</strong> Artefact type and period associated with a site record | <a href="../img/ld4he-artefact.svg">svg</a> | <a href="../img/ld4he-artefact.png">png</a> | <a href="../img/ld4he-artefact.pdf">pdf</a></p>
 <pre><code class="turtle">@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix crm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt; .
-@prefix obj: &lt;http://purl.org/heritagedata/schemes/mda_obj/concepts/&gt; .
+@prefix object: &lt;http://purl.org/heritagedata/schemes/mda_obj/concepts/&gt; .
+@prefix period: &lt;http://purl.org/heritagedata/schemes/eh_period/concepts/&gt; .
 
-&lt;http://tempuri/artefact/1&gt; a crm:E22_Man-Made_Object ;
-   crm:P53_has_former_or_current_location &lt;http://tempuri/site/1&gt; ;
-   crm:P2_has_type obj:100153 . 
-obj:100153 a crm:E55_Type ;
-   crm:P2i_is_type_of &lt;http://tempuri/artefact/1&gt; ;
-   rdfs:label &quot;Axehead&quot;@en .
+&lt;http://tempuri/record/1&gt; a crm:E73_Information_Object;
+    crm:P67_refers_to object:100153 ;
+    crm:P67_refers_to period:EM .
+
+object:100153 a crm:E55_Type ;
+   crm:P67i_is_referred_to_by &lt;http://tempuri/record/1&gt; ;
+   rdfs:label &quot;Axehead&quot;@en .    
+
+period:EM a crm:E55_Type ;
+   crm:P67i_is_referred_to_by &lt;http://tempuri/record/1&gt; ;
+   rdfs:label &quot;Early Medieval&quot;@en .     
+
+
 </code></pre>
 
-<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> example | <a href="https://cbinding.github.io/LD4HE/ttl/example-artefact.ttl">raw</a> | <a href="https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-artefact.ttl">styled</a></p></div>
+<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> example | <a href="../ttl/example-artefact.ttl">raw</a> | <a href="https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-artefact.ttl">styled</a></p></div>
         </div>
 
         <footer class="col-md-12">

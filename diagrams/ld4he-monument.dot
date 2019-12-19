@@ -1,16 +1,18 @@
 digraph {
-   // label = "Monument";
+   // label = "Artefact";
    // labelloc = "t";
    node [color=gray, fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite];
-   edge [color=black, fontcolor=maroon, fontsize=10, fontname=Arial];
-   "crm:E22_Man-Made_Object" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object"];
-   "crm:E55_Type" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E55_Type"];
-   "(site)" [style=dashed];
-   "(monument)" [fillcolor=lavender];
-   "(monument)" -> "crm:E22_Man-Made_Object" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];   
-   "(monument)" -> "mon:69063" [label="crm:P2_has_type\n(is type of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"];
-   "(monument)" -> "(site)" [label="crm:P55_has_current_location\n(currently holds)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location"];
-   "mon:69063" -> "crm:E55_Type" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   edge [color=black, fontcolor=maroon, fontsize=10, fontname=Arial ];
+   "(record)" [style=dashed];
+   "(monument type)" [fillcolor=lavender];
+   "(monument period)" [fillcolor=lavender];
    "\"Lime Kiln\"@en" [shape=box, fontcolor=black];
-   "mon:69063" -> "\"Lime Kiln\"@en" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];
+   "\"Early Medieval\"@en" [shape=box, fontcolor=black];
+   "crm:E55_Type" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E55_Type"]; 
+   "(record)" -> "(monument type)" [label="crm:P67_refers_to\n(is referred to by)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to"];
+   "(record)" -> "(monument period)" [label="crm:P67_refers_to\n(is referred to by)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to"];
+   "(monument type)" -> "crm:E55_Type" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "(monument period)" -> "crm:E55_Type" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "(monument type)" ->  "\"Lime Kiln\"@en" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];
+   "(monument period)" ->  "\"Early Medieval\"@en" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"]; 
  }

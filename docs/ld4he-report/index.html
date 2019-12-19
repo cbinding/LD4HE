@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Ceri Binding, University of South Wales">
-        
+        <link rel="canonical" href="https://cbinding.github.io/LD4HE/ld4he-report/">
         <link rel="shortcut icon" href="../img/favicon.ico">
         <title>Report - LD4HE</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
@@ -49,16 +49,25 @@
                             <li >
                                 <a href="..">Home</a>
                             </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Mapping <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../ld4he-example-data/">Example data</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-fields/">Data fields</a>
+</li>
+                                </ul>
+                            </li>
                             <li class="dropdown active">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Model <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="../ld4he-model/">Overall</a>
-</li>
-                                    
-<li >
-    <a href="../ld4he-artefact/">Artefact</a>
+    <a href="../ld4he-model/">Overview</a>
 </li>
                                     
 <li >
@@ -66,7 +75,19 @@
 </li>
                                     
 <li >
+    <a href="../ld4he-record/">Record</a>
+</li>
+                                    
+<li >
     <a href="../ld4he-investigation/">Investigation</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-site/">Site</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-artefact/">Artefact</a>
 </li>
                                     
 <li >
@@ -81,25 +102,18 @@
     <a href="../ld4he-person/">Person</a>
 </li>
                                     
-<li >
-    <a href="../ld4he-record/">Record</a>
-</li>
-                                    
 <li class="active">
     <a href="./">Report</a>
 </li>
                                     
 <li >
-    <a href="../ld4he-site/">Site</a>
+    <a href="../ld4he-timespan/">Timespan</a>
 </li>
                                     
 <li >
-    <a href="../ld4he-timespan/">Timespan</a>
+    <a href="../ld4he-place/">Place</a>
 </li>
                                 </ul>
-                            </li>
-                            <li >
-                                <a href="../ld4he-fields/">Data Fields</a>
                             </li>
                         </ul>
 
@@ -110,12 +124,12 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="../ld4he-record/">
+                                <a rel="next" href="../ld4he-person/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../ld4he-site/">
+                                <a rel="prev" href="../ld4he-timespan/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -134,33 +148,40 @@
 
 <h1 id="report">Report</h1>
 <hr />
-<p>A report may be produced as part of an <a href="../ld4he-investigation/">investigation</a>. Report types are concepts from the <a href="http://purl.org/heritagedata/schemes/c31949b0-b6cf-4223-a2c0-c9a2048633ff">OASIS Digital Paper and Archive Component</a> thesaurus.</p>
-<p><img alt="report" src="../img/ld4he-oasis-report.svg" /></p>
-<p><strong>Fig. 1:</strong> Report with associated entities and properties</p>
+<p>A report is a document describing some aspect of an <a href="../ld4he-investigation/">investigation</a>. One or more reports may be <a href="../ld4he-report-production/">produced</a> either during or following an investigation. A report usually has an associated <a href="../ld4he-report-identifier/">identifier</a>. Report types are concepts from the <a href="http://purl.org/heritagedata/schemes/c31949b0-b6cf-4223-a2c0-c9a2048633ff">OASIS Digital Paper and Archive Component</a> thesaurus - examples of report types are <a href="http://purl.org/heritagedata/schemes/c31949b0-b6cf-4223-a2c0-c9a2048633ff/concepts/a8554064-858c-4b75-b570-e37643bbfaaa">"Geophysical survey report"</a>, <a href="http://purl.org/heritagedata/schemes/c31949b0-b6cf-4223-a2c0-c9a2048633ff/concepts/38bd0ad4-717e-4f1a-98a7-4ed3110d8c2c">"Scientific dating report"</a>, <a href="http://purl.org/heritagedata/schemes/c31949b0-b6cf-4223-a2c0-c9a2048633ff/concepts/d38d0e6f-b97b-4925-a238-fd502d21d396">"Watching brief report"</a> etc.</p>
+<p><img alt="report" src="../img/ld4he-report.svg" /></p>
+<p><strong>Fig. 1:</strong> Report with associated entities and properties | <a href="../img/ld4he-report.svg">svg</a> | <a href="../img/ld4he-report.png">png</a> | <a href="../img/ld4he-report.pdf">pdf</a></p>
 <pre><code class="turtle">@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix crm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt; .
 @prefix rtype: &lt;http://purl.org/heritagedata/schemes/c31949b0-b6cf-4223-a2c0-c9a2048633ff/concepts/&gt; .
 
 &lt;http://tempuri/report/1&gt; a crm:E31_Document ;
+   crm:P1_is_identified_by &lt;http://tempuri/identifier/1&gt; ;
    crm:P108i_was_produced_by &lt;http://tempuri/reportproduction/1&gt; ;
-   crm:P67_refers_to &lt;http://tempuri/investigation/1&gt; ;
+   crm:P7_documents &lt;http://tempuri/investigation/1&gt; ;
    crm:P2_has_type rtype:a8554064-858c-4b75-b570-e37643bbfaaa ;
    crm:P102_has_title &lt;http://tempuri/reporttitle/1&gt; .
+
+&lt;http://tempuri/identifier/1&gt; a crm:E42_Identifier;
+   crm:P1i_identifies &lt;http://tempuri/report/1&gt; .
+
 &lt;http://tempuri/reportproduction/1&gt; a crm:12_Production ;
    crm:P9i_forms_part_of &lt;http://tempuri/investigation/1&gt; ;
    crm:P108_produced &lt;http://tempuri/report/1&gt; .
+
 &lt;http://tempuri/investigation/1&gt; a crm:E7_Activity ;
-   crm:P9_consists_of &lt;http://tempuri/reportproduction/1&gt; ;
-   crm:P67i_is_referred_to_by &lt;http://tempuri/report/1&gt; .
+   crm:P7i_is_documented_in &lt;http://tempuri/report/1&gt; .
+
 rtype:a8554064-858c-4b75-b570-e37643bbfaaa a crm:E55_Type ;
    crm:P2i_is_type_of &lt;http://tempuri/report/1&gt; ;
    rdfs:label &quot;Geophysical survey report&quot;@en .
+
 &lt;http://tempuri/reporttitle/1&gt; a crm:E35_Title ;
    crm:P102i_is_title_of &lt;http://tempuri/report/1&gt; ;
    rdfs:label &quot;Investigation of 1 temp street&quot;@en .
 </code></pre>
 
-<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> example | <a href="https://cbinding.github.io/LD4HE/ttl/example-report.ttl">raw</a> | <a href="https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-report.ttl">styled</a></p></div>
+<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> example | <a href="../ttl/example-report.ttl">raw</a> | <a href="https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-report.ttl">styled</a></p></div>
         </div>
 
         <footer class="col-md-12">

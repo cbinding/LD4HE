@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Ceri Binding, University of South Wales">
-        
+        <link rel="canonical" href="https://cbinding.github.io/LD4HE/ld4he-model/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Overall - LD4HE</title>
+        <title>Overview - LD4HE</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -49,16 +49,25 @@
                             <li >
                                 <a href="..">Home</a>
                             </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Mapping <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../ld4he-example-data/">Example data</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-fields/">Data fields</a>
+</li>
+                                </ul>
+                            </li>
                             <li class="dropdown active">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Model <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li class="active">
-    <a href="./">Overall</a>
-</li>
-                                    
-<li >
-    <a href="../ld4he-artefact/">Artefact</a>
+    <a href="./">Overview</a>
 </li>
                                     
 <li >
@@ -66,7 +75,19 @@
 </li>
                                     
 <li >
+    <a href="../ld4he-record/">Record</a>
+</li>
+                                    
+<li >
     <a href="../ld4he-investigation/">Investigation</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-site/">Site</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-artefact/">Artefact</a>
 </li>
                                     
 <li >
@@ -82,24 +103,17 @@
 </li>
                                     
 <li >
-    <a href="../ld4he-record/">Record</a>
-</li>
-                                    
-<li >
     <a href="../ld4he-report/">Report</a>
-</li>
-                                    
-<li >
-    <a href="../ld4he-site/">Site</a>
 </li>
                                     
 <li >
     <a href="../ld4he-timespan/">Timespan</a>
 </li>
+                                    
+<li >
+    <a href="../ld4he-place/">Place</a>
+</li>
                                 </ul>
-                            </li>
-                            <li >
-                                <a href="../ld4he-fields/">Data Fields</a>
                             </li>
                         </ul>
 
@@ -110,12 +124,12 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="..">
+                                <a rel="next" href="../ld4he-fields/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../ld4he-artefact/">
+                                <a rel="prev" href="../ld4he-dataset/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -127,44 +141,90 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#data-model">Data Model</a></li>
+        <li class="main active"><a href="#data-model-overview">Data Model Overview</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="data-model">Data Model</h1>
+<h1 id="data-model-overview">Data Model Overview</h1>
 <hr />
-<p>The <a href="../ld4he-dataset/">dataset</a> is composed of <a href="../ld4he-record/">records</a> referring to <a href="../ld4he-investigation/">investigations</a>. Investigations are carried out by <a href="../ld4he-organization/">organizations</a> at <a href="../ld4he-site/">sites</a> during <a href="../ld4he-timespan/">time-spans</a>. Investigations encompass many activities, including <a href="../ld4he-report/">report</a> production.</p>
+<p>The LD4HE data model is based on a subset of the <a href="http://www.cidoc-crm.org/">CIDOC Conceptual Reference Model (CRM)</a>. The following pages give further details of distinct aspects of the LD4HE data model:</p>
+<ul>
+<li><a href="../ld4he-dataset/">Dataset</a><ul>
+<li><a href="../ld4he-record/">Record</a>  </li>
+<li><a href="../ld4he-identifier/">Record identifier</a>  </li>
+</ul>
+</li>
+<li><a href="../ld4he-investigation/">Investigation</a><ul>
+<li><a href="../ld4he-investigation-identifier/">Investigation identifier</a></li>
+<li><a href="../ld4he-investigation-reason/">Investigation reason</a></li>
+<li><a href="../ld4he-methodology/">Investigation methodology</a> </li>
+</ul>
+</li>
+<li><a href="../ld4he-site/">Site</a><ul>
+<li><a href="../ld4he-site-name/">Site name</a></li>
+<li><a href="../ld4he-site-location/">Site location</a>       </li>
+</ul>
+</li>
+<li><a href="../ld4he-report/">Report</a><ul>
+<li><a href="../ld4he-report-identifier/">Report identifier</a></li>
+<li><a href="../ld4he-report-production/">Report production</a></li>
+<li><a href="../ld4he-report-publication/">Report publication</a></li>
+</ul>
+</li>
+<li><a href="../ld4he-timespan/">Time Span</a>  </li>
+<li><a href="../ld4he-artefact/">Artefact</a></li>
+<li><a href="../ld4he-monument/">Monument</a></li>
+<li><a href="../ld4he-organization/">Organization</a> <ul>
+<li><a href="../ld4he-organization-name/">Organization name</a>   </li>
+</ul>
+</li>
+<li><a href="../ld4he-person/">Person</a>  </li>
+</ul>
+<p>Figure 1 below gives an indication of how each of these aspects are interlinked in the overall model. The <a href="../ld4he-dataset/">dataset</a> is composed of <a href="../ld4he-record/">records</a> referring to <a href="../ld4he-investigation/">investigations</a>. Investigations are carried out by <a href="../ld4he-organization/">organizations</a> at <a href="../ld4he-site/">sites</a> during <a href="../ld4he-timespan/">time-spans</a>. <a href="../ld4he-report-production/">Report production</a> produces <a href="../ld4he-report/">reports</a> that document the <a href="../ld4he-investigation/">investigations</a>.</p>
 <p><img alt="model" src="../img/ld4he-main-model.svg" /></p>
-<p><strong>Fig. 1:</strong> Main entities and properties</p>
+<p><strong>Fig. 1:</strong> Main entities and properties | <a href="../img/ld4he-main-model.svg">svg</a> | <a href="../img/ld4he-main-model.png">png</a> | <a href="../img/ld4he-main-model.pdf">pdf</a></p>
 <pre><code class="turtle">@prefix crm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt; .
 
 &lt;http://tempuri/dataset/1&gt; a crm:E73_Information_Object ;
-   crm:P148_has_component &lt;http://tempuri/record/1&gt; .
+   crm:P148_has_component &lt;http://tempuri/record/1&gt; . 
+
 &lt;http://tempuri/record/1&gt; a crm:E73_Information_Object ;
    crm:P148i_is_component_of &lt;http://tempuri/dataset/1&gt; ;
-   crm:P67_refers_to &lt;http://tempuri/investigation/1&gt; .
+   crm:P1_is_identified_by &lt;http://tempuri/identifier/1&gt; ;
+   crm:P67_refers_to &lt;http://tempuri/investigation/1&gt; ;
+   crm:P67_refers_to &lt;http://tempuri/report/1&gt; . 
+
+&lt;http://tempuri/identifier/1&gt; a crm:E42_Identifier ;
+   crm:P1i_identifies &lt;http://tempuri/record/1&gt; .  
+
 &lt;http://tempuri/investigation/1&gt; a crm:E7_Activity ;
    crm:P14-carried_out_by &lt;http://tempuri/organization/1&gt; ;
    crm:P7_took_place_at &lt;http://tempuri/site/1&gt; ;
+   crm:P67i_is_referred_to_by &lt;http://tempuri/record/1&gt; ;
    crm:P9_consists_of &lt;http://tempuri/reportproduction/1&gt; ;
-   crm:P108_has_produced &lt;http://tempuri/report/1&gt; ;
-   crm:P4_has_time-span &lt;http://tempuri/timespan/1&gt; .
+   crm:P70i_is_documented_in &lt;http://tempuri/report/1&gt; ;
+   crm:P4_has_time-span &lt;http://tempuri/timespan/1&gt; .   
+
 &lt;http://tempuri/organization/1&gt; a crm:E74_Group ;
    crm:P14i_performed &lt;http://tempuri/investigation/1&gt; .
-&lt;http://tempuri/site/1&gt; a crm:E53_Place ;
-   crm:P7i_witnessed &lt;http://tempuri/investigation/1&gt; .
-&lt;http://tempuri/reportproduction/1&gt; a crm:E12_Production ;
-   crm:P9i_forms_part_of &lt;http://tempuri/investigation/1&gt; ;
-   crm:P108_has_produced &lt;http://tempuri/report/1&gt; .
-&lt;http://tempuri/report/1&gt; a crm:E31_Document ;
-   crm:P108i_was_produced_by &lt;http://tempuri/reportproduction/1&gt; .
-&lt;http://tempuri/timespan/1&gt; a crm:E52_Time-Span ;
-   crm:P4i_is_time-span_of &lt;http://tempuri/investigation/1&gt; .
 
+&lt;http://tempuri/site/1&gt; a crm:E53_Place ;
+   crm:P7i_witnessed &lt;http://tempuri/investigation/1&gt; .   
+
+&lt;http://tempuri/reportproduction/1&gt; a crm:E12_Production ;
+   crm:P108_has_produced &lt;http://tempuri/report/1&gt; .   
+
+&lt;http://tempuri/report/1&gt; a crm:E31_Document ;
+   crm:P67i_is_referred_to_by &lt;http://tempuri/record/1&gt; ;
+   crm:P108i_was_produced_by &lt;http://tempuri/reportproduction/1&gt; ;
+   crm:P70_documents &lt;http://tempuri/investigation/1&gt; .   
+
+&lt;http://tempuri/timespan/1&gt; a crm:E52_Time-Span ;
+   crm:P4i_is_time-span_of &lt;http://tempuri/investigation/1&gt; .  
 </code></pre>
 
-<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> example | <a href="https://cbinding.github.io/LD4HE/ttl/example-overall.ttl">raw</a> | <a href="https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-overall.ttl">styled</a></p></div>
+<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> example | <a href="../ttl/example-overall.ttl">raw</a> | <a href="https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-overall.ttl">styled</a></p></div>
         </div>
 
         <footer class="col-md-12">

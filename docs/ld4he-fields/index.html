@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Ceri Binding, University of South Wales">
-        
+        <link rel="canonical" href="https://cbinding.github.io/LD4HE/ld4he-fields/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Data Fields - LD4HE</title>
+        <title>Data fields - LD4HE</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -49,16 +49,25 @@
                             <li >
                                 <a href="..">Home</a>
                             </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Mapping <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../ld4he-example-data/">Example data</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Data fields</a>
+</li>
+                                </ul>
+                            </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Model <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="../ld4he-model/">Overall</a>
-</li>
-                                    
-<li >
-    <a href="../ld4he-artefact/">Artefact</a>
+    <a href="../ld4he-model/">Overview</a>
 </li>
                                     
 <li >
@@ -66,7 +75,19 @@
 </li>
                                     
 <li >
+    <a href="../ld4he-record/">Record</a>
+</li>
+                                    
+<li >
     <a href="../ld4he-investigation/">Investigation</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-site/">Site</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-artefact/">Artefact</a>
 </li>
                                     
 <li >
@@ -82,24 +103,17 @@
 </li>
                                     
 <li >
-    <a href="../ld4he-record/">Record</a>
-</li>
-                                    
-<li >
     <a href="../ld4he-report/">Report</a>
-</li>
-                                    
-<li >
-    <a href="../ld4he-site/">Site</a>
 </li>
                                     
 <li >
     <a href="../ld4he-timespan/">Timespan</a>
 </li>
+                                    
+<li >
+    <a href="../ld4he-place/">Place</a>
+</li>
                                 </ul>
-                            </li>
-                            <li class="active">
-                                <a href="./">Data Fields</a>
                             </li>
                         </ul>
 
@@ -110,12 +124,12 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="../ld4he-timespan/">
+                                <a rel="next" href="../ld4he-example-data/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
-                            <li class="disabled">
-                                <a rel="prev" >
+                            <li >
+                                <a rel="prev" href="../ld4he-model/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -127,205 +141,335 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#oasis-mandatory-fields">OASIS mandatory fields</a></li>
+        <li class="main active"><a href="#data-fields">Data Fields</a></li>
+            <li><a href="#field-1-oasis-id">Field 1 - oasis id</a></li>
+            <li><a href="#field-2-event-type">Field 2 - event type</a></li>
+            <li><a href="#field-3-reason-for-investigation">Field 3 - reason for investigation</a></li>
+            <li><a href="#field-4-country">Field 4 - country</a></li>
+            <li><a href="#field-5-site-name">Field 5 - site name</a></li>
+            <li><a href="#field-9a-grid-reference-geom_ngr">Field 9a - Grid reference (geom_ngr)</a></li>
+            <li><a href="#field-9b-grid-reference-geom_ll">Field 9b - Grid reference (geom_ll)</a></li>
+            <li><a href="#field-15-county">Field 15 - county</a></li>
+            <li><a href="#field-16-district">Field 16 - district</a></li>
+            <li><a href="#field-17-parish">Field 17 - parish</a></li>
+            <li><a href="#field-18-her">Field 18 - HER</a></li>
+            <li><a href="#field-19-national-body">Field 19 - national body</a></li>
+            <li><a href="#field-22-project-title">Field 22 - project title</a></li>
+            <li><a href="#field-23a-start-date">Field 23a - start date</a></li>
+            <li><a href="#field-23b-end-date">Field 23b - end date</a></li>
+            <li><a href="#field-24a-methodology">Field 24a - methodology</a></li>
+            <li><a href="#field-24b-description">Field 24b - description</a></li>
+            <li><a href="#field-28-planning-application-id">Field 28 - planning application ID</a></li>
+            <li><a href="#field-31-project-codes">Field 31 - project codes</a></li>
+            <li><a href="#field-35-publication-type">Field 35 - publication type</a></li>
+            <li><a href="#field-91-type-of-report">Field 91 - type of report</a></li>
+            <li><a href="#field-36-title-of-report">Field 36 - title of report</a></li>
+            <li><a href="#field-39-author-editor">Field 39 - author / editor</a></li>
+            <li><a href="#field-44-date">Field 44 - date</a></li>
+            <li><a href="#field-45-publisher">Field 45 - publisher</a></li>
+            <li><a href="#field-46-place-of-issue">Field 46 - place of issue</a></li>
+            <li><a href="#field-58-name-of-organization">Field 58 - name of organization</a></li>
+            <li><a href="#field-50-url">Field 50 - URL</a></li>
+            <li><a href="#field-50a-doi">Field 50a - DOI</a></li>
+            <li><a href="#field-62-monument-type">Field 62 - monument type</a></li>
+            <li><a href="#field-63-monument-period">Field 63 - monument period</a></li>
+            <li><a href="#field-64-artefact-type">Field 64 - artefact type</a></li>
+            <li><a href="#field-65-artefact-period">Field 65 - artefact period</a></li>
+            <li><a href="#field-70-research-outcomes">Field 70 - research outcomes</a></li>
+            <li><a href="#field-oasis-solid-geology">Field OASIS+ - Solid geology</a></li>
+            <li><a href="#field-oasis-drift-geology">Field OASIS+ - Drift geology</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="oasis-mandatory-fields">OASIS mandatory fields</h1>
+<h1 id="data-fields">Data Fields</h1>
 <hr />
-<p>The source data for the LD4HE project comes from a specific subset of fields in the overall OASIS dataset. These are mandatory fields in the OASIS data input. </p>
-<table>
-<thead>
-<tr>
-<th>Field ID</th>
-<th>Field Name</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>oasis_id</td>
-<td>Unique identifier of the OASIS <a href="../ld4he-record/">record</a></td>
-</tr>
-<tr>
-<td>2</td>
-<td>event_type</td>
-<td>The type of <a href="../ld4he-investigation/">investigation</a>. URIs from <a href="http://purl.org/heritagedata/schemes/agl_et">FISH Event Types Thesaurus</a>. There may be multiple event types per record</td>
-</tr>
-<tr>
-<td>3</td>
-<td>reason for investigation</td>
-<td>The reason for undertaking an <a href="../ld4he-investigation/">investigation</a>. URIs from <a href="http://purl.org/heritagedata/schemes/ee833bdc-4cf1-4fbf-9282-29e75655855d">OASIS Reason for Investigation</a></td>
-</tr>
-<tr>
-<td>4</td>
-<td>Country</td>
-<td>Location of a <a href="../ld4he-site/">site</a>. URIs from <a href="http://data.ordnancesurvey.co.uk/datasets/boundary-line">OS Open Names</a></td>
-</tr>
-<tr>
-<td>5</td>
-<td>Site name</td>
-<td>Free text name for a local <a href="../ld4he-site/">site</a></td>
-</tr>
-<tr>
-<td>9a</td>
-<td>Grid reference (geom_ngr)</td>
-<td>Location of a <a href="../ld4he-site/">site</a>. This will store either a point, line or polygon in a single geometry field (using PostGIS), using the OSGB36 crs. There can be multiple values per record.</td>
-</tr>
-<tr>
-<td>9b</td>
-<td>Grid reference (geom_ll)</td>
-<td>Location of a <a href="../ld4he-site/">site</a>. This will store either a point, line or polygon in a single geometry field (using PostGIS), using the WGS84 crs. There can be multiple rows per record.</td>
-</tr>
-<tr>
-<td>15</td>
-<td>County</td>
-<td>Location of a <a href="../ld4he-site/">site</a>. URIs from <a href="http://data.ordnancesurvey.co.uk/datasets/boundary-line">OS Open Names</a></td>
-</tr>
-<tr>
-<td>16</td>
-<td>District</td>
-<td>Location of a <a href="../ld4he-site/">site</a>. URIs from <a href="http://data.ordnancesurvey.co.uk/datasets/boundary-line">OS Open Names</a></td>
-</tr>
-<tr>
-<td>17</td>
-<td>Parish</td>
-<td>Location of a <a href="../ld4he-site/">site</a>. URIs from <a href="http://data.ordnancesurvey.co.uk/datasets/boundary-line">OS Open Names</a></td>
-</tr>
-<tr>
-<td>18</td>
-<td>HER</td>
-<td>Auto generated. HER organization responsible for the area encompassing the location of the site</td>
-</tr>
-<tr>
-<td>19</td>
-<td>National body</td>
-<td>Auto generated. National body responsible for the area encompassing the location of the site</td>
-</tr>
-<tr>
-<td>22</td>
-<td>Project title</td>
-<td>Value generated in form</td>
-</tr>
-<tr>
-<td>23a</td>
-<td>Start date</td>
-<td>Start of the overall <a href="../ld4he-timespan/">timespan</a> for an <a href="../ld4he-investigation/">investigation</a>. Value generated in form</td>
-</tr>
-<tr>
-<td>23b</td>
-<td>End date</td>
-<td>End of the overall <a href="../ld4he-timespan/">timespan</a> for an <a href="../ld4he-investigation/">investigation</a>. Value generated in form</td>
-</tr>
-<tr>
-<td>24a</td>
-<td>Methodology</td>
-<td>Techniques used in an <a href="../ld4he-investigation/">investigation</a>, URIs from <a href="http://purl.org/heritagedata/schemes/agl_et">FISH Event Types</a>. There can be multiple values per record.</td>
-</tr>
-<tr>
-<td>24b</td>
-<td>Description</td>
-<td>Free text</td>
-</tr>
-<tr>
-<td>28</td>
-<td>Planning application ID</td>
-<td>Free text, and only if prompt (id3) = commercial</td>
-</tr>
-<tr>
-<td>31</td>
-<td>Project codes</td>
-<td>Type of code - OASIS Associated ID</td>
-</tr>
-<tr>
-<td>35</td>
-<td>Publication type</td>
-<td>URIs from <a href="http://purl.org/heritagedata/schemes/c31949b0-b6cf-4223-a2c0-c9a2048633ff">OASIS Paper and Digital Archive Component</a> vocabulary</td>
-</tr>
-<tr>
-<td>91</td>
-<td>Type of report</td>
-<td><a href="../ld4he-report/">Report</a> type. URIs from <a href="http://purl.org/heritagedata/schemes/c31949b0-b6cf-4223-a2c0-c9a2048633ff">OASIS Paper and Digital Archive Component</a> vocabulary</td>
-</tr>
-<tr>
-<td>36</td>
-<td>Title of report</td>
-<td><a href="../ld4he-report/">Report</a> title. Auto generated through form</td>
-</tr>
-<tr>
-<td>39</td>
-<td>Author / editor</td>
-<td>Author / Editor of <a href="../ld4he-report/">report</a>. Potential at a future date to assign ISSN to authors via the ADS Library, but the methodology for sustaining this is still not firmly established.</td>
-</tr>
-<tr>
-<td>44</td>
-<td>Date</td>
-<td>year the <a href="../ld4he-report/">report</a> was published/issued</td>
-</tr>
-<tr>
-<td>45</td>
-<td>Publisher</td>
-<td><a href="../ld4he-organization/">Organization</a> publishing the <a href="../ld4he-report/">report</a></td>
-</tr>
-<tr>
-<td>46</td>
-<td>Place of issue</td>
-<td>Place of publication for the <a href="../ld4he-report/">report</a>. Could use OS, but of limited use for this data</td>
-</tr>
-<tr>
-<td>58</td>
-<td>Name of organization</td>
-<td>Auto generated</td>
-</tr>
-<tr>
-<td>50</td>
-<td>URL</td>
-<td>URL of the <a href="../ld4he-report/">report</a></td>
-</tr>
-<tr>
-<td>50a</td>
-<td>DOI</td>
-<td>DOI of the <a href="../ld4he-report/">report</a> - an identifier</td>
-</tr>
-<tr>
-<td>62</td>
-<td>Monument type</td>
-<td>URIs from monument type vocabulary corresponding to <a href="../ld4he-site/">site</a> location: <a href="http://purl.org/heritagedata/schemes/eh_tmt2">England</a> / <a href="http://purl.org/heritagedata/schemes/1">Scotland</a> / <a href="http://purl.org/heritagedata/schemes/10">Wales</a></td>
-</tr>
-<tr>
-<td>63</td>
-<td>Monument period</td>
-<td>URIs from period vocabulary corresponding to <a href="../ld4he-site/">site</a>  location: <a href="http://purl.org/heritagedata/schemes/eh_period">England</a> / <a href="http://purl.org/heritagedata/schemes/scapa">Scotland</a> / <a href="http://purl.org/heritagedata/schemes/11">Wales</a></td>
-</tr>
-<tr>
-<td>64</td>
-<td>Artefact type</td>
-<td>URIs from object types vocabulary according to <a href="../ld4he-site/">site</a> location: <a href="http://purl.org/heritagedata/schemes/mda_obj">England &amp; Wales</a> / <a href="http://purl.org/heritagedata/schemes/2">Scotland</a></td>
-</tr>
-<tr>
-<td>65</td>
-<td>Artefact period</td>
-<td>URIs from period vocabulary corresponding to <a href="../ld4he-site/">site</a> location: <a href="http://purl.org/heritagedata/schemes/eh_period">England</a> / <a href="http://purl.org/heritagedata/schemes/scapa">Scotland</a> / <a href="http://purl.org/heritagedata/schemes/11">Wales</a></td>
-</tr>
-<tr>
-<td>70</td>
-<td>Research outcomes</td>
-<td>Use selection from Research Frameworks list (non-LOD at time of writing)</td>
-</tr>
-<tr>
-<td>OASIS+</td>
-<td>Solid geology</td>
-<td>If Geophysical module completed. Will use data from <a href="http://data.bgs.ac.uk/downloads.html">http://data.bgs.ac.uk/downloads.html</a></td>
-</tr>
-<tr>
-<td>OASIS+</td>
-<td>Drift geology</td>
-<td>If Geophysical module completed. Will use data from <a href="http://data.bgs.ac.uk/downloads.html">http://data.bgs.ac.uk/downloads.html</a></td>
-</tr>
-</tbody>
-</table></div>
+<p>The <a href="../ld4he-example-data/">source data</a> for the LD4HE project is a specific subset of fields from the overall OASIS dataset. These are mandatory fields in the OASIS data input forms, and were identified during the LD4HE project design stage. Each field listed has an OASIS field identifier, a corresponding field name, a brief description of how the data will fit into the overall LD4HE data model, some examples of typical field contents and a JSONPath expression for locating the specific field within the overall data structure. The JSONPath expressions were developed and tested against received example data using the <a href="https://jsonpath.com/">JSONPath online evaluator</a> to ensure correctness.</p>
+<hr />
+<h2 id="field-1-oasis-id">Field 1 - oasis id</h2>
+<p>The field contains the unique <a href="../ld4he-identifier/">identifier</a> for the OASIS <a href="../ld4he-record/">record</a>. There will be one OASIS identifier per record. Example field values encountered in the example data received to date are <em>"oxfordar1-357078"</em>, <em>"jensdigg1-197587"</em> etc.</p>
+<pre><code>$.[*].oasisId   
+</code></pre>
+
+<p><strong>Fig. 1:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-2-event-type">Field 2 - event type</h2>
+<p>The type of <a href="../ld4he-investigation/">investigation</a> activity undertaken. There may be multiple event types per record. The field will contain URIs from the <a href="http://purl.org/heritagedata/schemes/agl_et">FISH Event Types Thesaurus</a>. Example field values are:</p>
+<ul>
+<li><a href="http://purl.org/heritagedata/schemes/agl_et/concepts/145118">http://purl.org/heritagedata/schemes/agl_et/concepts/145118</a> <em>(Building Survey)</em></li>
+<li><a href="http://purl.org/heritagedata/schemes/agl_et/concepts/145113">http://purl.org/heritagedata/schemes/agl_et/concepts/145113</a> <em>(Bosing survey)</em></li>
+<li><a href="http://purl.org/heritagedata/schemes/agl_et/concepts/145177">http://purl.org/heritagedata/schemes/agl_et/concepts/145177</a> <em>(Watching Brief)</em> etc.</li>
+</ul>
+<pre><code>$.[*].oasisProjDetails.oasisProjSubjectPeriodList[?(@.subjectType.subjectType == 'FISH_EVENT')].subjectUri  
+</code></pre>
+
+<p><strong>Fig. 2:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-3-reason-for-investigation">Field 3 - reason for investigation</h2>
+<p>The <a href="../ld4he-investigation-reason/">reason</a> for undertaking an <a href="../ld4he-investigation/">investigation</a>. The field will contain URIs from <a href="http://purl.org/heritagedata/schemes/ee833bdc-4cf1-4fbf-9282-29e75655855d">OASIS Reason for Investigation</a>. Example field values are:</p>
+<ul>
+<li><a href="http://purl.org/heritagedata/schemes/ee833bdc-4cf1-4fbf-9282-29e75655855d/concepts/11e58ff4-9432-4452-a364-6b22e1696944">http://purl.org/heritagedata/schemes/ee833bdc-4cf1-4fbf-9282-29e75655855d/concepts/11e58ff4-9432-4452-a364-6b22e1696944</a> <em>(Planning requirement)</em></li>
+<li><a href="http://purl.org/heritagedata/schemes/ee833bdc-4cf1-4fbf-9282-29e75655855d/concepts/48a1fbbc-65aa-4004-84c4-3ad33d0f1fb0">http://purl.org/heritagedata/schemes/ee833bdc-4cf1-4fbf-9282-29e75655855d/concepts/48a1fbbc-65aa-4004-84c4-3ad33d0f1fb0</a> <em>(Post determination)</em></li>
+</ul>
+<pre><code>$.[*].oasisProjDetails.oasisProjAttrList[?(@.projectAttrType == 'reason')].projectAttrLuId.uri
+</code></pre>
+
+<p><strong>Fig. 3:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-4-country">Field 4 - country</h2>
+<p>Location of a <a href="../ld4he-site/">site</a>. The intention is that this field will contain URIs from <a href="http://data.ordnancesurvey.co.uk/datasets/boundary-line">OS Open Names</a> - however in the example data the field currently contains textual country names e.g. <em>"England"</em>, <em>"Wales"</em>, <em>"Northern Ireland"</em>, <em>"Scotland"</em></p>
+<pre><code>$.[*].oasisProjDetails.adminAreasMap[*].Country
+</code></pre>
+
+<p><strong>Fig. 4:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-5-site-name">Field 5 - site name</h2>
+<p>Free text local <a href="../ld4he-site-name/">name</a> for a <a href="../ld4he-site/">site</a>. Example values for the field are <em>"Studfield Hill"</em>, <em>"Oxford Botanic Gardens"</em>, <em>"Boundary Wall of Former Cinema Site, Sandgate"</em> etc.</p>
+<pre><code>$.[*].oasisProjDetails.oasisProjSiteList[*].sitename
+
+Note for field values relating to a specific record (e.g. the site name for oasis_id 'jensdigg1-196788'), JSONPath would be:
+
+$.[?(@.oasisId == 'jensdigg1-196788')].oasisProjDetails.oasisProjSiteList[*].sitename
+</code></pre>
+
+<p><strong>Fig. 5:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-9a-grid-reference-geom_ngr">Field 9a - Grid reference (geom_ngr)</h2>
+<p><a href="../ld4he-site-location/">Location</a> of a <a href="../ld4he-site/">site</a>. This will store either a point, line or polygon in a single geometry field (using PostGIS), using the OSGB36 crs. Example values for the field are <em>"POINT(556600 256500)"</em>, <em>"POINT(154350 54350)"</em>. There can be multiple values per record.</p>
+<pre><code>$.[*].oasisProjDetails.oasisProjSiteList[*].oasisProjSiteCoordsList[?(@.vectorType == 'Point' || @.vectorType == 'Polygon')].geomNgrOut
+</code></pre>
+
+<p><strong>Fig. 6:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-9b-grid-reference-geom_ll">Field 9b - Grid reference (geom_ll)</h2>
+<p><a href="../ld4he-site-location/">Location</a> of a <a href="../ld4he-site/">site</a>. This will store either a point, line or polygon in a single geometry field (using PostGIS), using the WGS84 crs. Example values for the field are <em>"POINT(1 55)"</em>. There can be multiple values per record.</p>
+<pre><code>$.[*].oasisProjDetails.oasisProjSiteList[*].oasisProjSiteCoordsList[?(@.vectorType == 'Point' || @.vectorType == 'Polygon')].geomLlOut
+</code></pre>
+
+<p><strong>Fig. 7:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-15-county">Field 15 - county</h2>
+<p><a href="../ld4he-site-location/">Location</a> that a <a href="../ld4he-site/">site</a> falls within. The intention is that this field will contain URIs from <a href="http://data.ordnancesurvey.co.uk/datasets/boundary-line">OS Open Names</a> - however in the example data the field currently contains textual county names e.g. <em>"Cambridgeshire"</em>, <em>"Somerset"</em>, <em>"North Yorkshire"</em>, <em>"Shropshire"</em> etc.</p>
+<pre><code>$.[*].oasisProjDetails.adminAreasMap[*].County
+</code></pre>
+
+<p><strong>Fig. 8:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-16-district">Field 16 - district</h2>
+<p><a href="../ld4he-site-location/">Location</a> that a <a href="../ld4he-site/">site</a> falls within. The intention is that this field will contain URIs from <a href="http://data.ordnancesurvey.co.uk/datasets/boundary-line">OS Open Names</a> - however in the example data the field currently contains textual district names e.g. <em>"South Cambridgeshire"</em>, <em>"Sedgemoor"</em>, <em>"Hambleton"</em>, <em>"Harrogate"</em> etc.</p>
+<pre><code>$.[*].oasisProjDetails.adminAreasMap[*].[District/Unitary Authority]
+</code></pre>
+
+<p><strong>Fig. 9:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-17-parish">Field 17 - parish</h2>
+<p><a href="../ld4he-site-location/">Location</a> that a <a href="../ld4he-site/">site</a> falls within. The intention is that this field will contain URIs from <a href="http://data.ordnancesurvey.co.uk/datasets/boundary-line">OS Open Names</a> - however in the example data the field currently contains textual parish names e.g. <em>"Great Wilbraham"</em>, <em>"East Huntspill"</em>, <em>"Overton"</em>, <em>"Wighill"</em> etc.</p>
+<pre><code>$.[*].oasisProjDetails.adminAreasMap[*].Parish
+</code></pre>
+
+<p><strong>Fig. 10:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-18-her">Field 18 - HER</h2>
+<p>Name of the Historic Environment Record organization responsible for an area encompassing the <a href="../ld4he-site-location/">location of a site</a>. Example values for the field are <em>"Bedford Borough HER"</em>, <em>"Redcar and Cleveland UAD"</em>, <em>"New Forest National Park Authority"</em> etc.</p>
+<pre><code>$.[*].oasisReviewersHasOasisList[*].[?(@.level=='2')].name
+</code></pre>
+
+<p><strong>Fig. 11:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-19-national-body">Field 19 - national body</h2>
+<p>National body responsible for the area encompassing the <a href="../ld4he-site-location/">location of a site</a>. Example values for the field are <em>"Historic Environment Scotland"</em>, <em>"Royal Commission on the Ancient and Historical Monuments of Wales"</em> etc.</p>
+<pre><code>$.[*].oasisReviewersHasOasisList[*].[?(@.level=='4')].name
+</code></pre>
+
+<p><strong>Fig. 12:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-22-project-title">Field 22 - project title</h2>
+<p>Descriptive title of the <a href="../ld4he-investigation/">investigation</a>. Example values for the field are often in the form <em>"[Event type] at [Site name]"</em> e.g. <em>"Field Survey at Studfield Hill"</em>, <em>"Field Visit at The Sheiling"</em> etc. </p>
+<pre><code>$.[*].oasisProjDetails.projName
+</code></pre>
+
+<p><strong>Fig. 13:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-23a-start-date">Field 23a - start date</h2>
+<p>Start of the overall <a href="../ld4he-timespan/">timespan</a> for an <a href="../ld4he-investigation/">investigation</a>. Example values for the field are  <em>"13-Dec-2007 12:00"</em>, <em>"01-Apr-2018 12:00"</em> etc.</p>
+<pre><code>$.[*].oasisProjDetails.sdate
+</code></pre>
+
+<p><strong>Fig. 14:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-23b-end-date">Field 23b - end date</h2>
+<p>End of the overall <a href="../ld4he-timespan/">timespan</a> for an <a href="../ld4he-investigation/">investigation</a>. Example values for the field are  <em>"13-Dec-2007 12:00"</em>, <em>"01-Apr-2018 12:00"</em> etc.</p>
+<pre><code>$.[*].oasisProjDetails.edate
+</code></pre>
+
+<p><strong>Fig. 15:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-24a-methodology">Field 24a - methodology</h2>
+<p><a href="../ld4he-methodology/">Techniques</a> used in an <a href="../ld4he-investigation/">investigation</a>. The field will contain URIs from <a href="http://purl.org/heritagedata/schemes/agl_et">FISH Event Types</a>. There can be multiple values per record.</p>
+<pre><code>??
+</code></pre>
+
+<p><strong>Fig. 16:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-24b-description">Field 24b - description</h2>
+<p>Brief textual description of an <a href="../ld4he-investigation/">investigation</a>. Example value is: <em>"An archaeological evaluation was undertaken by Cotswold Archaeology in August 2017 at the proposed Clearwater CE Primary School site, Quedgeley, Gloucestershire. A total of seven trenches were excavated. The remains of two modern earthen banks, possibly relating to former flood defences or most probably episodes of landscaping associated with the construction of nearby modern housing, were identified in the south western part of the site. No further features, deposits or finds of archaeological significance were identified during the evaluation."</em></p>
+<pre><code>$.[*].oasisProjDetails.descr
+</code></pre>
+
+<p><strong>Fig. 17:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-28-planning-application-id">Field 28 - planning application ID</h2>
+<p>An <a href="../ld4he-investigation-identifier/">identifier</a> of a specific type, associated with an <a href="../ld4he-investigation/">investigation</a>. An example value of the field contents is <em>"TR4584358"</em></p>
+<pre><code>$.[*].oasisProjDetails.oasisProjAssocIdsList[?(@.identifierType.descr == 'Planning Application No')].identifier 
+</code></pre>
+
+<p><strong>Fig. 18:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-31-project-codes">Field 31 - project codes</h2>
+<p>Type of code - OASIS Associated ID</p>
+<pre><code> ??
+</code></pre>
+
+<p><strong>Fig. 19:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-35-publication-type">Field 35 - publication type</h2>
+<p>The form of publication the <a href="../ld4he-report/">report</a> takes. Values will be URIs from <a href="http://purl.org/heritagedata/schemes/c31949b0-b6cf-4223-a2c0-c9a2048633ff">OASIS Paper and Digital Archive Component</a> vocabulary; however in the example data the field contains textual values e.g. <em>"REPORT"</em>, <em>"MONOGRAPH"</em>, <em>"JOURNAL_ARTICLE"</em></p>
+<pre><code>$.[*].oasisProjDetails.oasisProjBiblioList[*].biblioType 
+</code></pre>
+
+<p><strong>Fig. 20:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-91-type-of-report">Field 91 - type of report</h2>
+<p>Values will be URIs from <a href="http://purl.org/heritagedata/schemes/c31949b0-b6cf-4223-a2c0-c9a2048633ff">OASIS Paper and Digital Archive Component</a> vocabulary</p>
+<pre><code> ??
+</code></pre>
+
+<p><strong>Fig. 21:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-36-title-of-report">Field 36 - title of report</h2>
+<p>Textual <a href="../ld4he-report/">Report</a> title. Example values is <em>"Excavation at edinburgh castle"</em></p>
+<pre><code> $.[*].oasisProjDetails.oasisProjBiblioList[*].title
+</code></pre>
+
+<p><strong>Fig. 22:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-39-author-editor">Field 39 - author / editor</h2>
+<p>Author / Editor of <a href="../ld4he-report/">report</a>. Potential at a future date to assign ISSN to authors via the ADS Library, but the methodology for sustaining this is still not firmly established. Example value for the field is <em>"Smith, Tony"</em></p>
+<pre><code>$.[*].oasisProjDetails.oasisProjBiblioList[*].oasisProjBiblioAuthsList[*].surname
+</code></pre>
+
+<p><strong>Fig. 23:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-44-date">Field 44 - date</h2>
+<p>Year the <a href="../ld4he-report/">report</a> was <a href="../ld4he-report-publication/">published/issued</a>. Example values are  <em>1914</em>, <em>2017</em> etc.</p>
+<pre><code>$.[*].oasisProjDetails.oasisProjBiblioList[*].pubdate
+</code></pre>
+
+<p><strong>Fig. 24:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-45-publisher">Field 45 - publisher</h2>
+<p>Name of the <a href="../ld4he-organization/">Organization</a> responsible for <a href="../ld4he-report-publication/">publishing</a> the <a href="../ld4he-report/">report</a>. Example values for the field are <em>"ADS"</em>, <em>"East Lothian Council Archaeology Service"</em></p>
+<pre><code>$.[*].oasisProjDetails.oasisProjBiblioList[*].publisher
+</code></pre>
+
+<p><strong>Fig. 25:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-46-place-of-issue">Field 46 - place of issue</h2>
+<p><a href="../ld4he-place/">Place</a> of <a href="../ld4he-report-publication/">publication</a> for the <a href="../ld4he-report/">report</a>. The field contains textual names only, not URIs. Examples are <em>"Edinburgh"</em>, <em>"Rye"</em> etc.</p>
+<pre><code>$.[*].oasisProjDetails.oasisProjBiblioList[*].place
+</code></pre>
+
+<p><strong>Fig. 26:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-58-name-of-organization">Field 58 - name of organization</h2>
+<p>??</p>
+<pre><code>??
+</code></pre>
+
+<p><strong>Fig. 27:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-50-url">Field 50 - URL</h2>
+<p>URL of the <a href="../ld4he-report/">report</a> - an identifier. An example is <a href="https://archaeologydataservice.ac.uk/catalogue/adsdata/arch-841-1/dissemination/pdf/oxfordar1-357078_1.pdf">https://archaeologydataservice.ac.uk/catalogue/adsdata/arch-841-1/dissemination/pdf/oxfordar1-357078_1.pdf</a></p>
+<pre><code>$.[*].oasisProjDetails.oasisProjBiblioList[*].oasisProjBiblioDetailsList[*].url
+</code></pre>
+
+<p><strong>Fig. 28:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-50a-doi">Field 50a - DOI</h2>
+<p>Digital Object Identifier of the <a href="../ld4he-report/">report</a> - an identifier. Examples are <em>"10.5284/1018054"</em>, <em>"10.5284/1057532"</em>, <em>"10.5284/1057505"</em></p>
+<pre><code>$.[*].oasisProjDetails.oasisProjBiblioList[*].oasisProjBiblioDetailsList[*].doi
+</code></pre>
+
+<p><strong>Fig. 29:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-62-monument-type">Field 62 - monument type</h2>
+<p>URIs from monument type vocabulary corresponding to <a href="../ld4he-site/">site</a> location: <a href="http://purl.org/heritagedata/schemes/eh_tmt2">England</a> / <a href="http://purl.org/heritagedata/schemes/1">Scotland</a> / <a href="http://purl.org/heritagedata/schemes/10">Wales</a>. Example values for the field are:</p>
+<ul>
+<li><a href="http://purl.org/heritagedata/schemes/eh_tmt2/concepts/70096">http://purl.org/heritagedata/schemes/eh_tmt2/concepts/70096</a> <em>(Henge)</em></li>
+<li><a href="http://purl.org/heritagedata/schemes/eh_tmt2/concepts/68622">http://purl.org/heritagedata/schemes/eh_tmt2/concepts/68622</a> <em>(Farmstead)</em></li>
+<li><a href="http://purl.org/heritagedata/schemes/eh_tmt2/concepts/70152">http://purl.org/heritagedata/schemes/eh_tmt2/concepts/70152</a> <em>(Monastery)</em></li>
+</ul>
+<pre><code>$.[*].oasisProjDetails.oasisProjSubjectPeriodList[?(@.subjectType.subjectType == 'FISH_TMT')].subjectUri
+</code></pre>
+
+<p><strong>Fig. 30:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-63-monument-period">Field 63 - monument period</h2>
+<p>URIs from period vocabulary corresponding to <a href="../ld4he-site/">site</a> location: <a href="http://purl.org/heritagedata/schemes/eh_period">England</a> / <a href="http://purl.org/heritagedata/schemes/scapa">Scotland</a> / <a href="http://purl.org/heritagedata/schemes/11">Wales</a>. Example values for the field are:</p>
+<ul>
+<li><a href="http://purl.org/heritagedata/schemes/eh_period/concepts/NE">http://purl.org/heritagedata/schemes/eh_period/concepts/NE</a> <em>(Neolithic)</em></li>
+<li><a href="http://purl.org/heritagedata/schemes/eh_period/concepts/MBA">http://purl.org/heritagedata/schemes/eh_period/concepts/MBA</a> <em>(Middle Bronze Age)</em></li>
+<li><a href="http://purl.org/heritagedata/schemes/eh_period/concepts/E20">http://purl.org/heritagedata/schemes/eh_period/concepts/E20</a> <em>(Early 20th Century)</em></li>
+</ul>
+<pre><code>$.[*].oasisProjDetails.oasisProjSubjectPeriodList[?(@.subjectType.subjectType == 'FISH_TMT')].periodId.uri
+</code></pre>
+
+<p><strong>Fig. 31:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-64-artefact-type">Field 64 - artefact type</h2>
+<p>URIs from object types vocabulary according to <a href="../ld4he-site/">site</a> location: <a href="http://purl.org/heritagedata/schemes/mda_obj">England &amp; Wales</a> / <a href="http://purl.org/heritagedata/schemes/2">Scotland</a>. Example values for the field are:</p>
+<ul>
+<li><a href="http://purl.org/heritagedata/schemes/mda_obj/concepts/96380">http://purl.org/heritagedata/schemes/mda_obj/concepts/96380</a> <em>(Pot)</em></li>
+<li><a href="http://purl.org/heritagedata/schemes/mda_obj/concepts/96665">http://purl.org/heritagedata/schemes/mda_obj/concepts/96665</a> <em>(Brooch)</em></li>
+<li><a href="http://purl.org/heritagedata/schemes/mda_obj/concepts/96057">http://purl.org/heritagedata/schemes/mda_obj/concepts/96057</a> <em>(Rune Stone)</em></li>
+</ul>
+<pre><code> $.[*].oasisProjDetails.oasisProjSubjectPeriodList[?(@.subjectType.subjectType == 'FISH_OBJ')].subjectUri
+</code></pre>
+
+<p><strong>Fig. 32:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-65-artefact-period">Field 65 - artefact period</h2>
+<p>URIs from period vocabulary corresponding to <a href="../ld4he-site/">site</a> location: <a href="http://purl.org/heritagedata/schemes/eh_period">England</a> / <a href="http://purl.org/heritagedata/schemes/scapa">Scotland</a> / <a href="http://purl.org/heritagedata/schemes/11">Wales</a>. Example values for the field are:</p>
+<ul>
+<li><a href="http://purl.org/heritagedata/schemes/eh_period/concepts/NE">http://purl.org/heritagedata/schemes/eh_period/concepts/NE</a> <em>(Neolithic)</em></li>
+<li><a href="http://purl.org/heritagedata/schemes/eh_period/concepts/MBA">http://purl.org/heritagedata/schemes/eh_period/concepts/MBA</a> <em>(Middle Bronze Age)</em></li>
+<li><a href="http://purl.org/heritagedata/schemes/eh_period/concepts/E20">http://purl.org/heritagedata/schemes/eh_period/concepts/E20</a> <em>(Early 20th Century)</em></li>
+</ul>
+<pre><code>$.[*].oasisProjDetails.oasisProjSubjectPeriodList[?(@.subjectType.subjectType == 'FISH_OBJ')].periodId.uri
+</code></pre>
+
+<p><strong>Fig. 33:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-70-research-outcomes">Field 70 - research outcomes</h2>
+<p>Use selection from Research Frameworks list (non-LOD at time of writing). A value from the example data for this field is <em>"Could reassessment of early work at sites of Loudon Hill and Milton help to understand early Roman activity in Scotland?"</em></p>
+<pre><code>$.[*].oasisProjDetails.oasisProjResOutcomesList[*].researchFrameworksId.section
+</code></pre>
+
+<p><strong>Fig. 34:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-oasis-solid-geology">Field OASIS+ - Solid geology</h2>
+<p>If Geophysical module completed. Will use data from <a href="http://data.bgs.ac.uk/downloads.html">http://data.bgs.ac.uk/downloads.html</a></p>
+<pre><code>??
+</code></pre>
+
+<p><strong>Fig. 35:</strong> JSONPath expression</p>
+<hr />
+<h2 id="field-oasis-drift-geology">Field OASIS+ - Drift geology</h2>
+<p>If Geophysical module completed. Will use data from <a href="http://data.bgs.ac.uk/downloads.html">http://data.bgs.ac.uk/downloads.html</a></p>
+<pre><code>??
+</code></pre>
+
+<p><strong>Fig. 36:</strong> JSONPath expression</p></div>
         </div>
 
         <footer class="col-md-12">

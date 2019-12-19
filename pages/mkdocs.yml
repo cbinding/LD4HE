@@ -1,21 +1,35 @@
 site_name: LD4HE
+site_url: https://cbinding.github.io/LD4HE/
 site_author: Ceri Binding, University of South Wales
-site_description: LD4HE - Linked Data for the Historic Environment
+site_description: Linked Data for the Historic Environment (LD4HE)
 nav:
     - Home: index.md
+    - Data Mapping: 
+        - Example data: ld4he-example-data.md
+        - Data fields: ld4he-fields.md
     - Data Model: 
-        - Overall: ld4he-model.md
-        - Artefact: ld4he-artefact.md
+        - Overview: ld4he-model.md
         - Dataset: ld4he-dataset.md
+        - Record: ld4he-record.md
+        - Record identifier: ld4he-identifier.md
         - Investigation: ld4he-investigation.md
+        - Investigation identifier: ld4he-investigation-identifier.md
+        - Investigation reason: ld4he-investigation-reason.md
+        - Investigation methodology: ld4he-methodology.md
+        - Site: ld4he-site.md
+        - Site name: ld4he-site-name.md
+        - Site location: ld4he-site-location.md
+        - Artefact: ld4he-artefact.md
         - Monument: ld4he-monument.md
         - Organization: ld4he-organization.md
+        - Organization name: ld4he-organization-name.md
         - Person: ld4he-person.md
-        - Record: ld4he-record.md
         - Report: ld4he-report.md
-        - Site: ld4he-site.md
+        - Report identifier: ld4he-report-identifier.md
+        - Report production: ld4he-report-production.md
+        - Report publication: ld4he-report-publication.md
         - Timespan: ld4he-timespan.md
-    - Data Fields: ld4he-fields.md
+        - Place: ld4he-place.md   
 markdown_extensions:
     - markdown_include.include:
-        base_path: docs   
+        base_path: docs

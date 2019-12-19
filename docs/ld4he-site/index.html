@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Ceri Binding, University of South Wales">
-        
+        <link rel="canonical" href="https://cbinding.github.io/LD4HE/ld4he-site/">
         <link rel="shortcut icon" href="../img/favicon.ico">
         <title>Site - LD4HE</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
@@ -49,16 +49,25 @@
                             <li >
                                 <a href="..">Home</a>
                             </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Mapping <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../ld4he-example-data/">Example data</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-fields/">Data fields</a>
+</li>
+                                </ul>
+                            </li>
                             <li class="dropdown active">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Model <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="../ld4he-model/">Overall</a>
-</li>
-                                    
-<li >
-    <a href="../ld4he-artefact/">Artefact</a>
+    <a href="../ld4he-model/">Overview</a>
 </li>
                                     
 <li >
@@ -66,7 +75,19 @@
 </li>
                                     
 <li >
+    <a href="../ld4he-record/">Record</a>
+</li>
+                                    
+<li >
     <a href="../ld4he-investigation/">Investigation</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Site</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-artefact/">Artefact</a>
 </li>
                                     
 <li >
@@ -82,24 +103,17 @@
 </li>
                                     
 <li >
-    <a href="../ld4he-record/">Record</a>
-</li>
-                                    
-<li >
     <a href="../ld4he-report/">Report</a>
-</li>
-                                    
-<li class="active">
-    <a href="./">Site</a>
 </li>
                                     
 <li >
     <a href="../ld4he-timespan/">Timespan</a>
 </li>
+                                    
+<li >
+    <a href="../ld4he-place/">Place</a>
+</li>
                                 </ul>
-                            </li>
-                            <li >
-                                <a href="../ld4he-fields/">Data Fields</a>
                             </li>
                         </ul>
 
@@ -110,12 +124,12 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="../ld4he-report/">
+                                <a rel="next" href="../ld4he-investigation/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../ld4he-timespan/">
+                                <a rel="prev" href="../ld4he-artefact/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -134,41 +148,41 @@
 
 <h1 id="site">Site</h1>
 <hr />
-<p>A site represents a location that is subject to an <a href="../ld4he-investigation/">investigation</a>. Sites can be the (former) location of <a href="../ld4he-artefact/">Artefacts</a> and the (current) location of <a href="../ld4he-monument/">Monuments</a>.</p>
+<p>A site represents a location (a place) that is subject to an <a href="../ld4he-investigation/">investigation</a>. Sites are identified by a local <a href="../ld4he-site-name/">site name</a>, often with locations and extents defined in terms of <a href="../ld4he-site-location/">geographical coordinates</a>; sites will usually also fall within a broader named <a href="../ld4he-site-location/">location</a>. </p>
 <p><img alt="site" src="../img/ld4he-site.svg" /></p>
-<p><strong>Fig. 1:</strong> Site with associated entities and properties</p>
-<p>Places containing sites are represented using a flat (as opposed to hierarchical) structure. This aligns with the way that OASIS and OS Open Names records are structured</p>
-<pre><code class="turtle">@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
-@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+<p><strong>Fig. 1:</strong> Site with associated entities and properties | <a href="../img/ld4he-site.svg">svg</a> | <a href="../img/ld4he-site.png">png</a> | <a href="../img/ld4he-site.pdf">pdf</a></p>
+<pre><code class="turtle">@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix crm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt; .
 @prefix osont: &lt;http://data.ordnancesurvey.co.uk/ontology/admingeo/&gt; .
 @prefix oslod: &lt;http://data.ordnancesurvey.co.uk/id/&gt; .
 
+&lt;http://tempuri/investigation/1&gt; a crm:E7_Activity;
+    crm:P7_took_place_at &lt;http://tempuri/site/1&gt; .
+
 &lt;http://tempuri/site/1&gt; a crm:E53_Place ;
    crm:P7i_witnessed &lt;http://tempuri/investigation/1&gt; ;
    crm:P1_is_identified_by &lt;http://tempuri/sitename/1&gt; ;
-   crm:P55i_currently_holds &lt;http://tempuri/monument/1&gt; ;
-   crm:P53i_is_former_or_current_location_of &lt;http://tempuri/artefact/1&gt; ;
-   crm:P89_falls_within oslod:7000000000043542 ,  
-      oslod:7000000000043674 ,  
-      oslod:7000000000041422 .   
-&lt;http://tempuri/monument/1&gt; crm:P55_has_current_location &lt;http://tempuri/site/1&gt; .  
-&lt;http://tempuri/artefact/1&gt; crm:P53_has_former_or_current_location &lt;http://tempuri/site/1&gt; . 
+   crm:P168_place_is_defined_by &quot;POINT(566600 256500)&quot; ;
+   crm:P89_falls_within oslod:7000000000043542 , oslod:7000000000043674 , oslod:7000000000041422 . 
+
 &lt;http://tempuri/sitename/1&gt; a crm:E41_Appellation ;
    crm:P1i_identifies &lt;http://tempuri/site/1&gt; ;
    rdfs:label &quot;Boundary Wall of Former Cinema Site, Sandgate&quot;@en .   
+
 oslod:7000000000043542 a osont:Parish ;
    rdfs:label &quot;Berwick Upon Tweed&quot;@en ;  
-   crm:P89i_contains &lt;http://tempuri/site/1&gt; .  
+   crm:P89i_contains &lt;http://tempuri/site/1&gt; . 
+
 oslod:7000000000043674 a osont:District ;
    rdfs:label &quot;Northumberland&quot;@en ;
-   crm:P89i_contains &lt;http://tempuri/site/1&gt; .   
+   crm:P89i_contains &lt;http://tempuri/site/1&gt; .
+
 oslod:7000000000041422 a osont:EuropeanRegion ;
    rdfs:label &quot;North East&quot;@en ;
    crm:P89i_contains &lt;http://tempuri/site/1&gt; .
 </code></pre>
 
-<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> example | <a href="https://cbinding.github.io/LD4HE/ttl/example-site.ttl">raw</a> | <a href="https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-site.ttl">styled</a></p></div>
+<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> example | <a href="../ttl/example-site.ttl">raw</a> | <a href="https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-site.ttl">styled</a></p></div>
         </div>
 
         <footer class="col-md-12">

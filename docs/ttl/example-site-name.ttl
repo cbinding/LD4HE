@@ -1,0 +1,10 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+
+
+<http://tempuri/site/1> a crm:E53_Place ;
+   crm:P1_is_identified_by <http://tempuri/sitename/1> ;   
+   
+<http://tempuri/sitename/1> a crm:E41_Appellation ;
+   crm:P1i_identifies <http://tempuri/site/1> ;
+   rdfs:label "Boundary Wall of Former Cinema Site, Sandgate"@en .   

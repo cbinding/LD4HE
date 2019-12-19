@@ -1,0 +1,13 @@
+digraph {
+   // label = "Investigation methodology";
+   // labelloc = "t";
+   node [color=gray, fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite];
+   edge [color=black, fontcolor=maroon, fontsize=10, fontname=Arial ];
+   "crm:E55_Type" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E55_Type"];
+   "(investigation)" [style=dashed];   
+   "evt:145112" [fillcolor=lavender]; // methodology
+   "\"Borehole Survey\"@en" [shape=box, fontcolor=black];
+   "(investigation)" -> "evt:145112" [label="crm:P32_used_general_technique\n(was_technique_of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique"];     
+   "evt:145112" -> "crm:E55_Type" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "evt:145112" -> "\"Borehole Survey\"@en" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];
+ }

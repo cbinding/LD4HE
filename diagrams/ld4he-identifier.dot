@@ -1,0 +1,19 @@
+digraph {
+   // label = "Identifier";
+   // labelloc = "t";
+   node [color=gray, fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite];
+   edge [color=black, fontcolor=maroon, fontsize=10, fontname=Arial ];
+   "crm:E42_Identifier" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"];
+   "crm:E55_Type" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E55_Type"];
+   "ids:XXX" [fillcolor=thistle, target="crm", URL="http://purl.org/heritagedata/schemes/2fedf061-855a-482c-9bc9-e7629bfc37ad/concepts/12433c5f-ccce-4610-91b0-2e4a100df7d6"];
+   "ids:XXX" -> "crm:E55_Type" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "ids:XXX" -> "\"Planning Application No\"" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];
+   "(identifier)" [fillcolor=lavender];
+   "\"Planning Application No\"" [shape=box, fontcolor=black];
+   "\"TR4584358\"" [shape=box, fontcolor=black];   
+   "(record)" [style=dashed];
+   "(identifier)" -> "crm:E42_Identifier" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "(identifier)" -> "ids:XXX" [label="crm:P2_has_type", labelURL="crm:P2_has_type\n(is type of)"];
+   "(record)" -> "(identifier)" [label="crm:P1_is_identified_by\n(identifies)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by"];
+   "(identifier)" -> "\"TR4584358\"" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];   
+ }

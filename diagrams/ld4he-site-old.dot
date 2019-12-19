@@ -1,0 +1,23 @@
+digraph {
+   // label = "Site";
+   // labelloc = "t";
+   node [color=gray, fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite];
+   edge [color=black, fontcolor=maroon, fontsize=10, fontname=Arial];
+   "(investigation)" [style=dashed];  
+   "(monument)" [style=dashed];  
+   "(artefact)" [style=dashed];
+   "(site)" [fillcolor="lavender"];
+   "(site name)" [style=dashed];
+   "crm:E53_Place" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E53_Place"];
+   "(investigation)" -> "(site)" [label="crm:P7_took_place_at\n(witnessed)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"];
+   "(monument)" -> "(site)" [label="crm:P55_has_current_location\n(currently holds)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location"];
+   "(artefact)" -> "(site)" [label="crm:P53_has_former_or_current_location\n(is former or current location of)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P53_has_former_or_current_location"];
+   "(site)" -> "crm:E53_Place" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];   
+   "(site)" -> "(site name)" [label="crm:P1_is_identified_by\n(identifies)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by"];
+   "oslod:7000000000043542" -> "osont:Parish" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "oslod:7000000000043674" -> "osont:District" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "oslod:7000000000041422" -> "osont:EuropeanRegion" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];   
+   "(site)" -> "oslod:7000000000043542" [label="crm:P89_falls_within\n(contains)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P89_falls_within"];  
+   "(site)" -> "oslod:7000000000043674" [label="crm:P89_falls_within\n(contains)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P89_falls_within"];  
+   "(site)" -> "oslod:7000000000041422" [label="crm:P89_falls_within\n(contains)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P89_falls_within"];     
+}

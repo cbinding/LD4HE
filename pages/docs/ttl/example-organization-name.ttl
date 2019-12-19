@@ -1,0 +1,8 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<http://tempuri/e74/1> a crm:E74_Group ;
+   crm:P1_is_identified_by <http://tempuri/e41/1> .
+   
+<http://tempuri/e41/1> a crm:E41_Appellation ;
+   rdfs:label "Wessex Archaeology"@en .

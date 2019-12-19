@@ -1,0 +1,13 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+      
+<http://tempuri/report/1/publication> a crm:E7_Activity ;   
+   crm:P7_took_place_at <http://tempuri/place/1> .
+   
+<http://tempuri/place/1> a crm:E53_Place ;
+   crm:P7i_witnessed <http://tempuri/report/1/publication> ;
+   crm:P87_is_identified_by <http://tempuri/placename/1> .
+ 
+<http://tempuri/placename/1> a crm:E41_Appellation;
+   rdfs:label "Aberdeen"@en . 
+    

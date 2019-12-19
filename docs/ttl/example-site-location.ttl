@@ -1,0 +1,21 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix osont: <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+@prefix oslod: <http://data.ordnancesurvey.co.uk/id/> .
+
+
+<http://tempuri/site/1> a crm:E53_Place ;
+   crm:P168_place_is_defined_by "POINT(566600 256500)" ;
+   crm:P89_falls_within oslod:7000000000043542 , oslod:7000000000043674 , oslod:7000000000041422 . 
+      
+oslod:7000000000043542 a osont:Parish ;
+   rdfs:label "Berwick Upon Tweed"@en ;  
+   crm:P89i_contains <http://tempuri/site/1> . 
+   
+oslod:7000000000043674 a osont:District ;
+   rdfs:label "Northumberland"@en ;
+   crm:P89i_contains <http://tempuri/site/1> .
+   
+oslod:7000000000041422 a osont:EuropeanRegion ;
+   rdfs:label "North East"@en ;
+   crm:P89i_contains <http://tempuri/site/1> .

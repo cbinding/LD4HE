@@ -5,7 +5,9 @@
 <http://tempuri/dataset/1> a crm:E73_Information_Object ;
    crm:P148_has_component <http://tempuri/record/1> ;
    crm:P2_has_type aat:300028543 .
+   
 <http://tempuri/record/1> a crm:E73_Information_Object ;
    crm:P148i_is_component_of <http://tempuri/dataset/1> .  
+   
 aat:300028543 a crm:E55_Type ;
    rdfs:label "databases"@en .

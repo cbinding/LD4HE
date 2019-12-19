@@ -1,68 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-     <loc>None</loc>
-     <lastmod>2019-07-19</lastmod>
+     <loc>https://cbinding.github.io/LD4HE/</loc>
+     <lastmod>2019-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
-     <lastmod>2019-07-19</lastmod>
+     <loc>https://cbinding.github.io/LD4HE/ld4he-example-data/</loc>
+     <lastmod>2019-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
-     <lastmod>2019-07-19</lastmod>
+     <loc>https://cbinding.github.io/LD4HE/ld4he-fields/</loc>
+     <lastmod>2019-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
-     <lastmod>2019-07-19</lastmod>
+     <loc>https://cbinding.github.io/LD4HE/ld4he-model/</loc>
+     <lastmod>2019-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
-     <lastmod>2019-07-19</lastmod>
+     <loc>https://cbinding.github.io/LD4HE/ld4he-dataset/</loc>
+     <lastmod>2019-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
-     <lastmod>2019-07-19</lastmod>
+     <loc>https://cbinding.github.io/LD4HE/ld4he-record/</loc>
+     <lastmod>2019-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
-     <lastmod>2019-07-19</lastmod>
+     <loc>https://cbinding.github.io/LD4HE/ld4he-investigation/</loc>
+     <lastmod>2019-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
-     <lastmod>2019-07-19</lastmod>
+     <loc>https://cbinding.github.io/LD4HE/ld4he-site/</loc>
+     <lastmod>2019-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
-     <lastmod>2019-07-19</lastmod>
+     <loc>https://cbinding.github.io/LD4HE/ld4he-artefact/</loc>
+     <lastmod>2019-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
-     <lastmod>2019-07-19</lastmod>
+     <loc>https://cbinding.github.io/LD4HE/ld4he-monument/</loc>
+     <lastmod>2019-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
-     <lastmod>2019-07-19</lastmod>
+     <loc>https://cbinding.github.io/LD4HE/ld4he-organization/</loc>
+     <lastmod>2019-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
-     <lastmod>2019-07-19</lastmod>
+     <loc>https://cbinding.github.io/LD4HE/ld4he-person/</loc>
+     <lastmod>2019-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
-     <lastmod>2019-07-19</lastmod>
+     <loc>https://cbinding.github.io/LD4HE/ld4he-report/</loc>
+     <lastmod>2019-12-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://cbinding.github.io/LD4HE/ld4he-timespan/</loc>
+     <lastmod>2019-12-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://cbinding.github.io/LD4HE/ld4he-place/</loc>
+     <lastmod>2019-12-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

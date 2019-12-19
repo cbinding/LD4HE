@@ -1,0 +1,374 @@
+[
+	{
+		"recordType": "Standard",
+		"oasisId": "eastloth3-33598",
+		"coreFieldsComp": false,
+		"oasisReviewersHasOasisList": [
+			{
+				"reviewStatus": "rev",
+				"reviewDetailsId": 159165,
+				"reviewerId": {
+					"level": "2",
+					"liteStandard": "Standard",
+					"name": "East Lothian Council Archaeology Service"
+				}
+			},
+			{
+				"reviewStatus": "rev",
+				"reviewDetailsId": 159165,
+				"reviewerId": {
+					"level": "4",
+					"liteStandard": "Standard",
+					"name": "Historic Environment Scotland"
+				}
+			},
+			{
+				"reviewStatus": "unRev",
+				"reviewerId": {
+					"level": "4a",
+					"liteStandard": "Standard",
+					"name": "Discovery and Excavation in Scotland"
+				}
+			}
+		],
+		"oasisProjDetails": {
+			"projName": "Metal Detector Survey at Barbachlaw Farm 2004-6",
+			"descOutcome": "These are the research outcomes of the project.",
+			"descr": "Three metal detecting surveys were undertaken of two fields to the immediate south-west of Barbachlaw Farm during 2005 and 2006 where part of the16th century Battle of Pinkie is believed to have taken place. This work was undertaken as part of a slavage exercise in advance what was believed to be imminent development. The survey identified an extensive and diverse assemblage of artefacts, representing a wide range of periods from the late medieval to the early modern period.  B Simpson 2006",
+			"version": 11,
+			"detailsId": 159165,
+			"sdate": "04-Jun-2004 12:00",
+			"edate": "29-Jan-2006 12:00",
+			"entryDate": "15-May-2015 12:00",
+			"oasisProjPeopleList": [
+				{
+					"surname": "East Lothian Council Heritage Officer",
+					"role": {
+						"descr": "Project director/manager"
+					}
+				},
+				{
+					"organisation": "Local Authority (Council)",
+					"role": {
+						"descr": "Sponsor/funding body"
+					}
+				},
+				{
+					"organisation": "East Lothian Council",
+					"role": {
+						"descr": "Sponsor/funding body"
+					}
+				},
+				{
+					"organisation": "East Lothian Council Archaeology Service",
+					"role": {
+						"descr": "Name of Organisation"
+					}
+				},
+				{
+					"surname": "East Lothian Council Heritage Officer",
+					"role": {
+						"descr": "Project supervisor"
+					}
+				}
+			],
+			"oasisProjSubjectPeriodList": [
+				{
+					"subject": "METAL DETECTING SURVEY",
+					"subjectUri": "http://purl.org/heritagedata/schemes/agl_et/concepts/145147",
+					"siteId": 0,
+					"subjectType": {
+						"subjectType": "FISH_EVENT",
+						"thesaurusName": "FISH Event Types Thesaurus"
+					}
+				},
+				{
+					"subject": "MUSKET BALL",
+					"subjectUri": "http://heritagedata.org/live/schemes/2/concepts/501441.html",
+					"siteId": 0,
+					"periodId": {
+						"period": "Medieval",
+						"uri": "http://purl.org/heritagedata/schemes/scapa/concepts/MD"
+					},
+					"subjectType": {
+						"subjectType": "SCOT_TMT",
+						"thesaurusName": "Monument Type Thesaurus (Scotland)"
+					}
+				},
+				{
+					"subject": "SACK SEAL",
+					"siteId": 0,
+					"periodId": {
+						"period": "Medieval",
+						"uri": "http://purl.org/heritagedata/schemes/scapa/concepts/MD"
+					},
+					"subjectType": {
+						"subjectType": "NONE",
+						"thesaurusName": "No thesaurus used"
+					}
+				},
+				{
+					"subject": "SALVAGE RECORDING",
+					"subjectUri": "http://purl.org/heritagedata/schemes/agl_et/concepts/145160",
+					"siteId": 0,
+					"subjectType": {
+						"subjectType": "FISH_EVENT",
+						"thesaurusName": "FISH Event Types Thesaurus"
+					}
+				},
+				{
+					"subject": "BUTTON",
+					"subjectUri": "http://heritagedata.org/live/schemes/2/concepts/501184.html",
+					"siteId": 0,
+					"periodId": {
+						"period": "Medieval",
+						"uri": "http://purl.org/heritagedata/schemes/scapa/concepts/MD"
+					},
+					"subjectType": {
+						"subjectType": "SCOT_TMT",
+						"thesaurusName": "Monument Type Thesaurus (Scotland)"
+					}
+				},
+				{
+					"subject": "BUCKLE",
+					"subjectUri": "http://heritagedata.org/live/schemes/2/concepts/501181.html",
+					"siteId": 0,
+					"periodId": {
+						"period": "Medieval",
+						"uri": "http://purl.org/heritagedata/schemes/scapa/concepts/MD"
+					},
+					"subjectType": {
+						"subjectType": "SCOT_TMT",
+						"thesaurusName": "Monument Type Thesaurus (Scotland)"
+					}
+				},
+				{
+					"subject": "CANON BALL",
+					"siteId": 0,
+					"periodId": {
+						"period": "Medieval",
+						"uri": "http://purl.org/heritagedata/schemes/scapa/concepts/MD"
+					},
+					"subjectType": {
+						"subjectType": "NONE",
+						"thesaurusName": "No thesaurus used"
+					}
+				},
+				{
+					"subject": "BATTLE SITE",
+					"subjectUri": "http://heritagedata.org/live/schemes/1/concepts/292.html",
+					"siteId": 0,
+					"periodId": {
+						"period": "Medieval",
+						"uri": "http://purl.org/heritagedata/schemes/scapa/concepts/MD"
+					},
+					"subjectType": {
+						"subjectType": "SCOT_OBJ",
+						"thesaurusName": "Archaeological Objects Thesaurus (Scotland)"
+					}
+				}
+			],
+			"oasisProjAttrList": [
+				{
+					"projectAttrType": "country",
+					"projectAttrLuId": {
+						"descr": "SCOTLAND"
+					}
+				},
+				{
+					"projectAttrType": "reason",
+					"projectAttrLuId": {
+						"descr": "Heritage management",
+						"uri": "http://purl.org/heritagedata/schemes/ee833bdc-4cf1-4fbf-9282-29e75655855d/concepts/5d5dc48e-add3-4c46-9837-aaf03c3dc759"
+					}
+				}
+			],
+			"oasisProjResOutcomesList": [
+				{
+					"researchFrameworksId": {
+						"frameworkName": "SCARF: Roman",
+						"section": "Where did stone used in buildings, sculpture and artefacts come from?",
+						"country": "SCOTLAND"
+					},
+					"descr": "describing this"
+				},
+				{
+					"researchFrameworksId": {
+						"frameworkName": "SCARF: Roman",
+						"section": "Where was the northern boundary of the Roman province in Antonine times?",
+						"country": "SCOTLAND"
+					},
+					"descr": "Some info on this"
+				}
+			],
+			"oasisProjSiteList": [
+				{
+					"siteId": 160460,
+					"sitename": "Barbachlaw Farm",
+					"sitecode": "barb23",
+					"oasisProjSiteCoordsList": [
+						{
+							"vectorType": "Point",
+							"boundaryOrigin": "Form",
+							"transformationsUsed": "None",
+							"notes": "Entered as by online map click",
+							"geomNgrOut": "POINT(337656 671086)"
+						},
+						{
+							"vectorType": "Point",
+							"boundaryOrigin": "Form",
+							"transformationsUsed": "None",
+							"notes": "Entered as by online map click",
+							"geomNgrOut": "POINT(336029 671453)"
+						},
+						{
+							"vectorType": "Point",
+							"boundaryOrigin": "Form",
+							"transformationsUsed": "None",
+							"notes": "Entered as by online map click",
+							"geomNgrOut": "POINT(337616 671691)"
+						},
+						{
+							"vectorType": "Point",
+							"boundaryOrigin": "Form",
+							"transformationsUsed": "None",
+							"notes": "Entered as by online map click",
+							"geomNgrOut": "POINT(337070 671175)"
+						},
+						{
+							"vectorType": "Point",
+							"boundaryOrigin": "Form",
+							"transformationsUsed": "None",
+							"notes": "Entered as by online map click",
+							"geomNgrOut": "POINT(337249 672395)"
+						},
+						{
+							"vectorType": "Polygon",
+							"boundaryOrigin": "Form",
+							"transformationsUsed": "None",
+							"notes": "Entered as by online map click",
+							"geomNgrOut": "POLYGON((331060 671612,331546 671761,332151 672504,331318 672812,330891 672088,331060 671612))"
+						},
+						{
+							"vectorType": "Point",
+							"boundaryOrigin": "Form",
+							"transformationsUsed": "None",
+							"notes": "Entered as by online map click",
+							"geomNgrOut": "POINT(338285 671523)"
+						},
+						{
+							"vectorType": "Point",
+							"boundaryOrigin": "Form",
+							"transformationsUsed": "None",
+							"notes": "Entered as by online map click",
+							"geomNgrOut": "POINT(338305 672187)"
+						},
+						{
+							"vectorType": "Point",
+							"boundaryOrigin": "Form",
+							"transformationsUsed": "None",
+							"notes": "Entered as by online map click",
+							"geomNgrOut": "POINT(333683 671919)"
+						},
+						{
+							"vectorType": "Point",
+							"boundaryOrigin": "Form",
+							"transformationsUsed": "None",
+							"notes": "Entered as by online map click",
+							"geomNgrOut": "POINT(334953 671929)"
+						},
+						{
+							"vectorType": "Point",
+							"boundaryOrigin": "Form",
+							"transformationsUsed": "None",
+							"notes": "Entered as by online map click",
+							"geomNgrOut": "POINT(335608 671225)"
+						},
+						{
+							"vectorType": "Polygon",
+							"boundaryOrigin": "Form",
+							"transformationsUsed": "None",
+							"notes": "Entered as by online map click",
+							"geomNgrOut": "POLYGON((334864 673040,333098 671840,335816 670947,335935 672296,334864 673040))"
+						},
+						{
+							"vectorType": "Point",
+							"boundaryOrigin": "Form",
+							"transformationsUsed": "None",
+							"notes": "Entered as by online map click",
+							"geomNgrOut": "POINT(334943 672792)"
+						},
+						{
+							"vectorType": "Polygon",
+							"boundaryOrigin": "OASIS import",
+							"transformationsUsed": "NGR 1st attempt;  1st attempt - 33621 67178 mapcode",
+							"notes": "Mapcode, easting, northing: NT36217178 Lat long : 55.9348807163 -3.02120610513; EAST LOTHIAN; null; INVERESK; Matched new Admin Areas",
+							"geomNgrOut": "POINT(336210 671780)"
+						}
+					]
+				}
+			],
+			"oasisProjAssocIdsList": [
+				{
+					"identifier": "1000779",
+					"identifierType": {
+						"descr": "Canmore Event ID"
+					}
+				},
+				{
+					"identifier": "347445",
+					"identifierType": {
+						"descr": "Canmore ID"
+					}
+				},
+				{
+					"identifier": "EEL736",
+					"identifierType": {
+						"descr": "HER Event No"
+					}
+				}
+			],
+			"oasisProjBiblioList": [
+				{
+					"title": "Barbachlaw Stadium: Metal Detector Surveys on two fields on the Battle of Pinkie",
+					"publisher": "East Lothian Council Archaeology Service",
+					"place": "East Lothian Council Archaeology Service",
+					"biblioType": "REPORT",
+					"reportDelay": "0",
+					"reportInLibrary": true,
+					"spage": 0,
+					"epage": 0,
+					"pubdate": 2011,
+					"oasisProjBiblioAuthsList": [
+						{
+							"surname": "Simpson, B",
+							"role": "auths"
+						}
+					],
+					"oasisProjBiblioDetailsList": [],
+					"oasisProjBiblioFilesList": []
+				}
+			],
+			"adminAreasMap": [
+				{
+					"Country": "Scotland",
+					"Former County": " City of Edinburgh",
+					"Council": " City of Edinburgh",
+					"Parish": " Edinburgh"
+				},
+				{
+					"Country": "Scotland",
+					"Former County": " East Lothian",
+					"Council": " East Lothian",
+					"Parish": " Inveresk"
+				},
+				{
+					"Country": "Scotland",
+					"Former County": " East Lothian",
+					"Council": " East Lothian",
+					"Parish": " Tranent"
+				}
+			]
+		}
+	}
+]

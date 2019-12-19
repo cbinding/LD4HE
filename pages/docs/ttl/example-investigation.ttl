@@ -5,22 +5,40 @@
 
 <http://tempuri/investigation/1> a crm:E7_Activity ;
    crm:P67i_is_referred_to_by <http://tempuri/record/1> ;
-   crm:P2_has_type evt:145129 ;
+   crm:P70i_is_documented_in <http://tempuri/report/1> ;
    crm:P17_was_motivated_by rfi:11e58ff4-9432-4452-a364-6b22e1696944 ;
+   crm:P32_used_general_technique evt:145112 ;
    crm:P14_carried_out_by <http://tempuri/organization/1> ;
    crm:P4_has_time-span <http://tempuri/timespan/1> ;
-   crm:P7_took_place_at <http://tempuri/site/1> .
+   crm:P7_took_place_at <http://tempuri/site/1> ;
+   crm:P1_is_identified_by <http://tempuri/investigation/1/identifier>, <http://tempuri/investigation/1/title> ;
+   crm:P3_has_note "An archaeological evaluation was undertaken by Diggs Archaeology in August..."@en .
+   
+<http://tempuri/investigation/1/identifier> a crm:E42_Identifier ;
+	crm:P1i_identifies <http://tempuri/investigation/1> .	
+
+<http://tempuri/investigation/1/title> a crm:E35_Title;
+	crm:1i_identifies <http://tempuri/investigation/1> ;
+	rdfs:label "Field Survey at Studfield Hill"@en .	
+   
 <http://tempuri/record/1> a crm:E73_Information_Object ;
    crm:P67_refers_to <http://tempuri/investigation/1> .
-evt:145129 a crm:E55_Type ;
-   crm:P2i_is_type_of <http://tempuri/investigation/1> ;
-   rdfs:label "Excavation"@en .
+
+<http://tempuri/report/1> a crm:E31_Document ;
+   crm:P70_documents <http://tempuri/investigation/1> .
+    
 rfi:11e58ff4-9432-4452-a364-6b22e1696944 a crm:E55_Type ;
    crm:P17i_motivated <http://tempuri/investigation/1> ;
    rdfs:label "Planning requirement"@en .
+
+evt:145112 a crm:E55_Type ;
+   crm:P32i_was_technique_of <http://tempuri/investigation/1> .
+   
 <http://tempuri/organization/1> a crm:E74_Group ;
    crm:P14i_performed <http://tempuri/investigation/1> .
+   
 <http://tempuri/timespan/1> a crm:E52_Time-Span ;
    crm:P4i_is_time-span_of <http://tempuri/investigation/1> .
+   
 <http://tempuri/site/1> a crm:E53_Place ;
    crm:P7i_witnessed <http://tempuri/investigation/1> .

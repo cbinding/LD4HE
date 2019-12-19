@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Ceri Binding, University of South Wales">
-        
+        <link rel="canonical" href="https://cbinding.github.io/LD4HE/ld4he-record/">
         <link rel="shortcut icon" href="../img/favicon.ico">
         <title>Record - LD4HE</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
@@ -49,24 +49,45 @@
                             <li >
                                 <a href="..">Home</a>
                             </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Mapping <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../ld4he-example-data/">Example data</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-fields/">Data fields</a>
+</li>
+                                </ul>
+                            </li>
                             <li class="dropdown active">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Model <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="../ld4he-model/">Overall</a>
-</li>
-                                    
-<li >
-    <a href="../ld4he-artefact/">Artefact</a>
+    <a href="../ld4he-model/">Overview</a>
 </li>
                                     
 <li >
     <a href="../ld4he-dataset/">Dataset</a>
 </li>
                                     
+<li class="active">
+    <a href="./">Record</a>
+</li>
+                                    
 <li >
     <a href="../ld4he-investigation/">Investigation</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-site/">Site</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-artefact/">Artefact</a>
 </li>
                                     
 <li >
@@ -81,25 +102,18 @@
     <a href="../ld4he-person/">Person</a>
 </li>
                                     
-<li class="active">
-    <a href="./">Record</a>
-</li>
-                                    
 <li >
     <a href="../ld4he-report/">Report</a>
 </li>
                                     
 <li >
-    <a href="../ld4he-site/">Site</a>
+    <a href="../ld4he-timespan/">Timespan</a>
 </li>
                                     
 <li >
-    <a href="../ld4he-timespan/">Timespan</a>
+    <a href="../ld4he-place/">Place</a>
 </li>
                                 </ul>
-                            </li>
-                            <li >
-                                <a href="../ld4he-fields/">Data Fields</a>
                             </li>
                         </ul>
 
@@ -110,12 +124,12 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="../ld4he-person/">
+                                <a rel="next" href="../ld4he-dataset/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../ld4he-report/">
+                                <a rel="prev" href="../ld4he-investigation/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -134,9 +148,9 @@
 
 <h1 id="record">Record</h1>
 <hr />
-<p>A single OASIS record, a component of the full OASIS <a href="../ld4he-dataset/">dataset</a>. OASIS records refer to <a href="../ld4he-investigation/">investigations</a>. OASIS records are identified by both local identifiers and Digital Object Identifiers (DOIs). Note DOIs identify OASIS records not <a href="../ld4he-report/">reports</a>, as there may be multiple reports associated with a single OASIS record.</p>
-<p><img alt="record" src="../img/ld4he-oasis-record.svg" /></p>
-<p><strong>Fig. 1:</strong> Record with associated entities and properties</p>
+<p>Each record is a component of the full <a href="../ld4he-dataset/">dataset</a>. Records refer to both <a href="../ld4he-investigation/">investigations</a> and <a href="../ld4he-report/">reports</a>. Records may have both local <a href="../ld4he-identifier/">identifiers</a> and Digital Object Identifiers (DOIs) - which are also used to identify <a href="../ld4he-report/">reports</a>.</p>
+<p><img alt="record" src="../img/ld4he-record.svg" /></p>
+<p><strong>Fig. 1:</strong> Record with associated entities and properties | <a href="../img/ld4he-record.svg">svg</a> | <a href="../img/ld4he-record.png">png</a> | <a href="../img/ld4he-record.pdf">pdf</a></p>
 <!-- see https://github.com/mkdocs/mkdocs/issues/777 - how to include content of a file -->
 
 <pre><code class="turtle">@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
@@ -145,20 +159,23 @@
 
 &lt;http://tempuri/dataset/1&gt; a crm:E73_Information_Object ;
    crm:P148_has_component &lt;http://tempuri/record/1&gt; .
+
 &lt;http://tempuri/record/1&gt; a crm:E73_Information_Object ;
    crm:P148i_is_component_of &lt;http://tempuri/dataset/1&gt; ;
    crm:P2_has_type aat:300026685 ;
    crm:P1_is_identified_by &lt;http://tempuri/identifier/1&gt; ;
-   crm:P67_refers_to &lt;http://tempuri/investigation/1&gt; .  
+   crm:P67_refers_to &lt;http://tempuri/investigation/1&gt; .
+
 aat:300026685 a crm:E55_Type ;
    crm:P2i_is_type_of &lt;http://tempuri/record/1&gt; ;
    rdfs:label &quot;records (documents)&quot;@en .
+
 &lt;http://tempuri/identifier/1&gt; a crm:E42_Identifier ;
    crm:P1i_identifies &lt;http://tempuri/record/1&gt; ;
    rdfs:label &quot;wardella2-327338&quot; . 
 </code></pre>
 
-<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> example | <a href="https://cbinding.github.io/LD4HE/ttl/example-record.ttl">raw</a> | <a href="https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-record.ttl">styled</a></p></div>
+<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> example | <a href="../ttl/example-record.ttl">raw</a> | <a href="https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-record.ttl">styled</a></p></div>
         </div>
 
         <footer class="col-md-12">

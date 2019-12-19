@@ -1,0 +1,13 @@
+digraph {
+   // label = "Organization Name";
+   // labelloc = "t";
+   node [color=gray, fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite];
+   edge [color=black, fontcolor=maroon, fontsize=10, fontname=Arial];
+   "(organization)" [style=dashed];   
+   "(organization name)" [fillcolor="lavender"];
+   "crm:E41_Appellation" [fillcolor=thistle, URL="http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"];
+   "\"Wessex Archaeology\"@en" [shape=box, fontcolor=black, color=gray]; 
+   "(organization)" -> "(organization name)" [label="crm:P1_is_identified_by\n(identifies)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by"];      
+   "(organization name)" -> "crm:E41_Appellation" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "(organization name)" -> "\"Wessex Archaeology\"@en" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];   
+}

@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Ceri Binding, University of South Wales">
-        
+        <link rel="canonical" href="https://cbinding.github.io/LD4HE/ld4he-timespan/">
         <link rel="shortcut icon" href="../img/favicon.ico">
         <title>Timespan - LD4HE</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
@@ -49,16 +49,25 @@
                             <li >
                                 <a href="..">Home</a>
                             </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Mapping <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../ld4he-example-data/">Example data</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-fields/">Data fields</a>
+</li>
+                                </ul>
+                            </li>
                             <li class="dropdown active">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Model <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="../ld4he-model/">Overall</a>
-</li>
-                                    
-<li >
-    <a href="../ld4he-artefact/">Artefact</a>
+    <a href="../ld4he-model/">Overview</a>
 </li>
                                     
 <li >
@@ -66,7 +75,19 @@
 </li>
                                     
 <li >
+    <a href="../ld4he-record/">Record</a>
+</li>
+                                    
+<li >
     <a href="../ld4he-investigation/">Investigation</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-site/">Site</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-artefact/">Artefact</a>
 </li>
                                     
 <li >
@@ -82,24 +103,17 @@
 </li>
                                     
 <li >
-    <a href="../ld4he-record/">Record</a>
-</li>
-                                    
-<li >
     <a href="../ld4he-report/">Report</a>
-</li>
-                                    
-<li >
-    <a href="../ld4he-site/">Site</a>
 </li>
                                     
 <li class="active">
     <a href="./">Timespan</a>
 </li>
+                                    
+<li >
+    <a href="../ld4he-place/">Place</a>
+</li>
                                 </ul>
-                            </li>
-                            <li >
-                                <a href="../ld4he-fields/">Data Fields</a>
                             </li>
                         </ul>
 
@@ -110,12 +124,12 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="../ld4he-site/">
+                                <a rel="next" href="../ld4he-report/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../ld4he-fields/">
+                                <a rel="prev" href="../ld4he-place/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -134,16 +148,15 @@
 
 <h1 id="time-span">Time-Span</h1>
 <hr />
-<p>A time-span defines the temporal extent of an activity such as an <a href="../ld4he-investigation/">investigation</a>. Time-spans may also be associated with other activities such as report publication.</p>
+<p>A time-span defines the overall temporal extents of an activity such as an <a href="../ld4he-investigation/">investigation</a>, or <a href="../ld4he-report-production/">report production</a>. The lower and upper bounds of the time-span should be defined using Gregorian calendar dates, in <a href="https://www.w3.org/TR/xmlschema11-2/#date">XML Schema date format</a> for consistency.</p>
 <p><img alt="timespan" src="../img/ld4he-timespan.svg" /></p>
-<p><strong>Fig. 1:</strong> Time-span with associated entities and properties</p>
-<pre><code class="Turtle">@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
-@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
-@prefix crm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt; .
-@prefix aat: &lt;http://vocab.getty.edu/aat/&gt; .
+<p><strong>Fig. 1:</strong> Time-span with associated entities and properties | <a href="../img/ld4he-timespan.svg">svg</a> | <a href="../img/ld4he-timespan.png">png</a> | <a href="../img/ld4he-timespan.pdf">pdf</a></p>
+<pre><code class="Turtle">@prefix crm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
 &lt;http://tempuri/investigation/1&gt; a crm:E7_Activity ;
    crm:P4_has_time-span &lt;http://tempuri/timespan/1&gt; .  
+
 &lt;http://tempuri/timespan/1&gt; a crm:E52_Time-Span ;
    crm:P4i_is_time-span_of &lt;http://tempuri/investigation/1&gt; ;
    crm:P81a_end_of_the_begin &quot;2019-03-20&quot;^^xsd:date ;
@@ -151,7 +164,7 @@
 
 </code></pre>
 
-<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> example | <a href="https://cbinding.github.io/LD4HE/ttl/example-timespan.ttl">raw</a> | <a href="https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-timespan.ttl">styled</a></p></div>
+<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> example | <a href="../ttl/example-timespan.ttl">raw</a> | <a href="https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-timespan.ttl">styled</a></p></div>
         </div>
 
         <footer class="col-md-12">

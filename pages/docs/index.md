@@ -1,9 +1,9 @@
 # Linked Data for the Historic Environment (LD4HE)
 
 ## Project aims
-The LD4HE project has the following aims and objectives:
+The purpose of the LD4HE project is to increase the potential for exchange and reuse of historic environment data. The project has the following primary aims and objectives:
 
-* To create a mapping from mandatory OASIS fields to the CIDOC-CRM.
+* To create a mapping from mandatory OASIS fields to CIDOC-CRM.
 * To create a simple means of converting an OASIS data export to a Linked Data compatible format.
 * To determine criteria for establishing which records should be included in Linked Data export.
 * To recommend potential for creation and usage of Linked Data.
@@ -15,20 +15,5 @@ The LD4HE project will allow questions such as the following examples to be answ
 
 * How many [reports](ld4he-report.md) have been produced with evidence of Roman archaeology from post-determinative excavation in Southwest England?
 * How many research [investigations](ld4he-investigation.md) occurred in England in a given year?
-* How many geophysical surveys have been undertaken on a specific type of geology?
+* How many [geophysical surveys](ld4he-methodology.md) have been undertaken on a specific type of geology?
 * How many [reports](ld4he-report.md) are there which fit a specific theme within a research framework?
-
-## Data model
-The [data model](ld4he-model.md) to be used is based on a subset of the [CIDOC Conceptual Reference Model (CRM)](http://www.cidoc-crm.org/). The following pages give further details of distinct aspects of the LD4HE data model:
-
-* [Overall data model](ld4he-model.md)
-	* [Dataset](ld4he-dataset.md)
-	* [Record](ld4he-record.md)  
-	* [Investigation](ld4he-investigation.md)
-	* [Organization](ld4he-organization.md)
-	* [Site](ld4he-site.md)
-	* [Report](ld4he-report.md)
-	* [Time Span](ld4he-timespan.md)  
-	* [Artefact](ld4he-artefact.md)
-	* [Monument](ld4he-monument.md)
-	* [Person](ld4he-person.md)  

@@ -1,0 +1,13 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<http://tempuri/report/1> a crm:E7_Activity ;
+   crm:P1_is_identified_by <http://tempuri/report/1/identifier> .
+      
+<http://tempuri/report/1/identifier> a crm:E42_Identifier ;
+	crm:P1i_identifies <http://tempuri/report/1> ;
+	crm:P2_has_type <http://tempuri/doi> ;
+	rdfs:label "10.5284/1018054" .	
+
+<http://tempuri/doi> a crm:E55_Type ;
+   rdfs:label "DOI"@en .

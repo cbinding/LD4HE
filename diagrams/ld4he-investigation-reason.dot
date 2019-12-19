@@ -1,0 +1,13 @@
+digraph {
+   // label = "Investigation reason";
+   // labelloc = "t";
+   node [color=gray, fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite];
+   edge [color=black, fontcolor=maroon, fontsize=10, fontname=Arial ];
+   "crm:E55_Type" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E55_Type"];
+   "(investigation)" [style=dashed];   
+   "(investigation reason)" [fillcolor=lavender]; // reason
+   "\"Planning requirement\"@en" [shape=box, fontcolor=black];
+   "(investigation)" -> "(investigation reason)" [label="crm:P17_was_motivated_by\n(motivated)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P17_was_motivated_by"]
+   "(investigation reason)" -> "crm:E55_Type" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "(investigation reason)" -> "\"Planning requirement\"@en" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];
+ }

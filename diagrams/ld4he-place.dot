@@ -1,0 +1,18 @@
+digraph {
+   // label = "Place";
+   // labelloc = "t";
+   node [color=gray, fontcolor=blue, fontsize=10, fontname=Arial, style=filled, fillcolor=ghostwhite, color=gray];
+   edge [color=black, fontcolor=maroon, fontsize=10, fontname=Arial ];   
+   
+   "crm:E41_Appellation" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"];
+   "crm:E53_Place" [fillcolor=thistle, target="crm", URL="http://www.cidoc-crm.org/cidoc-crm/E53_Place"];
+   "(activity)" [style=dashed];  
+   "(place)" [fillcolor=lavender];
+   "\"Aberdeen\"@en" [shape=box, fontcolor=black]; 
+   "(activity)" -> "(place)" [label="crm:P7_took_place_at\n(witnessed)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"];   
+   "(place)" -> "crm:E53_Place" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+   "(place)" -> "(place name)" [label="crm:P87_is_identified_by\n(identifies)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P87_is_identified_by"];   
+   "(place)" -> "(place)" [label="crm:P89_falls_within\n(contains)", labelURL="http://www.cidoc-crm.org/cidoc-crm/P89_falls_within"];    
+   "(place name)" -> "crm:E41_Appellation" [label="rdf:type", labelURL="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];          
+   "(place name)" -> "\"Aberdeen\"@en" [label="rdfs:label", labelURL="http://www.w3.org/2000/01/rdf-schema#label"];
+}

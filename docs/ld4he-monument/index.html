@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Ceri Binding, University of South Wales">
-        
+        <link rel="canonical" href="https://cbinding.github.io/LD4HE/ld4he-monument/">
         <link rel="shortcut icon" href="../img/favicon.ico">
         <title>Monument - LD4HE</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
@@ -49,16 +49,25 @@
                             <li >
                                 <a href="..">Home</a>
                             </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Mapping <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../ld4he-example-data/">Example data</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-fields/">Data fields</a>
+</li>
+                                </ul>
+                            </li>
                             <li class="dropdown active">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Model <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="../ld4he-model/">Overall</a>
-</li>
-                                    
-<li >
-    <a href="../ld4he-artefact/">Artefact</a>
+    <a href="../ld4he-model/">Overview</a>
 </li>
                                     
 <li >
@@ -66,7 +75,19 @@
 </li>
                                     
 <li >
+    <a href="../ld4he-record/">Record</a>
+</li>
+                                    
+<li >
     <a href="../ld4he-investigation/">Investigation</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-site/">Site</a>
+</li>
+                                    
+<li >
+    <a href="../ld4he-artefact/">Artefact</a>
 </li>
                                     
 <li class="active">
@@ -82,24 +103,17 @@
 </li>
                                     
 <li >
-    <a href="../ld4he-record/">Record</a>
-</li>
-                                    
-<li >
     <a href="../ld4he-report/">Report</a>
-</li>
-                                    
-<li >
-    <a href="../ld4he-site/">Site</a>
 </li>
                                     
 <li >
     <a href="../ld4he-timespan/">Timespan</a>
 </li>
+                                    
+<li >
+    <a href="../ld4he-place/">Place</a>
+</li>
                                 </ul>
-                            </li>
-                            <li >
-                                <a href="../ld4he-fields/">Data Fields</a>
                             </li>
                         </ul>
 
@@ -110,7 +124,7 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="../ld4he-investigation/">
+                                <a rel="next" href="../ld4he-artefact/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -134,24 +148,28 @@
 
 <h1 id="monument">Monument</h1>
 <hr />
-<p>Monuments are immovable objects of interest located on a <a href="../ld4he-site/">site</a>. Monument types are concepts from the monument types thesaurus corresponding to the location of the <a href="../ld4he-site/">site</a>. For England this will be the <a href="http://purl.org/heritagedata/schemes/eh_tmt2">FISH Thesaurus of Monument Types</a>, for Scotland the <a href="http://purl.org/heritagedata/schemes/1">HES Monument Types Thesaurus</a> and for Wales the <a href="http://purl.org/heritagedata/schemes/10">RCAHMW Monument Types Thesaurus</a>.</p>
-<p><img alt="monument" src="../img/ld4he-monument.svg" title="Monument" /></p>
-<p><strong>Fig. 1:</strong> Monument with associated entities and properties</p>
+<p>Monuments are larger immovable structures identified as being of some interest to archaeological activities. In a similar approach to <a href="../ld4he-artefact/">artefacts</a>, Specific instances of monuments are not included in OASIS metadata <a href="../ld4he-record/">records</a> - instead the records refer to general monument types (and monument periods). Monument types are concepts originating from the monument types thesaurus corresponding to the location of the <a href="../ld4he-site/">site</a>. For England this will be the <a href="http://purl.org/heritagedata/schemes/eh_tmt2">  FISH Thesaurus of Monument Types</a>, for Scotland it will be the <a href="http://purl.org/heritagedata/schemes/1">Monument Type Thesaurus (Scotland)</a> and for Wales it will be the <a href="http://purl.org/heritagedata/schemes/10">MONUMENT TYPE (WALES)</a> thesaurus. Where records refer to monument periods these will be concepts originating from the appropriate periods list corresponding to the location of the site. For England this will be the <a href="http://purl.org/heritagedata/schemes/eh_period">Historic England Periods List</a>, for Scotland it will (possibly) be <a href="http://purl.org/heritagedata/schemes/scapa">ScAPA : Scottish Archaeological Periods &amp; Ages</a> and for Wales it will be <a href="http://purl.org/heritagedata/schemes/11">PERIOD (WALES)</a>. There is no direct connection between the monument type and the period concept in the dataset record, but the concepts are nevertheless useful for searching on records referring to controlled vocabulary terms e.g. "Early Medieval" or "Lime Kiln".</p>
+<p><img alt="monument" src="../img/ld4he-monument.svg" /></p>
+<p><strong>Fig. 1:</strong> Monument type and period associated with a site record | <a href="../img/ld4he-monument.svg">svg</a> | <a href="../img/ld4he-monument.png">png</a> | <a href="../img/ld4he-monument.pdf">pdf</a></p>
 <pre><code class="turtle">@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix crm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt; .
 @prefix mon: &lt;http://purl.org/heritagedata/schemes/eh_tmt2/concepts/&gt; .
+@prefix period: &lt;http://purl.org/heritagedata/schemes/eh_period/concepts/&gt; .
 
-&lt;http://tempuri/monument/1&gt; a crm:E22_Man-Made_Object ;
-   crm:P55_has_current_location &lt;http://tempuri/site/1&gt; ;
-   crm:P2_has_type mon:69063 .
-&lt;http://tempuri/site/1&gt; a crm:E53_Place ;
-   crm:P55i_currently_holds &lt;http://tempuri/monument/1&gt; . 
+&lt;http://tempuri/record/1&gt; a crm:E73_Information_Object;
+    crm:P67_refers_to mon:69063 ;
+    crm:P67_refers_to period:EM .
+
 mon:69063 a crm:E55_Type;
-   crm:P2i_is_type_of &lt;http://tempuri/monument/1&gt; ;
+   crm:P67i_is_referred_to_by &lt;http://tempuri/record/1&gt; ;
    rdfs:label &quot;Lime Kiln&quot;@en .
+
+period:EM a crm:E55_Type ;
+   crm:P67i_is_referred_to_by &lt;http://tempuri/record/1&gt; ;
+   rdfs:label &quot;Early Medieval&quot;@en 
 </code></pre>
 
-<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> example | <a href="https://cbinding.github.io/LD4HE/ttl/example-monument.ttl">raw</a> | <a href="https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-monument.ttl">styled</a></p></div>
+<p><strong>Fig. 2:</strong> <a href="https://www.w3.org/TR/turtle/">Turtle RDF</a> example | <a href="../ttl/example-monument.ttl">raw</a> | <a href="https://cdn.rawgit.com/niklasl/ldtr/v0.2.2/demo/?url=https://cbinding.github.io/LD4HE/ttl/example-monument.ttl">styled</a></p></div>
         </div>
 
         <footer class="col-md-12">
